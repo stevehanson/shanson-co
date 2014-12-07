@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require scroller
 //= require jquery.imgr
+//= require showdown
 //= require_tree .

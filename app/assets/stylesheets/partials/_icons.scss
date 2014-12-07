@@ -1,4 +1,17 @@
 @charset "UTF-8";
+
+@font-face {
+  font-family: "budicons";
+  src: font-url("budicons-shanson.eot");
+  src: font-url("budicons-shanson.eot?#iefix") format("embedded-opentype"),
+     font-url("budicons-shanson.woff") format("woff"),
+     font-url("budicons-shanson.ttf") format("truetype"),
+     font-url("budicons-shanson.svg#budicons-shanson") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 [data-icon]:before {
   font-family: "budicons" !important;
   content: attr(data-icon);
@@ -28,26 +41,62 @@
 .icon-menu:before {
   content: "a";
 }
-.icon-price-tag:before {
+.icon-coffee:before {
   content: "b";
 }
-.icon-linkedin:before {
-  content: "c";
-}
-.icon-facebook:before {
+.icon-coffee-underline:before {
   content: "d";
 }
-.icon-twitter:before {
-  content: "f";
+.icon-expand:before {
+  content: "c";
 }
-.icon-close:before {
+.icon-collapse:before {
   content: "e";
 }
-.icon-loading:before {
+.icon-carot-down:before {
+  content: "f";
+}
+.icon-carot-right:before {
   content: "g";
-  display: inline-block;
-  font-size: 2.7em;
-  line-height: 0.78em;
+}
+.icon-carot-up:before {
+  content: "h";
+}
+.icon-carot-left:before {
+  content: "i";
+}
+.icon-close:before {
+  content: "j";
+}
+.icon-heart:before {
+  content: "k";
+}
+.icon-comment-active:before {
+  content: "l";
+}
+.icon-comment-text:before {
+  content: "m";
+}
+.icon-comment-empty:before {
+  content: "n";
+}
+.icon-instagram:before {
+  content: "o";
+}
+.icon-facebook:before {
+  content: "p";
+}
+.icon-twitter:before {
+  content: "q";
+}
+.icon-book:before {
+  content: "r";
+}
+.icon-search:before {
+  content: "s";
+}
+.icon-tag:before {
+  content: "t";
 }
 
 .icon-spin {

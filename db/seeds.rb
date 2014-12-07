@@ -5,3 +5,27 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Post.delete_all
+
+Post.create(
+  id: 1,
+  title: "Quit refrigerating your butter",
+  published_at: Time.now - 1.day,
+  body:
+  %Q{Bla bla bla
+
+  Thanks for visiting [shanson.co](http://shanson.co)!}
+)
+
+Post.create(
+  id: 2,
+  title: "My List of Things To Do",
+  published_at: Time.now,
+  body:
+  %Q{Here is the list of things I wish to do!
+
+  * write more posts
+  * write even more posts
+  * write even more posts!}
+)

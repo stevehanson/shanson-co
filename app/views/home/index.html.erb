@@ -45,8 +45,23 @@
   <section class="posts-list">
 
     <div class="container container-xs">
+
+      <% @posts.each do |post| %>
+        <article class="post-excerpt">
+          <h3 class="post-excerpt-title"><%= post.title %></h3>
+          <div class="post-excerpt-body">
+            <%= truncate(markdown(post.body), length: 200) %>
+          </div>
+          <div class="post-excerpt-metadata">
+            <div class="read-time">4 min read</div>
+            <div class="date"><%= post.published_at %></div>
+          </div>
+        </article>
+
+      <% end %>
+
       <article class="post-excerpt">
-        <h3 class="post-excerpt-title">What a stupid personality indicator has taught me</h3>
+        <h3 class="post-excerpt-title">What I learned from a stupid personality indicator</h3>
         <div class="post-excerpt-body">
           <p>When I was a child, I thought like a child, I talked like a child, I <em>was</em> a child.</p>
 
@@ -57,6 +72,19 @@
         <div class="post-excerpt-metadata">
           <div class="read-time">4 min read</div>
           <div class="date">Jun 4</div>
+        </div>
+      </article>
+
+      <article class="post-excerpt">
+        <h3 class="post-excerpt-title">Quit refrigerating your butter</h3>
+        <div class="post-excerpt-body">
+          <p>I like to cook, and lately have been trying some healthier recipes....</p>
+
+          <p>This is really just some sample text to get a feel for what this section might look like, ya know.</p>
+        </div>
+        <div class="post-excerpt-metadata">
+          <div class="post-excerpt-metadata-date">Jun 4</div>
+          <div class="read-time">4 min read</div>
         </div>
       </article>
 
@@ -83,6 +111,7 @@
           <div class="post-excerpt-metadata-date">Jun 4</div>
           <div class="read-time">4 min read</div>
         </div>
+      </article>
 
     </div>
 

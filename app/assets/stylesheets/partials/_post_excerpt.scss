@@ -1,6 +1,8 @@
 
 .post-excerpt {
-  margin-bottom: 3em;
+  margin-bottom: 4em;
+  // padding-bottom: 3em;
+  // border-bottom: 1px solid #f5f5f5;
 }
 
 .post-excerpt-photo {
@@ -25,9 +27,26 @@
 
   .read-time {
     text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 1em;
+    color: #555;
+
+    &:before {
+      content: 'b';
+      text-transform: none;
+      font-family: "budicons" !important;
+      vertical-align: text-bottom;
+      margin-right: 0.3em;
+    }
+
+    &:hover:before {
+      content: 'd';
+    }
   }
 
   .date {
+    display: inline-block;
     color: #999;
   }
 }
