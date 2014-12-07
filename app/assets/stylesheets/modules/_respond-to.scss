@@ -1,0 +1,72 @@
+$breakpoint-xsmall: 0;
+$breakpoint-small: 768px;
+$breakpoint-medium: 992px;
+$breakpoint-large: 1200px;
+
+// can be called with only one argument
+@mixin respond-to($min: "", $max: "") {
+
+  $min-width: $min;
+  $max-width: $max;
+
+  @if $min != "" {
+
+    $min-width: $min;
+
+    @if $min == small {
+      $min-width: $breakpoint-small;
+    }
+    @else if $min == medium {
+      $min-width: $breakpoint-medium; // tablet
+    }
+    @else if $min == large {
+      $min-width: $breakpoint-large; //tablet-landscape, desktop
+    }
+    @else if $min == xlarge {
+      $min-width: $breakpoint-xlarge; //tablet-landscape, desktop
+    }
+  }
+
+  @if $max != "" {
+
+    $max-width: $max - 1;
+
+    @if $max == small {
+      $max-width: $breakpoint-small - 1;
+    }
+    @else if $max == medium {
+      $max-width: $breakpoint-medium - 1; // tablet
+    }
+    @else if $max == large {
+      $max-width: $breakpoint-large - 1; //tablet-landscape, desktop
+    }
+    @else if $max == xlarge {
+      $max-width: $breakpoint-xlarge - 1; //tablet-landscape, desktop
+    }
+
+  }
+
+  @if($min-width != "" and $max-width != "") { // both min and max specified as parameters
+    @media only screen and (min-width: $min-width) and (max-width: $max-width) { @content; }
+  }
+
+  @else if($min-width != "") { // max not defined, just do min
+    @media only screen and (min-width: $min-width) { @content; }
+  }
+
+  @else if($max-width != "") { // just set min width
+    @media only screen and (max-width: $max-width) { @content; }
+  }
+}
+
+// can be useful if you don't want styles to bleed to other breakpoints
+// eg. if medium style will be overridden by large style, helps avoid complicated overriding
+
+@mixin respond-only-to($media) {
+  @if $media == small {
+    @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium - 1) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large - 1) { @content; } // tablet
+  }
+}

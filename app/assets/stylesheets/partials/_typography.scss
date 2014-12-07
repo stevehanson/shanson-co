@@ -1,0 +1,59 @@
+h1 {
+  font-size: 3.285em;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.57em;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 0.65em;
+}
+
+.p {
+  font-size: 1.5625em;
+}
+
+.p-small {
+  @extend .p;
+  font-size: 1.286em;
+  margin-top: 1em;
+}
+
+.link-primary {
+  color: $color-primary;
+}
+
+.link-secondary {
+  color: $color-secondary;
+}
+
+.announcement-text {
+  font-size: 2.5em;
+  font-weight: 300;
+  text-align: center;
+  max-width: 930px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include respond-to(medium) {
+    font-size: 3em;
+  }
+
+  @include respond-to(large) {
+    font-size: 3em;
+  }
+
+}

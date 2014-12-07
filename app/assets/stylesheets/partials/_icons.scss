@@ -1,0 +1,64 @@
+@charset "UTF-8";
+[data-icon]:before {
+  font-family: "budicons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "budicons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "a";
+}
+.icon-price-tag:before {
+  content: "b";
+}
+.icon-linkedin:before {
+  content: "c";
+}
+.icon-facebook:before {
+  content: "d";
+}
+.icon-twitter:before {
+  content: "f";
+}
+.icon-close:before {
+  content: "e";
+}
+.icon-loading:before {
+  content: "g";
+  display: inline-block;
+  font-size: 2.7em;
+  line-height: 0.78em;
+}
+
+.icon-spin {
+  animation: icon-spin 2s infinite linear;
+}
+
+@keyframes icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}

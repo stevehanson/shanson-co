@@ -1,0 +1,33 @@
+
+.post-excerpt {
+  margin-bottom: 3em;
+}
+
+.post-excerpt-photo {
+  width: 100%;
+}
+
+.post-excerpt-title {
+  font-weight: 600;
+  font-size: 1.7em;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+
+.post-excerpt-body {
+  font-size: 1.2em;
+  font-family: $font-primary;
+  margin-bottom: 1em;
+}
+
+.post-excerpt-metadata {
+  font-size: 0.9em;
+
+  .read-time {
+    text-transform: uppercase;
+  }
+
+  .date {
+    color: #999;
+  }
+}

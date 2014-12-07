@@ -1,0 +1,25 @@
+
+.fade-in {
+  &.out-of-view {
+    transition: none;
+    opacity: 0;
+  }
+  &.in-view {
+    transition: opacity 0.5s;
+    opacity: 1;
+  }
+}
+
+.fade-in-and-grow {
+  &.out-of-view {
+    transition: none;
+    transform: scale3d(0.98, 0.98, 0.98);
+    opacity: 0;
+  }
+  &.in-view {
+    transition: opacity 0.5s, transform 0.5s;
+    transition-delay: 100ms;
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
