@@ -39,13 +39,11 @@ GEM
     arel (6.0.0.beta2)
     autoprefixer-rails (4.0.1)
       execjs
+    bcrypt (3.1.9)
     binding_of_caller (0.7.3.pre1)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (3.5.1)
-      columnize (~> 0.8)
-      debugger-linecache (~> 1.2)
-      slop (~> 3.6)
+    coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -53,9 +51,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
-    columnize (0.8.9)
     debug_inspector (0.0.2)
-    debugger-linecache (1.2.0)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.2)
     globalid (0.3.0)
@@ -74,13 +77,21 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.4.3)
     mini_portile (0.6.1)
     minitest (5.4.3)
     multi_json (1.10.1)
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
+    orm_adapter (0.5.0)
     pg (0.17.1)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
     rack (1.6.0.beta)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -117,6 +128,8 @@ GEM
     rdoc (4.1.2)
       json (~> 1.4)
     redcarpet (3.0.0)
+    responders (2.0.2)
+      railties (>= 4.2.0.alpha, < 5)
     sass (3.4.8)
     sass-rails (5.0.0.beta1)
       railties (>= 4.0.0, < 5.0)
@@ -147,6 +160,8 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     web-console (2.0.0.beta4)
       activemodel (~> 4.0)
       binding_of_caller (= 0.7.3.pre1)
@@ -158,10 +173,11 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  byebug
+  devise
   jbuilder (~> 2.0)
   jquery-rails (~> 4.0.0.beta2)
   pg
+  pry-rails
   rails (= 4.2.0.beta4)
   rails_12factor
   redcarpet (~> 3.0.0)

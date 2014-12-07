@@ -10,6 +10,7 @@ Post.delete_all
 
 Post.create(
   id: 1,
+  slug: 'quit-refrigerating-your-butter',
   title: "Quit refrigerating your butter",
   published_at: Time.now - 1.day,
   body:
@@ -20,6 +21,7 @@ Post.create(
 
 Post.create(
   id: 2,
+  slug: 'my-list-of-things-to-do',
   title: "My List of Things To Do",
   published_at: Time.now,
   body:
