@@ -31,25 +31,31 @@ $btn-default-bg: #1ba8e0;
   }
 }
 
-$btn-secondary-bg: #f5f5f5;
+$btn-secondary-bg: #fff;
 
 .btn-secondary {
   @extend .btn;
   background-color: $btn-secondary-bg;
+  border: 1px solid #333;
   color: $text-color;
-  transition: all 150ms linear;
+  transition: all 100ms linear;
 
   &:hover {
-    color: $text-color;
-    background: darken($btn-secondary-bg, 7%);
+    color: #fff;
+    background: #333;
   }
 
   &:active {
-    background: darken($btn-secondary-bg, 11%);
+    background: #000;
   }
 }
 
 .btn-small {
   font-size: 1em;
-  padding: 0.8em 1.875em;
+  padding: 0.7em 1.875em;
+}
+
+.btn-xs {
+  font-size: 0.95em;
+  padding: 0.15em 1em 0;
 }

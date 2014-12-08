@@ -36,6 +36,10 @@
     background-color: #fafafa;
   }
 
+  &.active {
+    border-left: 2px solid #333;
+  }
+
   h4 {
     font-weight: 400;
     font-size: 1.25em;
@@ -47,3 +51,7 @@
   }
 }
 
+.admin-new-btn {
+  margin-right: 1em;
+  margin-top: 1.5em;
+}

@@ -13,6 +13,12 @@
 
   [class^="icon"] {
     margin-bottom: 1.75em;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $text-color;
+    }
   }
 }
 

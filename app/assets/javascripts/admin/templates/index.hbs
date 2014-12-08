@@ -1,11 +1,15 @@
 
 <div class="admin-left-column">
-  <div class="admin-list-title">Thoughts</div>
+  <div class="admin-list-title pull-left">Thoughts</div>
+  <div class="pull-right">
+    <div class="admin-new-btn btn-secondary btn-xs" {{action "new"}}>New</div>
+  </div>
+  <div class="clearfix"></div>
 
   <div class="admin-posts-list">
 
     {{#each post in posts}}
-      <div class="admin-posts-list-item">
+      <div class="admin-posts-list-item" {{action "selectPost" post}}>
         <h4>{{post.title}}</h4>
         <p>And other musings.</p>
       </div>
@@ -19,6 +23,7 @@
   <div class="editor-left">
     <div class="icon-heart" {{action "togglePreview"}}></div>
     <div class="icon-tag"></div>
+    <div class="icon-close" {{action "delete"}}></div>
   </div>
 
   <div class="editor-content">
@@ -37,7 +42,7 @@
   </div>
 
   <div class="editor-footer">
-    <div class="btn-default pull-right" {{action "save"}}>Save</div>
+    <div class="btn-default btn-small pull-right" {{action "save"}}>Save</div>
   </div>
 
 </div>

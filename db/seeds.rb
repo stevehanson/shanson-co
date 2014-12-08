@@ -27,7 +27,9 @@ Post.create(
   title: "Quit refrigerating your butter",
   published_at: Time.now,
   body:
-  %Q{Bla bla bla
+  %Q{Cold butter doesn't spread.
 
-  Thanks for visiting [shanson.co](http://shanson.co)!}
+I like a piece of toast with butter on it in the morning and have always had a hard time spreading the butter. This Christmas, my brother solved all of my (our) problems by gifting me and Monica (and himself, since he lives with us..) this French butter dish.
+
+[[picture here]]!}
 )

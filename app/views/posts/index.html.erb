@@ -18,7 +18,7 @@
     <% @posts.each do |post| %>
       <article class="post-excerpt">
         <h3 class="post-excerpt-title">
-          <%= link_to post.title, post_permalink_path(post) %>
+          <%= link_to post.title, post %>
         </h3>
         <div class="post-excerpt-body">
           <%= truncate(markdown(post.body), length: 200) %>
