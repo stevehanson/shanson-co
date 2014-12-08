@@ -1,70 +1,21 @@
+<section class="post">
 
-<nav id="nav">
-  <div class="container">
+  <div class="container container-xs">
 
-    <div class="pull-left">
-      <%= link_to "Steve Hanson", root_path, class: 'nav-title'  %>
-    </div>
-
-    <div class="nav-mobile-menu-toggle">
-      <div class="icon-menu"></div>
-      <div class="icon-close"></div>
-    </div>
-
-    <ul class="nav-links">
-      <li class="nav-link"><a href="#">Posts</a></li>
-      <li class="nav-link"><a href="/about">About</a></li>
-      <li class="nav-link"><a href="//brainspace.com/blog">Photos</a></li>
-      <li class="nav-link login-nav-link">
-        <a href="/sign-up" class="link-primary">Follow me</a>
-      </li>
-    </ul>
-
-    </div>
+    <article class="post">
+      <h3 class="post-title"><%=@post.title%></h3>
+      <div class="post-metadata">
+        <div class="read-time">4 min read</div>
+        <div class="date"><%= @post.published_at %></div>
+      </div>
+      <div class="post-body"><%= markdown(@post.body) %></div>
+    </article>
 
   </div>
-</nav>
+
+</section>
 
 
-<div class="page-body">
-
-  <section class="post">
-
-    <div class="container container-xs">
-
-      <article class="post">
-        <h3 class="post-title"><%=@post.title%></h3>
-        <div class="post-metadata">
-          <div class="read-time">4 min read</div>
-          <div class="date"><%= @post.published_at %></div>
-        </div>
-        <div class="post-body"><%= markdown(@post.body) %></div>
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <div class="heart">
-    <div class="icon-heart"></div>
-  </div>
-
+<div class="heart">
+  <div class="icon-heart"></div>
 </div>
-
-
-
-
-
-
-
-
-<footer class="footer">
-
-  <div class="container">
-
-
-
-  </div>
-
-</footer>

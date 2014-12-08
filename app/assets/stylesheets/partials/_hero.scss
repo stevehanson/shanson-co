@@ -1,6 +1,11 @@
 .hero {
   padding: 2em 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 8px solid $color-primary;
+}
+
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .hero-text {

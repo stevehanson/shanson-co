@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   get 'admin' => 'admin#index'
+  get '/:id' => 'posts#show', as: 'post_permalink'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
