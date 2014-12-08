@@ -16,4 +16,6 @@
 //= require scroller
 //= require jquery.imgr
 //= require showdown
-//= require_tree .
+//= require nav
+//= require scroll-events
+//= require_self

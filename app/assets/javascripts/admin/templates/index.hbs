@@ -1,0 +1,43 @@
+
+<div class="admin-left-column">
+  <div class="admin-list-title">Thoughts</div>
+
+  <div class="admin-posts-list">
+
+    {{#each post in posts}}
+      <div class="admin-posts-list-item">
+        <h4>{{post.title}}</h4>
+        <p>And other musings.</p>
+      </div>
+    {{/each}}
+
+  </div>
+</div>
+
+<div class="admin-right-column admin-editor">
+
+  <div class="editor-left">
+    <div class="icon-heart" {{action "togglePreview"}}></div>
+    <div class="icon-tag"></div>
+  </div>
+
+  <div class="editor-content">
+    {{input placeholder="title" value=model.title class="editor-title"}}
+
+    {{textarea placeholder="Butter goes on everything..." class="editor-body" value=model.body }}
+
+    {{#if showPreview}}
+      <div class="markdown-preview">
+
+        <h3 class="post-title">{{model.title}}</h3>
+
+        {{ markdown model.body }}
+      </div>
+    {{/if}}
+  </div>
+
+  <div class="editor-footer">
+    <div class="btn-default pull-right" {{action "save"}}>Save</div>
+  </div>
+
+</div>

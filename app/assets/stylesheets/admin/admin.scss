@@ -1,0 +1,49 @@
+@import 'form';
+@import 'editor';
+
+.admin-left-column {
+  width: 30%;
+  float: left;
+  border-right: 1px solid #eee;
+  height: 100vh;
+}
+
+.admin-right-column {
+  width: 70%;
+  float: left;
+  height: 100vh;
+}
+
+.admin-list-title {
+  font-weight: 800;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-left: 0.714em;
+  text-transform: uppercase;
+}
+
+.admin-posts-list {
+
+}
+
+.admin-posts-list-item {
+  padding: 1em;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #fafafa;
+  }
+
+  h4 {
+    font-weight: 400;
+    font-size: 1.25em;
+    margin: 0;
+  }
+
+  p {
+
+  }
+}
+

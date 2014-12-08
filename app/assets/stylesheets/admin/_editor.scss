@@ -1,0 +1,49 @@
+.admin-editor {
+  position: relative;
+}
+
+.editor-left {
+  width: 4em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 3em;
+  padding-left: 2em;
+  color: #aaa;
+
+  [class^="icon"] {
+    margin-bottom: 1.75em;
+  }
+}
+
+.editor-content {
+  width: 100%;
+  position: relative;
+  max-width: 700px;
+  margin-left: 5em;
+  margin-top: 1em;
+}
+
+.editor-title {
+  font-size: 3em;
+}
+
+.editor-body {
+  border:none;
+  min-height: 400px;
+  font-size: 18px;
+}
+
+.markdown-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  height: 100vh;
+}
+
+.editor-footer {
+  position: absolute;
+  bottom: 0;
+}

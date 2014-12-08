@@ -1,0 +1,25 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #f1f1f1;
+  font-weight: 400;
+  color: $text-color;
+  padding: 0.7em 0.2em;
+  //margin-bottom: 2em;
+  font-size: 1em;
+
+  @include placeholder {
+    color: #666;
+    font-family: $font-primary;
+    font-weight: 300;
+  }
+
+  &:focus {
+    outline: 0;
+    background: none;
+  }
+}
