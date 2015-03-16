@@ -5,10 +5,10 @@
     <article class="post">
       <h3 class="post-title"><%=@post.title%></h3>
       <div class="post-metadata">
-        <div class="read-time">4 min read</div>
-        <div class="date"><%= @post.published_at %></div>
+        <div class="read-time"><%=read_length(@post.body)%> min read</div>
+        <div class="date"><%= @post.published_at.strftime("%b %d, %Y") %></div>
       </div>
-      <div class="post-body"><%= markdown(@post.body) %></div>
+      <div class="post-body"><%= markdown(@post.body).html_safe %></div>
     </article>
 
   </div>

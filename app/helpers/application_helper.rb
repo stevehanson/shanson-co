@@ -1,24 +1,20 @@
 module ApplicationHelper
-
   def markdown(text)
-    options = {
-      filter_html:     true,
-      hard_wrap:       true,
-      link_attributes: { rel: 'nofollow', target: "_blank" },
+    @markdown ||= Redcarpet::Markdown.new(BlogMarkdownRenderer, {
+      autolink: true,
       space_after_headers: true,
-      fenced_code_blocks: true
-    }
-
-    extensions = {
-      autolink:           true,
-      superscript:        true,
-      disable_indented_code_blocks: true
-    }
-
-    renderer = Redcarpet::Render::HTML.new(options)
-    markdown = Redcarpet::Markdown.new(renderer, extensions)
-
-    markdown.render(text).html_safe
+      fenced_code_blocks: true,
+      underline: true,
+      highlight: true,
+      footnotes: true,
+      tables: true
+    })
+    @markdown.render(text)
   end
 
+  def read_length(content)
+    words_per_minute = 200
+    num_words = content.split.size
+    read_time_minutes = (num_words / 200.0).ceil
+  end
 end

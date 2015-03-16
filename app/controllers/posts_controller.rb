@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(slug: params[:id])
+    not_found and return if @post.nil?
   end
 
   def create
