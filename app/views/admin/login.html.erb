@@ -1,0 +1,34 @@
+<%= content_for(:title, "Admin Login") %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>shanson</title>
+
+    <script src="//use.typekit.net/hfm1pfh.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "admin" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="login-error"><%= value.html_safe %></div>
+      <% end %>
+
+      <h3>Hello. Please log in to access the admin.</h3>
+
+      <p>
+        <%= link_to "Log In via Google", "/auth/google_oauth2", class: "btn-small btn-secondary" %>
+      </p>
+    </div>
+
+  </body>
+</html>

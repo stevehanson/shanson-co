@@ -21,6 +21,8 @@ Post.create(
   * write even more posts!}
 )
 
+puts '√ Created Post: My List of Things To Do'
+
 Post.create(
   id: 2,
   slug: 'quit-refrigerating-your-butter',
@@ -33,3 +35,5 @@ I like a piece of toast with butter on it in the morning and have always had a h
 
 [[picture here]]!}
 )
+
+puts '√ Created Post: Quit refrigerating your butter'
