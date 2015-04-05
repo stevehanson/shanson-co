@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
 gem 'pg'
-gem 'devise'
 
 gem 'sass-rails', '~> 5.0.0.beta1'
 gem "autoprefixer-rails"
@@ -25,8 +24,9 @@ gem "dotenv", "~> 1.0.2"
 gem "thin"
 
 group :development, :test do
+  gem "factory_girl_rails"
   gem "pry-rails"
-  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'rspec-rails', '~> 3.0'
   gem 'web-console', '~> 2.0.0.beta4'
   gem 'spring'
 end

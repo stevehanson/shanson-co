@@ -8,7 +8,7 @@ class Admin::PostsController < AdminController
   end
 
   def create
-    params[:post][:slug] = post_params[:title].dasherize if post_params[:slug].empty?
+    params[:post][:slug] = post_params[:title].dasherize if post_params[:slug].blank?
     @post = Post.new(post_params)
 
     if @post.save
