@@ -18,7 +18,7 @@ gem "omniauth-google-oauth2"
 
 #admin
 gem 'ember-rails'
-gem 'ember-source', '~> 1.9.0'
+gem 'ember-source', '~> 1.11.0'
 
 gem "dotenv", "~> 1.0.2"
 gem "thin"

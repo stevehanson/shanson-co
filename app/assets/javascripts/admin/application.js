@@ -3,7 +3,6 @@
 //= require turbolinks
 //= require showdown
 //= require jquery
-//= require handlebars
 //= require ember
 //= require ember-data
 //= require_self
