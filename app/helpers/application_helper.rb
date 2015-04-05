@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def human_date(date)
+    date.strftime("%b %d, %Y")
+  end
+
   def markdown(text)
     @markdown ||= Redcarpet::Markdown.new(BlogMarkdownRenderer, {
       autolink: true,

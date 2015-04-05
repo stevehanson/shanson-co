@@ -21,11 +21,11 @@
           <%= link_to post.title, post %>
         </h3>
         <div class="post-excerpt-body">
-          <%= truncate(markdown(post.body), length: 200) %>
+          <%= truncate(markdown(post.body).html_safe, length: 200, escape: false) %>
         </div>
         <div class="post-excerpt-metadata">
-          <div class="read-time">4 min read</div>
-          <div class="date"><%= post.published_at %></div>
+          <div class="read-time"><%= read_length(post.body) %> min read</div>
+          <div class="date"><%= human_date(post.published_at) %></div>
         </div>
       </article>
     <% end %>

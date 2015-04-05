@@ -19,42 +19,45 @@
 
   <body>
 
-    <nav id="nav">
-      <div class="container">
+    <div class="body-content-wrapper">
+      <nav id="nav">
+        <div class="container">
 
 
-        <%= link_to "Steve Hanson", root_path, class: 'nav-title'  %>
+          <%= link_to "Steve Hanson", root_path, class: 'nav-title'  %>
 
-        <div class="nav-mobile-menu-toggle">
-          <div class="icon-menu"></div>
-          <div class="icon-close"></div>
+          <div class="nav-mobile-menu-toggle">
+            <div class="icon-menu"></div>
+            <div class="icon-close"></div>
+          </div>
+
+          <!--ul class="nav-links">
+            <li class="nav-link"><a href="#">Posts</a></li>
+            <li class="nav-link"><a href="/about">About</a></li>
+            <li class="nav-link"><a href="//brainspace.com/blog">Photos</a></li>
+            <li class="nav-link login-nav-link">
+              <a href="/sign-up" class="link-primary">Follow me</a>
+            </li>
+          </ul-->
+
         </div>
+      </nav>
 
-        <!--ul class="nav-links">
-          <li class="nav-link"><a href="#">Posts</a></li>
-          <li class="nav-link"><a href="/about">About</a></li>
-          <li class="nav-link"><a href="//brainspace.com/blog">Photos</a></li>
-          <li class="nav-link login-nav-link">
-            <a href="/sign-up" class="link-primary">Follow me</a>
-          </li>
-        </ul-->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
-        </div>
-
+      <div class="page-body">
+        <%= yield %>
       </div>
-    </nav>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <div class="page-body">
-      <%= yield %>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-msg">
+            Made with <i class="icon-heart"></i> by Shanson.
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <footer class="footer">
-      <div class="container">
-      </div>
-    </footer>
 
     <%= javascript_include_tag "application" %>
   </body>
