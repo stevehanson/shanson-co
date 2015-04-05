@@ -5,12 +5,19 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
-  # admin
   scope :admin, as: "admin" do
-    get  "/"      => "admin#index"
     get  "login"  => "admin#show_login"
     get  "logout" => "admin#logout"
     post "login"  => "admin#login"
+  end
+
+  namespace :admin do
+    get "/"       => "posts#index"
+
+    resources :posts, except: [:show, :edit] do
+      post "markdown"
+    end
+    get "/posts"  => "posts#index"
     post "posts/markdown" => "posts#markdown_preview"
   end
 

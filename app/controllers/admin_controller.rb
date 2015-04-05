@@ -15,10 +15,6 @@ class AdminController < ApplicationController
     redirect_to admin_login_url
   end
 
-  def markdown_preview
-    render text: markdown(params[:markdown])
-  end
-
   private
 
   def set_user

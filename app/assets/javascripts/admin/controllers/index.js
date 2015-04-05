@@ -1,7 +1,6 @@
 App.IndexController = Ember.Controller.extend({
   needs: ['application'],
   posts: Ember.computed.alias('controllers.application.model'),
-
   showPreview: false,
 
   actions: {
@@ -15,6 +14,21 @@ App.IndexController = Ember.Controller.extend({
 
     save: function() {
       this.get('model').save();
+    },
+
+    publish: function() {
+      if(confirm('Alright! Are you sure you\'re ready?')) {
+        this.set('model.draft', false);
+        this.get('model').save();
+      }
+    },
+
+    unpublish: function() {
+      var msg = 'Are you sure? This will remove the post from the blog. Any sites that currently link here will break.';
+      if(confirm(msg)) {
+        this.set('model.draft', true);
+        this.get('model').save();
+      }
     },
 
     delete: function() {
