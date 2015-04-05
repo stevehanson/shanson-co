@@ -52,4 +52,13 @@
 .editor-footer {
   position: absolute;
   bottom: 0;
+  margin-bottom: 1em;
+
+  .btn-default {
+    margin-left: 1em;
+  }
+
+  .btn-secondary {
+    margin-left: 1em;
+  }
 }
