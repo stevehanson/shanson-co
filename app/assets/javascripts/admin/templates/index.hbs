@@ -35,19 +35,18 @@
       <div class="markdown-preview">
 
         <h3 class="post-title">{{model.title}}</h3>
-
         {{ markdown model.body }}
       </div>
     {{/if}}
   </div>
 
-  <div class="editor-footer">
+  <div class="editor-footer {{if notPreview 'is-fixed'}}">
     {{#if model.draft}}
-      <div class="btn-default btn-small pull-right" {{action "publish"}}>Ship It</div>
-      <div class="btn-secondary btn-small pull-right" {{action "save"}}>Save Draft</div>
+      <div class="btn-secondary btn-small" {{action "save"}}>Save Draft</div>
+      <div class="btn-default btn-small" {{action "publish"}}>Ship It</div>
     {{else}}
-      <div class="btn-default btn-small pull-right" {{action "save"}}>Save</div>
-      <div class="btn-secondary btn-small pull-right" {{action "unpublish"}}>Unpublish Post</div>
+      <div class="btn-secondary btn-small" {{action "unpublish"}}>Unpublish Post</div>
+      <div class="btn-default btn-small" {{action "save"}}>Save</div>
     {{/if}}
   </div>
 

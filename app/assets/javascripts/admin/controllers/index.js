@@ -2,6 +2,7 @@ App.IndexController = Ember.Controller.extend({
   needs: ['application'],
   posts: Ember.computed.alias('controllers.application.model'),
   showPreview: false,
+  notPreview: Ember.computed.not('showPreview'),
 
   actions: {
     togglePreview: function() {

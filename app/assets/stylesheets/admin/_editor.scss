@@ -10,6 +10,7 @@
   padding-top: 3em;
   padding-left: 2em;
   color: #aaa;
+  z-index: 10;
 
   [class^="icon"] {
     margin-bottom: 1.75em;
@@ -23,11 +24,16 @@
 }
 
 .editor-content {
+  height: 100%;
   width: 100%;
   position: relative;
   max-width: 700px;
   margin-left: 5em;
-  margin-top: 1em;
+  padding: 1em 1em 0;
+
+  textarea {
+    height: 100%;
+  }
 }
 
 .editor-title {
@@ -46,19 +52,22 @@
   left: 0;
   width: 100%;
   background: #fff;
-  height: 100vh;
 }
 
 .editor-footer {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 1em;
+  background: #fff;
 
-  .btn-default {
-    margin-left: 1em;
+  padding: 0.8em 0 0.8em 5em;
+  width: 100%;
+  border-top: 1px solid #eee;
+
+  &.is-fixed {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 
-  .btn-secondary {
+  .btn-default {
     margin-left: 1em;
   }
 }
