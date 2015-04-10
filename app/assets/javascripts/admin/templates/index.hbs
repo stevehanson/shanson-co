@@ -1,53 +1,61 @@
+<div class="admin-page-full">
+  <nav class="admin-nav">
 
-<div class="admin-left-column">
-  <div class="admin-list-title pull-left">Thoughts</div>
-  <div class="pull-right">
-    <div class="admin-new-btn btn-secondary btn-xs" {{action "new"}}>New</div>
-  </div>
-  <div class="clearfix"></div>
+  </nav>
 
-  <div class="admin-posts-list">
-
-    {{#each post in posts}}
-      <div class="admin-posts-list-item" {{action "selectPost" post}}>
-        <h4>{{post.title}}</h4>
-        <p>And other musings.</p>
+  <section class="admin-body">
+    <div class="admin-left-column">
+      <div class="admin-list-title pull-left">Thoughts</div>
+      <div class="pull-right">
+        <div class="admin-new-btn btn-secondary btn-xs" {{action "new"}}>New</div>
       </div>
-    {{/each}}
+      <div class="clearfix"></div>
 
-  </div>
-</div>
+      <div class="admin-posts-list">
 
-<div class="admin-right-column admin-editor">
+        {{#each post in posts}}
+          <div class="admin-posts-list-item" {{action "selectPost" post}}>
+            <h4>{{post.title}}</h4>
+            <p>And other musings.</p>
+          </div>
+        {{/each}}
 
-  <div class="editor-left">
-    <div class="icon-heart" {{action "togglePreview"}}></div>
-    <div class="icon-tag"></div>
-    <div class="icon-close" {{action "delete"}}></div>
-  </div>
-
-  <div class="editor-content">
-    {{input placeholder="title" value=model.title class="editor-title"}}
-
-    {{textarea placeholder="Butter goes on everything..." class="editor-body" value=model.body }}
-
-    {{#if showPreview}}
-      <div class="markdown-preview">
-
-        <h3 class="post-title">{{model.title}}</h3>
-        {{ markdown model.body }}
       </div>
-    {{/if}}
-  </div>
+    </div>
 
-  <div class="editor-footer {{if notPreview 'is-fixed'}}">
-    {{#if model.draft}}
-      <div class="btn-secondary btn-small" {{action "save"}}>Save Draft</div>
-      <div class="btn-default btn-small" {{action "publish"}}>Ship It</div>
-    {{else}}
-      <div class="btn-secondary btn-small" {{action "unpublish"}}>Unpublish Post</div>
-      <div class="btn-default btn-small" {{action "save"}}>Save</div>
-    {{/if}}
-  </div>
+    <div class="admin-right-column admin-editor">
+      <div class="editor-content-wrapper">
+        <div class="editor-left">
+          <div class="icon-heart" {{action "togglePreview"}}></div>
+          <div class="icon-tag"></div>
+          <div class="icon-close" {{action "delete"}}></div>
+        </div>
+
+        <div class="editor-content">
+          {{#if showPreview}}
+            <div class="markdown-preview">
+              <h3 class="post-title">{{model.title}}</h3>
+              {{ markdown model.body }}
+            </div>
+          {{else}}
+            {{input placeholder="title" value=model.title class="editor-title"}}
+            {{textarea placeholder="Butter goes on everything..." class="editor-body" value=model.body }}
+          {{/if}}
+        </div>
+      </div>
+
+
+      <div class="editor-footer {{if notPreview 'is-fixed'}}">
+        {{#if model.draft}}
+          <div class="btn-secondary btn-small" {{action "save"}}>Save Draft</div>
+          <div class="btn-default btn-small" {{action "publish"}}>Ship It</div>
+        {{else}}
+          <div class="btn-secondary btn-small" {{action "unpublish"}}>Unpublish Post</div>
+          <div class="btn-default btn-small" {{action "save"}}>Save</div>
+        {{/if}}
+      </div>
+
+    </div>
+  </section>
 
 </div>

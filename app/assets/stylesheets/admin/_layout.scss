@@ -1,0 +1,35 @@
+.admin-page-full {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.admin-nav {
+  border-bottom: 1px solid #eee;
+  padding: 0.5em;
+}
+
+.admin-body {
+  display: flex;
+  flex: 1;
+}
+
+.admin-left-column {
+  flex: 1;
+  border-right: 1px solid #eee;
+  overflow: scroll;
+}
+
+.admin-right-column {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  flex: 3;
+}
+
+.editor-content-wrapper {
+  display: flex;
+  flex-flow: row;
+  flex: 1;
+}

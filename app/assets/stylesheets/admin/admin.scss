@@ -1,18 +1,8 @@
 @import 'form';
 @import 'editor';
+@import 'layout';
 
-.admin-left-column {
-  width: 30%;
-  float: left;
-  border-right: 1px solid #eee;
-  height: 100vh;
-}
 
-.admin-right-column {
-  width: 70%;
-  float: left;
-  height: 100vh;
-}
 
 .admin-list-title {
   font-weight: 800;
