@@ -24,11 +24,13 @@ $btn-default-bg: $color-primary;
   transition: all 150ms linear;
 
   &:hover {
-    background: lighten($btn-default-bg, 8%);
+    background: $text-color;
+    border-color: $text-color;
   }
 
   &:active {
-    background: lighten($btn-default-bg, 11%);
+    background: #000;
+    border-color: #000;
   }
 }
 

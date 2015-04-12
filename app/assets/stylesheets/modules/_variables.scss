@@ -1,6 +1,9 @@
 
-$font-primary: "PT Sans", sans-serif;
-$font-serif: "adriane", serif;
+$font-sans: "PT Sans", sans-serif;
+$font-serif: "Bitter", serif;
+
+$font-primary: $font-serif;
+$font-heading: $font-sans;
 
 $color-primary: #0ae;
 $color-secondary: darken($color-primary, 20%);

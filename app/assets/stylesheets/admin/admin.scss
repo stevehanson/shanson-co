@@ -2,10 +2,7 @@
 @import 'editor';
 @import 'layout';
 
-
-
 .admin-list-title {
-  font-weight: 800;
   font-size: 1.4em;
   margin-top: 1em;
   margin-left: 0.714em;
@@ -31,8 +28,8 @@
   }
 
   h4 {
-    font-weight: 400;
-    font-size: 1.25em;
+    font-size: 1.15em;
+    line-height: 1.2;
     margin: 0;
   }
 
@@ -43,5 +40,5 @@
 
 .admin-new-btn {
   margin-right: 1em;
-  margin-top: 1.5em;
+  margin-top: 1.4em;
 }
