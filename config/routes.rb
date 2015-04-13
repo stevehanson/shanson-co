@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :posts, except: [:show]
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
@@ -20,5 +20,7 @@ Rails.application.routes.draw do
     get "/posts"  => "posts#index"
     post "posts/markdown" => "posts#markdown_preview"
   end
+
+  get ":id" => "posts#show", as: :show_post
 
 end
