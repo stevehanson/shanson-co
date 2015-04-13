@@ -33,3 +33,9 @@
   flex-flow: row;
   flex: 1;
 }
+
+@include respond-to(0, medium) {
+  .admin-left-column {
+    flex: 2;
+  }
+}

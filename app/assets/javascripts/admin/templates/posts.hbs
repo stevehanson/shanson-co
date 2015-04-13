@@ -1,0 +1,28 @@
+<div class="admin-page-full">
+  <nav class="admin-nav">
+
+  </nav>
+
+  <section class="admin-body">
+    <div class="admin-left-column">
+      <h3 class="admin-list-title pull-left">Thoughts</h3>
+      <div class="pull-right">
+        {{link-to "New" "posts.new" class="admin-new-btn btn-secondary btn-xs"}}
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="admin-posts-list">
+        {{#each post in model}}
+          {{#link-to "posts.show" post.id class="admin-posts-list-item"}}
+            <h4>{{post.title}}</h4>
+            {{post.publishedAt}}
+            <p>And other musings.</p>
+          {{/link-to}}
+        {{/each}}
+      </div>
+    </div>
+
+    {{outlet}}
+  </section>
+
+</div>

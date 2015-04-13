@@ -1,16 +1,17 @@
-App.IndexController = Ember.Controller.extend({
-  needs: ['application'],
-  posts: Ember.computed.alias('controllers.application.model'),
+App.PostsShowController = Ember.Controller.extend({
   showPreview: false,
+  showOptions: false,
   notPreview: Ember.computed.not('showPreview'),
+  notOptions: Ember.computed.not('showOptions'),
 
   actions: {
     togglePreview: function() {
       this.toggleProperty('showPreview');
+      debugger;
     },
 
-    selectPost: function(post) {
-      this.set('model', post);
+    toggleOptions: function() {
+      this.toggleProperty('showOptions');
     },
 
     save: function() {
@@ -38,14 +39,6 @@ App.IndexController = Ember.Controller.extend({
         this.set('model',
           this.get('posts').objectAt(postsLength - 1));
       }.bind(this));
-    },
-
-    new: function() {
-      var post = this.store.createRecord('post', {
-        draft: true,
-        publishedAt: new Date()
-      });
-      this.set('model', post);
     }
   }
 });

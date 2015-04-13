@@ -1,6 +1,8 @@
 @import 'form';
 @import 'editor';
 @import 'layout';
+@import 'new';
+@import 'posts';
 
 .admin-list-title {
   font-size: 1.4em;
@@ -14,17 +16,22 @@
 }
 
 .admin-posts-list-item {
+  border-left: 2px solid transparent;
+  display: block;
+  color: $text-color;
   padding: 1em;
   border-bottom: 1px solid #eee;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, border-left-color 0.2s;
 
-  &:hover {
+  &:hover, &.active {
     background-color: #fafafa;
+    color: $text-color;
+    text-decoration: none;
   }
 
   &.active {
-    border-left: 2px solid #333;
+    border-left-color: $text-color;
   }
 
   h4 {

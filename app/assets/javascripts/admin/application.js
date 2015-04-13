@@ -1,6 +1,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require moment
+//= require pikaday.jquery
 //= require showdown
 //= require jquery
 //= require ember

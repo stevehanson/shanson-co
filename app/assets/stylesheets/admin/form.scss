@@ -23,3 +23,30 @@ textarea {
     background: none;
   }
 }
+
+.form-group {
+  margin: 1em 0 2em;
+
+  label {
+    display: block;
+    margin-bottom: 0.2em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    background: #f8f9fa;
+    border-bottom: 2px solid #888;
+    padding: 0.2em 0.2em;
+
+    &:focus {
+      outline: 0;
+      border-bottom: 2px solid #1883AE;
+      background: rgba(#B2E1F5, 0.2);
+    }
+  }
+}

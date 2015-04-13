@@ -1,0 +1,16 @@
+.post-options {
+  background: #fff;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 5em;
+  width: 100%;
+  transition: all 0.1s ease-in;
+  opacity: 1;
+  visibility: visible;
+
+  &.inactive {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
