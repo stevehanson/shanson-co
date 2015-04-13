@@ -7,9 +7,10 @@ App.PostsNewRoute = Ember.Route.extend({
     });
   },
 
-  renderTemplate: function() {
+  renderTemplate: function(controller, model) {
     var postShowController = this.controllerFor('posts.show');
     postShowController.set('showOptions', true);
+    postShowController.set('model', model);
     this.render('posts.show', {
       controller: postShowController
     });

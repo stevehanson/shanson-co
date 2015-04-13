@@ -4,10 +4,22 @@ App.PostsShowController = Ember.Controller.extend({
   notPreview: Ember.computed.not('showPreview'),
   notOptions: Ember.computed.not('showOptions'),
 
+  _init: function() {
+    var self = this;
+    $(document).on('blur', '#title', function() {
+      if(Ember.isEmpty(self.get('model.slug'))) {
+        self.set('model.slug', self.sluggify(self.get('model.title')));
+      }
+    });
+  }.on('init'),
+
+  sluggify: function(str) {
+    return str.replace(/[^a-zA-Z0-9\-\_ ]/g, '').replace(/[ _]/g, '-').toLowerCase();
+  },
+
   actions: {
     togglePreview: function() {
       this.toggleProperty('showPreview');
-      debugger;
     },
 
     toggleOptions: function() {

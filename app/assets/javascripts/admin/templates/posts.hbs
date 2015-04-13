@@ -15,8 +15,7 @@
         {{#each post in model}}
           {{#link-to "posts.show" post.id class="admin-posts-list-item"}}
             <h4>{{post.title}}</h4>
-            {{post.publishedAt}}
-            <p>And other musings.</p>
+            <p>{{truncate post.body 65}}</p>
           {{/link-to}}
         {{/each}}
       </div>
