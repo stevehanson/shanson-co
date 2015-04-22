@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lte IE 7]><html lang="en" class="ie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="ie ie8 lt-ie9"><![endif]-->
+<!--[if IE 9]><html lang="en" class="ie ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,10 +20,8 @@
   </head>
 
   <body>
-
     <nav id="nav" class="nav">
       <div class="container">
-
 
         <%= link_to "Steve Hanson", root_path, class: 'nav-title'  %>
 
@@ -37,6 +38,10 @@
           </li>
         </ul>
 
+        <!--[if lt-IE10]>
+          <div class="clearfix"></div>
+          <p class="browsehappy">Oh shoot. I don't support your version of Internet Explorer. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
       </div>
     </nav>
 
