@@ -3,4 +3,5 @@
 
 //= require nav
 //= require local-storage
+//= require kudos
 //= require_self

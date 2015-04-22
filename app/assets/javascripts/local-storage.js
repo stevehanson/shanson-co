@@ -2,7 +2,7 @@
 
   var init = function init() {
     if(typeof(Storage) !== "undefined") {
-      if(localStorage.getItem('visited', true)) {
+      if(localStorage.getItem('visited')) {
         $('.posts-list').css({'animation': 'none', 'opacity': '1'});
       }
 

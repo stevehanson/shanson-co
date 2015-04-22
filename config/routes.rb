@@ -21,6 +21,11 @@ Rails.application.routes.draw do
     post "posts/markdown" => "posts#markdown_preview"
   end
 
+  namespace :api do
+    post   "/kudos/:id" => "kudos#create"
+    delete "/kudos/:id" => "kudos#destroy"
+  end
+
   get ":id" => "posts#show", as: :show_post
 
 end

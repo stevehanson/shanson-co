@@ -1,0 +1,41 @@
+.kudo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.kudoed {
+    .kudo-heart-path {
+      fill: $text-color;
+    }
+  }
+
+  .kudo-heart {
+    cursor: pointer;
+    font-size: 2.5em;
+    line-height: 1;
+    max-width: 50px;
+    max-height: 50px;
+    text-align: center;
+  }
+
+  .kudo-heart-path {
+    fill: #fff;
+    stroke-width: 20px;
+    stroke: $text-color;
+    transition: stroke-width 150ms;
+
+    &:hover {
+      stroke-width: 30px;
+    }
+  }
+
+
+
+  .kudo-count-message {
+    margin-left: 1em;
+  }
+
+  .kudo-count {
+    font-weight: 600;
+  }
+}
