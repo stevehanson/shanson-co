@@ -36,13 +36,16 @@
   font-size: 0.9em;
   font-weight: 400;
   text-transform: uppercase;
+  border-bottom: 2px solid transparent;
   color: $text-color;
+  transition: border-bottom-color 200ms linear;
 
   &.link-primary {
     color: $color-primary;
   }
-  &.link-secondary {
-    color: $color-secondary;
+
+  &:hover {
+    text-decoration: none;
   }
 }
 

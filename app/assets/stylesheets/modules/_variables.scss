@@ -6,12 +6,14 @@ $font-primary: $font-serif;
 $font-heading: $font-sans;
 
 $color-primary: #0ae;
-$color-secondary: darken($color-primary, 20%);
+$color-secondary: tomato;
 
 $color-light-gray: #ebebeb;
 $color-blue-gray: #54646e;
 $color-dark-gray: #022c3a;
 $color-darkest-gray: #011f29;
+
+$color-danger: $color-secondary;
 
 $text-color: #333;
 $text-color-accent: #54646e;

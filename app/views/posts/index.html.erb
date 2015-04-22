@@ -1,95 +1,99 @@
-<header class="hero hero-main">
-  <div class="hero-container container container-xs">
+<div class="index-page">
+  <header class="hero hero-main">
+    <div class="hero-container container container-xs">
 
-    <div class="hero-text-container">
-      <h2 class="hero-title highlight-primary">Hello, i'm <span class="shanson">shanson</span></h2>
+      <div class="hero-text-container">
+        <h2 class="hero-title highlight-primary">Hello, i'm <span class="shanson">shanson</span></h2>
 
-      <div class="hero-text">
-        <p>I'm glad you're here, friend.</p>
-        <!--p>I'm a thinker, writer, tinkerer, husband, human, developer, friend.</p-->
+        <div class="hero-text">
+          <p>I'm glad you're here, friend.</p>
+          <!--p>I'm a thinker, writer, tinkerer, husband, human, developer, friend.</p-->
+        </div>
+      </div>
+
+      <%= image_tag("steve-profile.jpg", class: "avatar") %>
+
+
+    </div>
+  </header>
+
+  <section class="posts-list">
+    <div class="posts-heading">
+      <div class="container container-xs">
+
       </div>
     </div>
 
-    <%= image_tag("steve-profile.jpg", class: "avatar") %>
+    <div class="container container-xs">
+      <% @posts.each do |post| %>
+        <article class="post-excerpt">
+          <h3 class="post-excerpt-title">
+            <%= link_to post.title, show_post_path(post[:slug]) %>
+          </h3>
+          <div class="post-excerpt-body">
+            <%= truncate(markdown(post.body).html_safe, length: 200, escape: false) %>
+          </div>
+          <div class="post-excerpt-metadata">
+            <div class="read-time"><%= read_length(post.body) %> min read</div>
+            <div class="date"><%= human_date(post.published_at) %></div>
+          </div>
+        </article>
+      <% end %>
 
-
-  </div>
-</header>
-
-<section class="posts-list">
-
-  <div class="container container-xs">
-
-    <p class="p lead-text">Here are some of my latest posts.</p>
-
-    <% @posts.each do |post| %>
       <article class="post-excerpt">
-        <h3 class="post-excerpt-title">
-          <%= link_to post.title, show_post_path(post[:slug]) %>
-        </h3>
+        <h3 class="post-excerpt-title">What I learned from a stupid personality indicator</h3>
         <div class="post-excerpt-body">
-          <%= truncate(markdown(post.body).html_safe, length: 200, escape: false) %>
+          <p>When I was a child, I thought like a child, I talked like a child, I <em>was</em> a child.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sit dolor maiores cumque saepe fugiat dolorem exercitationem? Est earum tempore in a, labore, adipisci, quibusdam id magni quisquam nulla maxime.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sit dolor maiores cumque saepe fugiat dolorem exercitationem? Est earum tempore in a, labore, adipisci, quibusdam id magni quisquam nulla maxime.</p>
         </div>
         <div class="post-excerpt-metadata">
-          <div class="read-time"><%= read_length(post.body) %> min read</div>
-          <div class="date"><%= human_date(post.published_at) %></div>
+          <div class="read-time">4 min read</div>
+          <div class="date">Jun 4</div>
         </div>
       </article>
-    <% end %>
 
-    <article class="post-excerpt">
-      <h3 class="post-excerpt-title">What I learned from a stupid personality indicator</h3>
-      <div class="post-excerpt-body">
-        <p>When I was a child, I thought like a child, I talked like a child, I <em>was</em> a child.</p>
+      <article class="post-excerpt">
+        <h3 class="post-excerpt-title">Quit refrigerating your butter</h3>
+        <div class="post-excerpt-body">
+          <p>I like to cook, and lately have been trying some healthier recipes....</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sit dolor maiores cumque saepe fugiat dolorem exercitationem? Est earum tempore in a, labore, adipisci, quibusdam id magni quisquam nulla maxime.</p>
+          <p>This is really just some sample text to get a feel for what this section might look like, ya know.</p>
+        </div>
+        <div class="post-excerpt-metadata">
+          <div class="post-excerpt-metadata-date">Jun 4</div>
+          <div class="read-time">4 min read</div>
+        </div>
+      </article>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sit dolor maiores cumque saepe fugiat dolorem exercitationem? Est earum tempore in a, labore, adipisci, quibusdam id magni quisquam nulla maxime.</p>
-      </div>
-      <div class="post-excerpt-metadata">
-        <div class="read-time">4 min read</div>
-        <div class="date">Jun 4</div>
-      </div>
-    </article>
+      <article class="post-excerpt">
+        <h3 class="post-excerpt-title">Why no one votes with idealism</h3>
+        <div class="post-excerpt-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sit dolor maiores cumque saepe fugiat dolorem exercitationem? Est earum tempore in a, labore, adipisci, quibusdam id magni quisquam nulla maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi vel eos, laudantium aliquid excepturi porro odio officia dolor temporibus reiciendis obcaecati beatae, illum omnis fuga voluptatum distinctio modi! Aperiam, dignissimos!</p>
+        </div>
+        <div class="post-excerpt-metadata">
+          <div class="date">Jun 4</div>
+          <div class="read-time">4 min read</div>
+        </div>
+      </article>
 
-    <article class="post-excerpt">
-      <h3 class="post-excerpt-title">Quit refrigerating your butter</h3>
-      <div class="post-excerpt-body">
-        <p>I like to cook, and lately have been trying some healthier recipes....</p>
+      <article class="post-excerpt">
+        <%= image_tag "skillet-narrow.jpg", class: "post-excerpt-photo" %>
+        <h3 class="post-excerpt-title">How to cook a really awesome thing</h3>
+        <div class="post-excerpt-body">
+          <p>I like to cook, and lately have been trying some healthier recipes....</p>
 
-        <p>This is really just some sample text to get a feel for what this section might look like, ya know.</p>
-      </div>
-      <div class="post-excerpt-metadata">
-        <div class="post-excerpt-metadata-date">Jun 4</div>
-        <div class="read-time">4 min read</div>
-      </div>
-    </article>
+          <p>This is really just some sample text to get a feel for what this section might look like, ya know.</p>
+        </div>
+        <div class="post-excerpt-metadata">
+          <div class="post-excerpt-metadata-date">Jun 4</div>
+          <div class="read-time">4 min read</div>
+        </div>
+      </article>
 
-    <article class="post-excerpt">
-      <h3 class="post-excerpt-title">Why no one votes with idealism</h3>
-      <div class="post-excerpt-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sit dolor maiores cumque saepe fugiat dolorem exercitationem? Est earum tempore in a, labore, adipisci, quibusdam id magni quisquam nulla maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi vel eos, laudantium aliquid excepturi porro odio officia dolor temporibus reiciendis obcaecati beatae, illum omnis fuga voluptatum distinctio modi! Aperiam, dignissimos!</p>
-      </div>
-      <div class="post-excerpt-metadata">
-        <div class="date">Jun 4</div>
-        <div class="read-time">4 min read</div>
-      </div>
-    </article>
+    </div>
 
-    <article class="post-excerpt">
-      <%= image_tag "skillet-narrow.jpg", class: "post-excerpt-photo" %>
-      <h3 class="post-excerpt-title">How to cook a really awesome thing</h3>
-      <div class="post-excerpt-body">
-        <p>I like to cook, and lately have been trying some healthier recipes....</p>
-
-        <p>This is really just some sample text to get a feel for what this section might look like, ya know.</p>
-      </div>
-      <div class="post-excerpt-metadata">
-        <div class="post-excerpt-metadata-date">Jun 4</div>
-        <div class="read-time">4 min read</div>
-      </div>
-    </article>
-
-  </div>
-
-</section>
+  </section>
+</div>

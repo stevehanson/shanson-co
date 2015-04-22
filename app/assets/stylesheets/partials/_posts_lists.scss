@@ -1,3 +1,9 @@
 .posts-list {
-  margin-top: 2.5em;
+  background-color: #fff;
+  padding-top: 2.5em;
+  @include animate('fadeIn', 0.7s, 1.8s, 'linear');
+}
+
+.index-page {
+  background-color: #fff;
 }

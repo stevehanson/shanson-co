@@ -58,6 +58,14 @@ blockquote {
   color: #fff;
 }
 
+a {
+  transition: color 100ms linear;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
 .link-primary {
   color: $color-primary;
 }
