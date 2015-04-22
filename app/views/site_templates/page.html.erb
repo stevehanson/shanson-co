@@ -1,0 +1,8 @@
+<section class="page">
+  <div class="container container-xs">
+    <article class="post">
+      <h3 class="post-title"><%=@post.title%></h3>
+      <div class="post-body"><%= markdown(@post.body).html_safe %></div>
+    </article>
+  </div>
+</section>

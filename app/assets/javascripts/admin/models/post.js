@@ -2,6 +2,7 @@ App.Post = DS.Model.extend({
   title: DS.attr(),
   body: DS.attr(),
   slug: DS.attr(),
+  template: DS.attr(),
   publishedAt: DS.attr(),
   draft: DS.attr('boolean')
 });

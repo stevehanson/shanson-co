@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :slug
   validates_presence_of :title
 
+  scope :not_pages, -> { where(template: 'post') }
   scope :draft,     -> { where(draft: true) }
   scope :published, -> { where(draft: false) }
   scope :desc,      -> { order("published_at DESC") }
