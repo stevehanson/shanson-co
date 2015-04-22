@@ -43,12 +43,16 @@
       {{input value=model.title id="title"}}
     </div>
     <div class="form-group">
+      <label for="slug">Slug</label>
+      {{input value=model.slug id="slug"}}
+    </div>
+    <div class="form-group">
       <label for="published-date">Published Date</label>
       {{pik-a-day date=model.publishedAt utc=true id="published-date"}}
     </div>
     <div class="form-group">
-      <label for="slug">Slug</label>
-      {{input value=model.slug id="slug"}}
+      <label for="page-template">Page Template</label>
+      {{input value="post" id="page-template" placeholder="post, page..."}}
     </div>
     <div class="form-group">
       <label for="tags">Tags</label>

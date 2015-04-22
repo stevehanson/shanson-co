@@ -49,6 +49,15 @@ blockquote {
   margin-top: 1em;
 }
 
+.highlight {
+  background-color: #f3f3f3;
+}
+
+.highlight-primary {
+  background-color: $color-primary;
+  color: #fff;
+}
+
 .link-primary {
   color: $color-primary;
 }

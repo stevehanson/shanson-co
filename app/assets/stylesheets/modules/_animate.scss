@@ -1,0 +1,47 @@
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  } to {
+    opacity:1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity:1;
+  } to {
+    opacity:0;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  } to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAndSlideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  } to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@mixin animate($animation_name, $duration, $delay, $easing_func: 'ease-in', $slide_distance: 0) {
+  @if $animation_name == "fadeIn" or $animation_name == "fadeInAndSlideUp" {
+    opacity: 0;
+  } @else if $animation_name == "fadeOut" {
+    opacity: 1;
+  }
+
+  animation: $animation_name #{$easing_func} $duration;
+  animation-fill-mode: forwards;
+  animation-delay: $delay;
+}

@@ -18,28 +18,29 @@
 
   <body>
 
-    <div class="body-content-wrapper">
-      <nav id="nav" class="nav">
-        <div class="container">
+    <nav id="nav" class="nav">
+      <div class="container">
 
 
-          <%= link_to "Steve Hanson", root_path, class: 'nav-title'  %>
+        <%= link_to "Steve Hanson", root_path, class: 'nav-title'  %>
 
-          <div class="nav-mobile-menu-toggle">
-            <div class="icon-menu"></div>
-            <div class="icon-close"></div>
-          </div>
-
-          <ul class="nav-links">
-            <li class="nav-link"><a href="#">Posts</a></li>
-            <li class="nav-link"><a href="/about">About</a></li>
-            <li class="nav-link login-nav-link">
-              <a href="/sign-up" class="link-primary">Follow me</a>
-            </li>
-          </ul>
-
+        <div class="nav-mobile-menu-toggle">
+          <div class="icon-menu"></div>
+          <div class="icon-close"></div>
         </div>
-      </nav>
+
+        <ul class="nav-links">
+          <li class="nav-link"><a href="/">Posts</a></li>
+          <li class="nav-link"><a href="/about">About</a></li>
+          <li class="nav-link login-nav-link">
+            <a href="/sign-up" class="link-primary">Follow me</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="body-content-wrapper">
 
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>

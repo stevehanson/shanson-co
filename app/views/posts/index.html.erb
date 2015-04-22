@@ -1,12 +1,17 @@
 <header class="hero hero-main">
-  <div class="container container-xs">
+  <div class="hero-container container container-xs">
 
-    <h2 class="hero-title">Hello, i'm shanson.</h2>
+    <div class="hero-text-container">
+      <h2 class="hero-title highlight-primary">Hello, i'm <span class="shanson">shanson</span></h2>
 
-    <div class="hero-text">
-      <p>I'm glad you're here, friend.</p>
-      <!--p>I'm a thinker, writer, tinkerer, husband, human, developer, friend.</p-->
+      <div class="hero-text">
+        <p>I'm glad you're here, friend.</p>
+        <!--p>I'm a thinker, writer, tinkerer, husband, human, developer, friend.</p-->
+      </div>
     </div>
+
+    <%= image_tag("steve-profile.jpg", class: "avatar") %>
+
 
   </div>
 </header>
@@ -14,6 +19,8 @@
 <section class="posts-list">
 
   <div class="container container-xs">
+
+    <p class="p lead-text">Here are some of my latest posts.</p>
 
     <% @posts.each do |post| %>
       <article class="post-excerpt">

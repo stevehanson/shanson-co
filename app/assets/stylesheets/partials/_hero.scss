@@ -1,6 +1,5 @@
 .hero {
-  padding: 2em 0;
-  border-bottom: 8px solid $color-primary;
+  padding: 5em 0;
 }
 
 .hero-title {
@@ -11,5 +10,71 @@
 .hero-text {
   p {
     font-size: 1.35em;
+  }
+}
+
+@keyframes slidePaddingUp {
+  from {
+    padding-bottom: 50em;
+  } to {
+    padding-bottom: 5em;
+  }
+}
+
+.hero-main {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding-bottom: 50em;
+  @include animate('slidePaddingUp', 2s, 0s, 'ease-out');
+
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-text-container {
+    font-size: 0.9em;
+  }
+
+  .hero-title.highlight-primary {
+    padding: 0 3px;
+    @include animate('fadeIn', 0.4s, 0.2s);
+  }
+
+  .hero-text {
+    margin-top: 0.2em;
+    @include animate('fadeIn', 0.8s, 0.7s);
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    @include animate('fadeInAndSlideUp', 1s, 1s, linear);
+  }
+
+  @include respond-to(380px) {
+    .hero-text-container {
+      font-size: 1em;
+    }
+  }
+
+  @include respond-to(637px) {
+    text-align: auto;
+
+    .hero-container {
+      flex-direction: row;
+    }
+
+    .avatar {
+      margin-left: 5em;
+    }
+
+    .hero-text {
+      margin-top: 0.1em;
+    }
   }
 }

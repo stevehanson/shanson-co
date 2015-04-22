@@ -1,25 +1,89 @@
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  } to {
+    opacity:1;
+  }
+}
 
 .fade-in {
-  &.out-of-view {
-    transition: none;
-    opacity: 0;
+  opacity:0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.fade-in-first {
+  @extend .fade-in;
+}
+
+.fade-in-second {
+  @extend .fade-in;
+  animation-delay: 0.9s;
+}
+
+.fade-in-third {
+  @extend .fade-in;
+  animation-delay: 1.3s;
+}
+
+.animation-slow {
+  animation-duration: 1s !important;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity:1;
+  } to {
+    opacity:0;
   }
-  &.in-view {
-    transition: opacity 0.5s;
+}
+
+.fade-out {
+  opacity:0;
+  animation: fadeOut ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-delay: 0.25s;
+}
+
+.fade-out-first {
+  @extend .fade-out;
+  animation-delay: 0.5s;
+}
+
+.fade-out-second {
+  @extend .fade-out;
+  animation-delay: 0.9s;
+}
+
+.fade-out-third {
+  @extend .fade-out;
+  animation-delay: 1.3s;
+}
+
+@keyframes slideDownAndFadeIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  } to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
-.fade-in-and-grow {
-  &.out-of-view {
-    transition: none;
-    transform: scale3d(0.98, 0.98, 0.98);
-    opacity: 0;
-  }
-  &.in-view {
-    transition: opacity 0.5s, transform 0.5s;
-    transition-delay: 100ms;
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
+.slide-down {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideDownAndFadeIn linear 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
 }
+
+.slide-down-third {
+  @extend .slide-down;
+  animation-delay: 1.3s;
+}
+
