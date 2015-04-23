@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422075006) do
+ActiveRecord::Schema.define(version: 20150423194914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,8 @@ ActiveRecord::Schema.define(version: 20150422075006) do
     t.boolean  "draft",        default: true,   null: false
     t.integer  "kudos",        default: 0,      null: false
     t.string   "template",     default: "post", null: false
+    t.text     "excerpt"
+    t.string   "hero_image"
   end
 
   create_table "tags", force: :cascade do |t|

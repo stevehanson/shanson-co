@@ -1,5 +1,6 @@
 App.Post = DS.Model.extend({
   title: DS.attr(),
+  excerpt: DS.attr(),
   body: DS.attr(),
   slug: DS.attr(),
   template: DS.attr(),

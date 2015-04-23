@@ -28,7 +28,12 @@
             <%= link_to post.title, show_post_path(post[:slug]) %>
           </h3>
           <div class="post-excerpt-body">
-            <%= truncate(markdown(post.body).html_safe, length: 200, escape: false) %>
+            <% if post.excerpt.present? %>
+              <%= markdown(post.excerpt).html_safe %>
+            <% else %>
+              <%= truncate(markdown(post.body).html_safe, length: 200, escape: false)
+              %>
+            <% end %>
           </div>
           <div class="post-excerpt-metadata">
             <div class="read-time"><%= read_length(post.body) %> min read</div>

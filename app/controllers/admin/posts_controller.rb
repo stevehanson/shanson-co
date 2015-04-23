@@ -38,6 +38,6 @@ class Admin::PostsController < AdminController
   protected
 
   def post_params
-    params.require(:post).permit(:title, :slug, :body, :draft, :template, :published_at)
+    params.require(:post).permit(:title, :slug, :excerpt, :body, :draft, :template, :published_at)
   end
 end
