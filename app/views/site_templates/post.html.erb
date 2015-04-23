@@ -1,3 +1,7 @@
+<%= content_for :title, @post.title %>
+<%#= content_for(:meta_og_image, @post.hero_image) %>
+<%= content_for :meta_description, strip_tags(markdown(@post.excerpt).html_safe).html_safe %>
+
 <section class="post">
 
   <div class="container container-xs">

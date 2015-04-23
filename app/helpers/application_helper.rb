@@ -13,7 +13,11 @@ module ApplicationHelper
       footnotes: true,
       tables: true
     })
-    @markdown.render(text)
+    if text.present?
+      @markdown.render(text)
+    else
+      ""
+    end
   end
 
   def read_length(content)

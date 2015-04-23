@@ -7,7 +7,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>shanson</title>
+    <%
+      if yield(:title).blank?
+        site_title = "Steve Hanson"
+      else
+        site_title = yield(:title)
+      end
+    %>
+    <title><%=site_title%></title>
+    <meta property="og:title" content="<%=site_title%>"/>
+
+    <%= render "shared/meta" %>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <script src="//use.typekit.net/hfm1pfh.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
