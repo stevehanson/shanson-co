@@ -59,10 +59,27 @@ blockquote {
 }
 
 a {
-  transition: color 100ms linear;
+  color: $link-color;
+  transition: color 50ms linear;
 
   &:hover {
     color: $color-primary;
+    text-decoration: none;
+  }
+
+  &:active, &:focus {
+    color: darken($link-color, 10%);
+  }
+}
+
+.markdown a, .text-link {
+  border-bottom: 1px solid #eee;
+  transition: color 25ms linear, border-bottom-color 50ms linear;
+
+  &:hover {
+    border-bottom-color: $color-primary;
+    color: $color-primary;
+    text-decoration: none;
   }
 }
 

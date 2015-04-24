@@ -3,9 +3,7 @@
 <%= content_for :meta_description, strip_tags(markdown(@post.excerpt).html_safe).html_safe %>
 
 <section class="post">
-
   <div class="container container-xs">
-
     <article class="post">
       <h3 class="post-title"><%=@post.title%></h3>
       <div class="post-metadata">
@@ -14,9 +12,7 @@
       </div>
       <div class="post-body"><%= markdown(@post.body).html_safe %></div>
     </article>
-
   </div>
-
 </section>
 
 <div class="kudo-container" data-key="<%=@post.id%>">

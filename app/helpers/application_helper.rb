@@ -14,7 +14,7 @@ module ApplicationHelper
       tables: true
     })
     if text.present?
-      @markdown.render(text)
+      "<div class=\"markdown\">" + @markdown.render(text) + "</div>"
     else
       ""
     end
