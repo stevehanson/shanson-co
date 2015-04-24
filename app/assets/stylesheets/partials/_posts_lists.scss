@@ -1,7 +1,18 @@
 .posts-list {
   background-color: #fff;
-  padding-top: 2.5em;
   @include animate('fadeIn', 0.7s, 1.8s, 'linear');
+}
+
+.posts-heading {
+  padding: 2em 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1em;
+  font-size: 1em;
+  text-align: center;
+
+  @include respond-to(340px) {
+    font-size: 1.1em;
+  }
 }
 
 .index-page {
