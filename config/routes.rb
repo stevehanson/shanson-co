@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  root 'posts#index'
+  root "posts#index"
+  get "/feed" => "posts#feed", :as => :feed, :defaults => { :format => 'atom' }
 
   scope :admin, as: "admin" do
     get  "login"  => "admin#show_login"
