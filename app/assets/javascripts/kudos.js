@@ -14,7 +14,7 @@
 
   Kudo.prototype.bindEvents = function() {
     var self = this;
-    this.element.find('.kudo-heart').on('mouseup touchend', function() {
+    this.element.find('.kudo-heart').on('mouseup', function() {
       if(self.isKudoed) {
         self.removeKudo();
       } else {
