@@ -13,6 +13,10 @@
   @include respond-to(340px) {
     font-size: 1.1em;
   }
+
+  @include respond-to(small) {
+    text-align: left;
+  }
 }
 
 .index-page {
