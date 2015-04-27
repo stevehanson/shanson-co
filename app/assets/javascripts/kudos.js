@@ -14,12 +14,17 @@
 
   Kudo.prototype.bindEvents = function() {
     var self = this;
-    this.element.on('mouseup touchend', function() {
+    this.element.find('.kudo-heart').on('mouseup touchend', function() {
       if(self.isKudoed) {
         self.removeKudo();
       } else {
         self.addKudo();
       }
+    });
+
+    this.element.find('.cancel-kudo-form').click(function(e) {
+      self.defaultKudoState();
+      e.preventDefault();
     });
   };
 
@@ -30,10 +35,11 @@
 
     var self = this;
     $.post('/api/kudos/' + this.key).success(function(data) {
-      self.element.find('.kudo-count').text(data.count);
+      self.displayKudoThanks(data.count);
     });
     this.isKudoed = true;
     this.element.addClass('kudoed');
+    this.track('add');
   };
 
   Kudo.prototype.removeKudo = function() {
@@ -44,13 +50,48 @@
     var self = this;
     $.ajax({
       url: '/api/kudos/' + this.key,
-      type: 'DELETE',
+      type: 'DELETE'
     }).success(function(data) {
       self.element.find('.kudo-count').text(data.count);
     });
 
     this.isKudoed = false;
     this.element.removeClass('kudoed');
+    this.track('remove');
+  };
+
+  Kudo.prototype.displayKudoThanks = function(kudoCount) {
+    this.element.find('.kudo-count-message').css('display', 'none'); // hide count
+    this.element.find('.kudo-count').text(kudoCount);                // update hidden count
+
+    //var name = getStorage('userName');
+    //if(false) { // if we decide to prompt for name, change this to if(!name)
+    //  this.element.find('.kudo-heart').css('display', 'none');         // hide heart
+    //  this.element.find('.kudo-thanks').css('display', 'block');        // display thanks
+    //  this.element.find('.kudo-thanks-form').css('display', 'block');  // display form
+    //}
+    // else {
+    var self = this;
+    this.element.find('.kudo-thanks').css('display', 'block');        // display thanks
+    setTimeout(function() {                                          // already have name
+      self.element.find('.kudo-thanks').fadeOut(100, function() {    // fade count back in
+        self.element.find('.kudo-heart').fadeIn(100);
+        self.element.find('.kudo-count-message').fadeIn(100);
+      });
+    }, 1500);
+    // }
+  };
+
+  Kudo.prototype.defaultKudoState = function() {
+    this.element.find('.kudo-thanks').css('display', 'none');
+    this.element.find('.kudo-thanks-form').css('display', 'none');
+
+    this.element.find('.kudo-heart').css('display', 'block');
+    this.element.find('.kudo-count-message').css('display', 'block');
+  };
+
+  Kudo.prototype.track = function(action) {
+    ga('send', 'event', 'kudo', action, $('.post-title').text())
   };
 
   function getKudos() {

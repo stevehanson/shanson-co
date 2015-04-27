@@ -29,7 +29,44 @@
     }
   }
 
+  .kudo-thanks {
+    display: none;
+    margin-left: 1em;
+    min-height: 50px;
 
+    .kudo-thanks-heading {
+      font-size: 1.1em;
+      font-weight: 600;
+      line-height: 50px;
+    }
+
+    p {
+      margin-bottom: 1em;
+      margin-top: 0.1em;
+    }
+
+    input[type="text"] {
+      border: none;
+      border-bottom: 2px solid #f0f0f0;
+      font-family: $font-sans;
+      font-size: 1.1em;
+      margin-bottom: 1.2em;
+      margin-top: 0;
+      outline: none;
+      width: 100%;
+    }
+
+    .kudo-thanks-form {
+      display: none;
+    }
+
+    .kudo-thanks-buttons {
+
+      .cancel-kudo-form {
+        margin-left: 0.5em;
+      }
+    }
+  }
 
   .kudo-count-message {
     margin-left: 1em;
