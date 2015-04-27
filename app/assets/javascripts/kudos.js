@@ -52,7 +52,7 @@
       url: '/api/kudos/' + this.key,
       type: 'DELETE'
     }).success(function(data) {
-      self.element.find('.kudo-count').text(data.count);
+      self.updateKudoCount(data.count);
     });
 
     this.isKudoed = false;
@@ -62,7 +62,7 @@
 
   Kudo.prototype.displayKudoThanks = function(kudoCount) {
     this.element.find('.kudo-count-message').css('display', 'none'); // hide count
-    this.element.find('.kudo-count').text(kudoCount);                // update hidden count
+    this.updateKudoCount(kudoCount);
 
     //var name = getStorage('userName');
     //if(false) { // if we decide to prompt for name, change this to if(!name)
@@ -80,6 +80,15 @@
       });
     }, 1500);
     // }
+  };
+
+  Kudo.prototype.updateKudoCount = function(count) {
+    this.element.find('.kudo-count').text(count);
+    if(count == 1) {
+      this.element.find('.kudo-word').text('kudo');
+    } else {
+      this.element.find('.kudo-word').text('kudos');
+    }
   };
 
   Kudo.prototype.defaultKudoState = function() {
