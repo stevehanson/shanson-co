@@ -12,7 +12,7 @@ class Admin::PostsController < AdminController
     @post = Post.new(post_params)
 
     if @post.save
-      render json: @post, status: :created
+      render json: { post: @post }, status: :created
     else
       head :unprocessable_entity
     end
@@ -22,7 +22,7 @@ class Admin::PostsController < AdminController
     @post = Post.find(params[:id])
 
     if @post.update_attributes(post_params)
-      render json: @post
+      render json: { post: @post }
     end
   end
 
