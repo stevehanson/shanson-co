@@ -1,0 +1,47 @@
+.markdown {
+  img {
+    display: block;
+    border: 2px solid #eee;
+    border-radius: 3px;
+    padding: 3px;
+    margin: 1.5em auto;
+    max-width: 100%;
+
+    &.no-border {
+      border: none;
+    }
+
+    &.small {
+      width: 400px;
+    }
+
+    &.medium {
+      width: 500px;
+    }
+
+    &.large { // breaks out of contianer a little bit on 992px+
+      @include respond-to(medium) {
+        max-width: 130%;
+        width: 130%;
+        margin-left: -15%;
+        max-width: 200%;
+      }
+    }
+
+    &.full-width {
+      @include respond-to(medium) {
+        // tbd
+      }
+    }
+
+    &.left {
+      float: left;
+      margin: 0 1.5em 1.5em 0;
+    }
+
+    &.right {
+      float: right;
+      margin: 0 0 1.5em 1.5em;
+    }
+  }
+}
