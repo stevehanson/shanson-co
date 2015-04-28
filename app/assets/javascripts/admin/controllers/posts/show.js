@@ -46,11 +46,13 @@ App.PostsShowController = Ember.Controller.extend({
     },
 
     delete: function() {
-      this.get('model').destroyRecord().then(function() {
-        var postsLength = this.get('posts.length');
-        this.set('model',
-          this.get('posts').objectAt(postsLength - 1));
-      }.bind(this));
+      if(confirm("Are you sure you want to delete this post? You can't go back.")) {
+        this.get('model').destroyRecord().then(function() {
+          var postsLength = this.get('posts.length');
+          this.set('model',
+            this.get('posts').objectAt(postsLength - 1));
+        }.bind(this));
+      }
     }
   }
 });

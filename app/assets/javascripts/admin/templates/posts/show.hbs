@@ -10,7 +10,9 @@
       {{#if showPreview}}
         <div class="markdown-preview">
           <h3 class="post-title">{{model.title}}</h3>
-          {{ markdown model.body }}
+          <div class="markdown">
+            {{ markdown model.body }}
+          </div>
         </div>
       {{else}}
         {{input placeholder="title" value=model.title class="editor-title"}}
