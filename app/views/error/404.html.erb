@@ -7,3 +7,7 @@
     <a href="/" class="btn btn-default four-oh-four-button">Take me home</a>
   </div>
 </section>
+
+<script>
+  ga('send', 'event', '404', '<%=request.fullpath%>');
+</script>
