@@ -14,7 +14,12 @@
       <div class="admin-posts-list">
         {{#each post in model}}
           {{#link-to "posts.show" post.id class="admin-posts-list-item"}}
-            <h4>{{post.title}}</h4>
+            <h4>
+              {{post.title}}
+              {{#if post.draft}}
+                <span class="muted">Draft</span>
+              {{/if}}
+            </h4>
             <p>{{truncate post.body 65}}</p>
           {{/link-to}}
         {{/each}}

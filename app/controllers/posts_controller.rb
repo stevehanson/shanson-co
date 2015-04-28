@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.published.find_by(slug: params[:id])
+    @post = Post.find_by(slug: params[:id])
     not_found and return if @post.nil?
 
     template = @post.template || 'post'

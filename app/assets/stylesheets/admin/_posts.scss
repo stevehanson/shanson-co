@@ -14,3 +14,15 @@
     visibility: hidden;
   }
 }
+
+.admin-posts-list {
+  h4 {
+    .muted {
+      font-size: 0.7em;
+      color: #888;
+      font-weight: 600;
+      margin-left: 0.5em;
+      text-transform: uppercase;
+    }
+  }
+}
