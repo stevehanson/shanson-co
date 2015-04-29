@@ -4,7 +4,7 @@
     border: 2px solid #eee;
     border-radius: 3px;
     padding: 3px;
-    margin: 1.5em auto;
+    margin: 1.75em auto;
     max-width: 100%;
 
     &.no-border {
@@ -42,6 +42,17 @@
     &.right {
       float: right;
       margin: 0 0 1.5em 1.5em;
+    }
+  }
+
+  /* to have an image with a caption, nest the image and figcaption in <figure> */
+  figure {
+    figcaption {
+      font-size: 0.9em;
+      font-style: italic;
+      margin-bottom: 2em;
+      margin-top: -1.3em;
+      text-align: center;
     }
   }
 }
