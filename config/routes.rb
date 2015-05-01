@@ -27,6 +27,8 @@ Rails.application.routes.draw do
     delete "/kudos/:id" => "kudos#destroy"
   end
 
+  get "/hello-asciidoc-goodbye-word" => redirect("http://codetutr.com/2013/12/08/hello-asciidoc-goodbye-word/")
+
   get ":id" => "posts#show", as: :show_post
 
 end
