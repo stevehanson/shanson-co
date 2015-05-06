@@ -4,7 +4,6 @@ App.PostsController = Ember.Controller.extend({
     var self = this;
     var posts = this.get('model');
     var groupedPosts = [];
-    //debugger;
     posts.sortBy('publishedAt').forEach(function(post) {
       self.addPostToGroupingArray(post, self.getSeparator(post), groupedPosts);
     });

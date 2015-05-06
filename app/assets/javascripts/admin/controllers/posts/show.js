@@ -6,7 +6,7 @@ App.PostsShowController = Ember.Controller.extend({
 
   _init: function() {
     var self = this;
-    $(document).on('blur', '#title', function() {
+    $(document).on('blur', '#title, .editor-title', function() {
       if(Ember.isEmpty(self.get('model.slug'))) {
         self.set('model.slug', self.sluggify(self.get('model.title')));
       }
@@ -16,21 +16,26 @@ App.PostsShowController = Ember.Controller.extend({
   save: function() {
     var self = this;
     this.get('model').save().then(function() {
-      self.set('showSaveSuccess', true);
-      Ember.run.later(self, function() {
-        self.set('showSaveSuccess', false);
-      }, 3000);
+      self.showSuccess();
     }, function() {
-      self.set('showSaveError', true);
-      Ember.run.later(self, function() {
-        self.set('showSaveError', false);
-      }, 10000);
+      self.showError();
     }).catch(function() {
-      self.set('showSaveError', true);
-      Ember.run.later(self, function() {
-        self.set('showSaveError', false);
-      }, 10000);
+      self.showError();
     });
+  },
+
+  showError: function() {
+    this.set('showSaveError', true);
+    Ember.run.later(this, function() {
+      this.set('showSaveError', false);
+    }, 10000);
+  },
+
+  showSuccess: function() {
+    this.set('showSaveSuccess', true);
+    Ember.run.later(this, function() {
+      this.set('showSaveSuccess', false);
+    }, 3000);
   },
 
   sluggify: function(str) {
