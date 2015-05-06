@@ -5,7 +5,11 @@ App.Post = DS.Model.extend({
   slug: DS.attr(),
   template: DS.attr(),
   publishedAt: DS.attr(),
-  draft: DS.attr('boolean')
+  draft: DS.attr('boolean'),
+
+  publishedAtDate: function() {
+    return new Date(this.get('publishedAt'));
+  }.property('publishedAt')
 });
 
 App.PostSerializer = DS.ActiveModelSerializer.extend({
