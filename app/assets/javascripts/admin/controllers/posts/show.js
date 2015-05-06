@@ -13,6 +13,26 @@ App.PostsShowController = Ember.Controller.extend({
     });
   }.on('init'),
 
+  save: function() {
+    var self = this;
+    this.get('model').save().then(function() {
+      self.set('showSaveSuccess', true);
+      Ember.run.later(self, function() {
+        self.set('showSaveSuccess', false);
+      }, 3000);
+    }, function() {
+      self.set('showSaveError', true);
+      Ember.run.later(self, function() {
+        self.set('showSaveError', false);
+      }, 10000);
+    }).catch(function() {
+      self.set('showSaveError', true);
+      Ember.run.later(self, function() {
+        self.set('showSaveError', false);
+      }, 10000);
+    });
+  },
+
   sluggify: function(str) {
     return str.replace(/[^a-zA-Z0-9\-\_ ]/g, '').replace(/[ _]/g, '-').toLowerCase();
   },
@@ -27,13 +47,13 @@ App.PostsShowController = Ember.Controller.extend({
     },
 
     save: function() {
-      this.get('model').save();
+      this.save();
     },
 
     publish: function() {
       if(confirm('Alright! Are you sure you\'re ready?')) {
         this.set('model.draft', false);
-        this.get('model').save();
+        this.save();
       }
     },
 
@@ -41,7 +61,7 @@ App.PostsShowController = Ember.Controller.extend({
       var msg = 'Are you sure? This will remove the post from the blog. Any sites that currently link here will break.';
       if(confirm(msg)) {
         this.set('model.draft', true);
-        this.get('model').save();
+        this.save();
       }
     },
 

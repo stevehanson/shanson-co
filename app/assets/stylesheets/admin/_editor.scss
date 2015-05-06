@@ -6,11 +6,12 @@
   width: 4em;
   padding-top: 3em;
   padding-left: 2em;
-  color: #aaa;
+  color: #888;
   z-index: 10;
 
-  [class^="icon"] {
-    margin-bottom: 1.75em;
+  [class^="pe-7s"] {
+    font-size: 1.3em;
+    margin-bottom: 1em;
     cursor: pointer;
     transition: color 0.3s;
 
@@ -64,5 +65,37 @@
 
   .btn-default {
     margin-left: 1em;
+  }
+}
+
+.post-save-success {
+  color: #080;
+  display: none;
+  opacity: 0;
+  font-size: 1.8em;
+  margin-bottom: 0.15em;
+  margin-left: 0.75em;
+  vertical-align: middle;
+  transition: all 0.5s;
+
+  &.active {
+    opacity: 1;
+    display: inline-block;
+  }
+}
+
+.post-save-error {
+  color: #800;
+  display: none;
+  opacity: 0;
+  font-size: 1.1em;
+  margin-bottom: 0.15em;
+  margin-left: 0.75em;
+  vertical-align: middle;
+  transition: all 0.5s;
+
+  &.active {
+    opacity: 1;
+    display: inline-block;
   }
 }

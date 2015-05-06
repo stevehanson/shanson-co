@@ -1,9 +1,9 @@
 <div class="admin-right-column admin-editor">
   <div class="editor-content-wrapper">
     <div class="editor-left">
-      <div class="icon-heart" {{action "togglePreview"}}></div>
-      <div class="icon-tag" {{action "toggleOptions"}}></div>
-      <div class="icon-close" {{action "delete"}}></div>
+      <div class="pe-7s-look" {{action "togglePreview"}} title="Preview Markdown"></div>
+      <div class="pe-7s-edit" {{action "toggleOptions"}} title="Edit Post Settings"></div>
+      <div class="pe-7s-trash" {{action "delete"}} title="Delete Post"></div>
     </div>
 
     <div class="editor-content">
@@ -30,6 +30,8 @@
       <div class="btn-secondary btn-small" {{action "unpublish"}}>Unpublish Post</div>
       <div class="btn-default btn-small" {{action "save"}}>Save</div>
     {{/if}}
+    <div class="post-save-success pe-7s-check {{if showSaveSuccess "active"}}"></div>
+    <div class="post-save-error pe-7s-close {{if showSaveError "active"}}">Whoops, an error occurred</div>
   </div>
 
   <div class="post-options {{if notOptions 'inactive'}}">
@@ -66,7 +68,7 @@
     </div>
 
     <div class="form-group">
-      <div class="btn btn-small btn-default" {{action "toggleOptions"}}>Done (You can always finish later)</div>
+      <div class="btn btn-small btn-default" {{action "toggleOptions"}}>Done</div>
     </div>
   </div>
 
