@@ -10,12 +10,4 @@ class Api::KudosController < ApplicationController
     post.decrement!(:kudos)
     render json: { status: 200, message: "Sucess", count: post.kudos }, status: 200
   end
-
-  def show
-    @post = Post.published.find_by(slug: params[:id])
-    not_found and return if @post.nil?
-
-    template = @post.template || 'post'
-    render "site_templates/#{template}"
-  end
 end
