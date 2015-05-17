@@ -14,7 +14,7 @@ App.PostsController = Ember.Controller.extend({
   addPostToGroupingArray: function(post, separator, groupedPosts) {
     for(var i=0; i<groupedPosts.length; i++) {
       if(groupedPosts[i] && groupedPosts[i].name === separator) {
-        groupedPosts[i].posts.push(post);
+        groupedPosts[i].posts.unshift(post);
         return;
       }
     }
