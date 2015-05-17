@@ -6,10 +6,10 @@
   width: 4em;
   padding-top: 3em;
   padding-left: 2em;
-  color: #888;
   z-index: 10;
 
   [class^="pe-7s"] {
+    color: #888;
     font-size: 1.3em;
     margin-bottom: 1em;
     cursor: pointer;
@@ -17,6 +17,11 @@
 
     &:hover {
       color: $text-color;
+      text-decoration: none;
+    }
+
+    &:focus {
+      text-decoration: none;
     }
   }
 }
