@@ -1,0 +1,13 @@
+addons:
+  postgresql: "9.4"
+language: ruby
+rvm: 2.2.3
+cache: bundler
+before_script:
+  - psql -c "create database shanson_test;" -U postgres
+  - bundle exec rake db:migrate
+  - mkdir -p tmp/cache
+script: xvfb-run -a bundle exec rspec
+sudo: false
+env:
+  - HOST: "http://localhost:3000"
