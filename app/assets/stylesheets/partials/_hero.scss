@@ -45,7 +45,7 @@
     height: 200px;
     border-radius: 100px;
     margin-top: 1.5em;
-    @include animate('fadeInAndSlideUp', 0.6s, 0.9s, linear);
+    @include animate('fadeInAndSlideUp', 0.5s, 0.4s, linear);
   }
 
   @include respond-to(380px) {
