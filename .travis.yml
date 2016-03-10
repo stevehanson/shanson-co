@@ -1,7 +1,7 @@
 addons:
   postgresql: "9.4"
 language: ruby
-rvm: 2.2.3
+rvm: 2.3.0
 cache: bundler
 before_script:
   - psql -c "create database shanson_test;" -U postgres
