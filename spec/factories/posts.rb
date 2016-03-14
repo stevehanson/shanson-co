@@ -1,10 +1,10 @@
 FactoryGirl.define do
   factory :post do
-    title "My Post"
-    slug "my-post"
-    body "This is the body"
+    sequence(:title) { |n| "My Post #{n}" }
+    sequence(:slug) { |n| "my-post-#{n}" }
+    sequence(:body) { |n| "This is the body #{n}" }
 
-    factory :published_post do
+    trait :published do
       published true
     end
   end

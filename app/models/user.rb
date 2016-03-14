@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   private
 
   def self.super_admin_emails
-    ["s.hanson5@gmail.com"] + admin_super_env_emails
+    ["s.hanson5@gmail.com", "steve@shanson.co"] + admin_super_env_emails
   end
 
   def self.admin_emails

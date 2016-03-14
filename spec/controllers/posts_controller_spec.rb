@@ -9,7 +9,7 @@ describe PostsController do
     end
 
     it "includes published posts" do
-      create(:published_post)
+      create(:post, :published)
       get :index
       expect(assigns(:posts).count).to be 1
     end
@@ -17,7 +17,7 @@ describe PostsController do
 
   describe "#show" do
     it "retrieves by slug" do
-      post = create(:published_post)
+      post = create(:post, :published)
       get :show, id: post.slug
       expect(assigns(:post).title).to eq post.title
     end

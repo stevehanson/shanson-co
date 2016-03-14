@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
-  validates_presence_of :body
-  validates_presence_of :slug
-  validates_presence_of :title
+  validates :body, presence: true
+  validates :slug, presence: true
+  validates :title, presence: true
 
   scope :not_pages, -> { where(template: 'post') }
   scope :draft,     -> { where(draft: true) }
