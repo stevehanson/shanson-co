@@ -25,11 +25,27 @@ gem "dotenv", "~> 1.0.2"
 gem "thin"
 
 group :development, :test do
-  gem "factory_girl_rails"
+  gem 'better_errors'
+  gem 'dotenv-rails'
   gem "pry-rails"
-  gem 'rspec-rails', '~> 3.0'
-  gem 'web-console', '~> 2.0.0.beta4'
-  gem 'spring'
+  gem 'pry-nav'
+  gem 'spring-commands-rspec' # use spring to load tests quickly
+end
+
+group :test do
+  gem 'capybara', '~> 2.5.0'
+  gem 'capybara-webkit', '~> 1.7.1'
+  gem 'capybara-email'
+  gem 'capybara-screenshot'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem "faker"
+  gem "launchy"
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'simplecov', require: false
+  gem 'timecop', require: false
+  gem 'webmock', require: false
 end
 
 group :production do
