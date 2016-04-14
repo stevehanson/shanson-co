@@ -39,6 +39,8 @@
 
     &:before {
       content: 'b';
+      display: inline-block;
+      min-width: 18px;
       text-transform: none;
       font-family: "budicons" !important;
       vertical-align: text-bottom;
