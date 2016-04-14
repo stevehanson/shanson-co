@@ -1,8 +1,0 @@
-<% meta_description = yield(:meta_description).presence || "I'm Steve Hanson, a Dallas-based web developer and human. I write about life, tech and random nonsense." %>
-<% meta_og_image = yield(:meta_og_image) || "" %>
-<meta content="<%= request.original_url %>" property="og:url"/>
-<meta content="<%= meta_description %>" name="description"/>
-<meta content="website" property="og:type"/>
-<meta content="Steve Hanson" property="og:site_name"/>
-<meta content="<%= meta_og_image %>" property="og:image"/>
-<meta content="<%= meta_description %>" property="og:description"/>

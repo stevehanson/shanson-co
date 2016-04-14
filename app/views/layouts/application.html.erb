@@ -8,21 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="s_ncMYSeS7kFo375Qf34znxAx0k19qG2wGADUUe7MFA" />
 
-    <%
-      if yield(:title).blank?
-        site_title = "Steve Hanson"
-      else
-        site_title = yield(:title)
-      end
-    %>
-    <title><%=site_title%></title>
-    <meta property="og:title" content="<%=site_title%>"/>
+    <%= render "partials/meta" %>
+    <%= render "partials/favicons" %>
+
     <link href="/feed" type="application/atom+xml" rel="alternate" title="Steve Hanson">
-
-    <%= render "shared/meta" %>
-    <%= render "shared/favicons" %>
-
-
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag "modernizr.min" %>
 
@@ -31,32 +20,8 @@
   </head>
 
   <body>
-    <%= render "shared/analytics" %>
-
-    <nav id="nav" class="nav">
-      <div class="container">
-
-        <%= link_to "Steve Hanson", root_path, class: 'nav-title'  %>
-
-        <div class="nav-mobile-menu-toggle">
-          <div class="icon-menu"></div>
-          <div class="icon-close"></div>
-        </div>
-
-        <ul class="nav-links">
-          <li class="nav-link"><a href="/">Posts</a></li>
-          <li class="nav-link"><a href="/about">About</a></li>
-          <li class="nav-link login-nav-link">
-            <a href="http://twitter.com/stephenhanson" class="link-primary">Follow me</a>
-          </li>
-        </ul>
-
-        <!--[if lt-IE10]>
-          <div class="clearfix"></div>
-          <p class="browsehappy">Oh shoot. I don't support your version of Internet Explorer. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-      </div>
-    </nav>
+    <%= render "partials/analytics" %>
+    <%= render "partials/nav" %>
 
     <div class="body-content-wrapper">
 
