@@ -3,7 +3,6 @@
 //
 //= require nav
 //= require external-links-in-new-tabs
-//= require local-storage
 //= require kudos
 //= require easter-eggs
 //= require_self

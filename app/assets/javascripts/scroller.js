@@ -60,20 +60,6 @@ var Scroller = (function ($, window, document, undefined) {
   Plugin.prototype.init = function () {
     var t = this;
 
-    /* //non-jQuery
-    if (window.addEventListener) {
-      addEventListener('DOMContentLoaded', handler, false);
-      addEventListener('load', handler, false);
-      addEventListener('scroll', handler, false);
-      addEventListener('resize', handler, false);
-    } else if (window.attachEvent)  {
-      attachEvent('onDOMContentLoaded', handler); // IE9+ :(
-      attachEvent('onload', handler);
-      attachEvent('onscroll', handler);
-      attachEvent('onresize', handler);
-    }
-    */
-
     $(window).on('load resize scroll', function() {
       if (t.inView === false && isElementInViewport(t.e, t.options.offset) ) {
         t.inView = true;

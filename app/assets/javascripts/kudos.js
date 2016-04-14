@@ -100,7 +100,7 @@
   };
 
   Kudo.prototype.track = function(action) {
-    ga('send', 'event', 'kudo', action, $('.post-title').text())
+    ga('send', 'event', 'kudo', action, $('.post-title').text());
   };
 
   function getKudos() {
@@ -128,7 +128,7 @@
     $('.kudo-container').kudo();
   });
 
-  return $.fn.kudo = function() {
+  $.fn.kudo = function() {
     return this.each(function() {
       return new Kudo($(this));
     });

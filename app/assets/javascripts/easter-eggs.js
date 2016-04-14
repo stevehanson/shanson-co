@@ -1,5 +1,4 @@
-var MyModule = (function(window, $) {
-
+(function(window, $) {
   var clicks = 0;
   var lastAvatarClick = Date.now();
 
