@@ -18,6 +18,8 @@ page '/*.txt', layout: false
 
 # General configuration
 
+activate :autoprefixer
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
@@ -28,11 +30,19 @@ end
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def human_date(dt)
+    "12/12/2012"
+  end
+
+  def read_length(txt)
+    "2 minutes"
+  end
+
+  def markdown(txt)
+    "markdown"
+  end
+end
 
 # Build-specific configuration
 configure :build do

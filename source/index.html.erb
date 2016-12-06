@@ -1,13 +1,50 @@
 ---
-title: Welcome to Middleman
+title: Steve Hanson
 ---
 
-<div class="welcome">
-  <div class="logo">
-    <%= image_tag "middleman-logo.svg" %>
-  </div>
-  <h1>Middleman is Running</h1>
-  <p class="doc">
-    <%= link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<div class="index-page">
+  <header class="hero hero-main">
+    <div class="hero-container container container-xs">
+      <div class="hero-text-container">
+        <h2 class="hero-title highlight-primary">Hello, i’m <span class="shanson">shanson</span></h2>
+
+        <div class="hero-text">
+          <p>I’m glad you’re here, friend.</p>
+          <!--p>I’m a thinker, writer, tinkerer, husband, human, developer, friend.</p-->
+        </div>
+      </div>
+
+      <%= image_tag("steve-profile.jpg", class: "avatar", alt: "") %>
+    </div>
+  </header>
+
+  <section class="posts-list">
+    <div class="posts-heading">
+      <div class="container container-xs">
+        Welcome to my blog! Check out my thoughts below, or <%=link_to "get to know me", "about", class: "text-link" %>.
+      </div>
+    </div>
+
+    <div class="container container-xs">
+      <% (@posts || []).each do |post| %>
+        <article class="post-excerpt">
+          <h3 class="post-excerpt-title">
+            <%= link_to post.title, show_post_path(post[:slug]) %>
+          </h3>
+          <div class="post-excerpt-body">
+            <% if post.excerpt.present? %>
+              <%= markdown(post.excerpt).html_safe %>
+            <% else %>
+              <%= truncate(markdown(post.body).html_safe, length: 200, escape: false)
+              %>
+            <% end %>
+          </div>
+          <div class="post-excerpt-metadata">
+            <div class="read-time"><%= read_length(post.body) %> min read</div>
+            <div class="date"><%= human_date(post.published_at) %></div>
+          </div>
+        </article>
+      <% end %>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,31 @@
+.text-container {
+  max-width: 50em;
+}
+
+.text-container-narrow {
+  max-width: 40em;
+}
+
+.archive {
+  opacity: 0.4;
+}
+
+.page-body {
+  margin-top: 4em;
+  margin-bottom: 7em;
+}
+
+$footer-height: 91px;
+.body-content-wrapper {
+  min-height: 100%;
+  padding: 0 0 $footer-height;
+  position: relative;
+
+  footer {
+    bottom: 0;
+    height: $footer-height;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}

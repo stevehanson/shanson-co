@@ -1,0 +1,111 @@
+
+h1, h2, h3, h4 {
+  font-family: $font-heading;
+}
+
+h1 {
+  font-size: 3.285em;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.55em;
+  line-height: 1.3;
+  margin-top: 1em;
+  margin-bottom: 0.667em;
+}
+
+h4 {
+  font-size: 1.3em;
+  margin-top: 1em;
+  margin-bottom: 0.65em;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0;
+  margin-bottom: 1.15em;
+}
+
+.p {
+  font-size: 1.5625em;
+}
+
+blockquote {
+  padding-left: 1em;
+  margin-left: 0;
+  border-left: 4px solid $text-color;
+  line-height: 1.7;
+}
+
+.p-small {
+  @extend .p;
+  font-size: 1.286em;
+  margin-top: 1em;
+}
+
+.highlight {
+  background-color: #f3f3f3;
+}
+
+.highlight-primary {
+  background-color: $color-primary;
+  color: #fff;
+}
+
+a {
+  color: $link-color;
+  transition: color 50ms linear;
+
+  &:hover {
+    color: $color-primary;
+    text-decoration: none;
+  }
+
+  &:active, &:focus {
+    color: darken($link-color, 10%);
+  }
+}
+
+.markdown a, .text-link {
+  border-bottom: 1px solid #eee;
+  transition: color 25ms linear, border-bottom-color 50ms linear;
+
+  &:hover {
+    border-bottom-color: $color-primary;
+    color: $color-primary;
+    text-decoration: none;
+  }
+}
+
+.link-primary {
+  color: $color-primary;
+}
+
+.link-secondary {
+  color: $color-secondary;
+}
+
+.announcement-text {
+  font-size: 2.5em;
+  font-weight: 300;
+  text-align: center;
+  max-width: 930px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include respond-to(medium) {
+    font-size: 3em;
+  }
+
+  @include respond-to(large) {
+    font-size: 3em;
+  }
+
+}

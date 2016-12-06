@@ -1,0 +1,78 @@
+.kudo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.kudoed {
+    .kudo-heart-path {
+      fill: $text-color;
+    }
+  }
+
+  .kudo-heart {
+    cursor: pointer;
+    font-size: 2.5em;
+    line-height: 1;
+    max-width: 50px;
+    max-height: 50px;
+    text-align: center;
+  }
+
+  .kudo-heart-path {
+    fill: #fff;
+    stroke-width: 20px;
+    stroke: $text-color;
+    transition: stroke-width 150ms;
+
+    &:hover {
+      stroke-width: 30px;
+    }
+  }
+
+  .kudo-thanks {
+    display: none;
+    margin-left: 1em;
+    min-height: 50px;
+
+    .kudo-thanks-heading {
+      font-size: 1.1em;
+      font-weight: 600;
+      line-height: 50px;
+    }
+
+    p {
+      margin-bottom: 1em;
+      margin-top: 0.1em;
+    }
+
+    input[type="text"] {
+      border: none;
+      border-bottom: 2px solid #f0f0f0;
+      font-family: $font-sans;
+      font-size: 1.1em;
+      margin-bottom: 1.2em;
+      margin-top: 0;
+      outline: none;
+      width: 100%;
+    }
+
+    .kudo-thanks-form {
+      display: none;
+    }
+
+    .kudo-thanks-buttons {
+
+      .cancel-kudo-form {
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  .kudo-count-message {
+    margin-left: 1em;
+  }
+
+  .kudo-count {
+    font-weight: 600;
+  }
+}

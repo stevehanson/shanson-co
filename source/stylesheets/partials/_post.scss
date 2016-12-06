@@ -1,0 +1,55 @@
+.post {
+  .post-title {
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+  }
+
+  .post-header-photo {
+    width: 100%;
+  }
+
+  .post-body {
+    font-size: 1.2em;
+    font-family: $font-primary;
+    margin-top: 2em;
+    margin-bottom: 5em;
+  }
+
+  .post-metadata {
+    font-size: 0.9em;
+
+    .read-time {
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 1em;
+      color: #555;
+
+      &:before {
+        content: 'b';
+        display: inline-block;
+        min-width: 14px;
+        text-transform: none;
+        font-family: "budicons" !important;
+        vertical-align: text-bottom;
+        margin-right: 0.3em;
+      }
+
+      &:hover:before {
+        content: 'd';
+      }
+    }
+
+    .date {
+      display: inline-block;
+      color: #999;
+    }
+  }
+
+}
+
+section.post {
+  margin-top: 4em;
+}

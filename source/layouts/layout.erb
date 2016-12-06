@@ -1,20 +1,60 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<!--[if lte IE 7]><html lang="en" class="ie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="ie ie8 lt-ie9"><![endif]-->
+<!--[if IE 9]><html lang="en" class="ie ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
   <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="s_ncMYSeS7kFo375Qf34znxAx0k19qG2wGADUUe7MFA" />
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <title><%= current_page.data.title || "Steve Hanson" %></title>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <% meta_description = current_page.data.description || "I’m Steve Hanson, an Austin-based web developer and human. I write about life, tech, and random nonsense." %>
+    <meta property="og:title" content="<%= current_page.data.title || 'Steve Hanson' %>"/>
+    <meta content="http://shanson.co" property="og:url"/>
+    <meta content="<%= meta_description %>" name="description"/>
+    <meta content="Steve Hanson, Austin, web developer, Ruby on Rails, freelance, front-end, tech, technology" name="keywords">
+    <meta content="<%= meta_description %>" property="og:description"/>
+    <meta content="website" property="og:type"/>
+    <meta content="Steve Hanson" property="og:site_name"/>
+    <meta content="<%= current_page.data.og_image || '' %>" property="og:image"/>
+
+    <%= partial "partials/favicons" %>
+
+    <link href="/feed" type="application/atom+xml" rel="alternate" title="Steve Hanson">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+    <%= javascript_include_tag "modernizr.min" %>
 
     <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
   </head>
 
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <%= partial "partials/analytics" %>
+    <%= partial "partials/nav" %>
+
+    <div class="body-content-wrapper">
+
+      <p class="notice"></p>
+      <p class="alert"></p>
+
+      <div class="page-body">
+        <%= yield %>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-msg">
+            Made with <i class="icon-heart"></i> by shanson.
+          </div>
+          <div class="footer-social">
+            <a href="https://twitter.com/stephenhanson" target="_blank">@stephenhanson</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <%= javascript_include_tag :all %>
   </body>
 </html>

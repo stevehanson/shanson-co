@@ -1,0 +1,64 @@
+.btn {
+  cursor: pointer;
+  border-radius: 3px;
+  color :#fff;
+  padding: 1em 1.875em;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.25em;
+  text-transform: uppercase;
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+$btn-default-bg: $color-primary;
+
+.btn-default {
+  @extend .btn;
+  background-color: $btn-default-bg;
+  border: 2px solid $btn-default-bg;
+  //background-image: linear-gradient(to bottom, $btn-default-bg 50%, rgba(darken(#1698da,2%), 1) 100%);
+  transition: all 150ms linear;
+
+  &:hover {
+    background: $text-color;
+    border-color: $text-color;
+  }
+
+  &:active {
+    background: #000;
+    border-color: #000;
+  }
+}
+
+$btn-secondary-bg: #fff;
+
+.btn-secondary {
+  @extend .btn;
+  background-color: $btn-secondary-bg;
+  border: 2px solid $text-color;
+  color: $text-color;
+  transition: all 100ms linear;
+
+  &:hover {
+    color: #fff;
+    background: $text-color;
+  }
+
+  &:active {
+    background: #000;
+  }
+}
+
+.btn-small {
+  font-size: 1em;
+  padding: 0.7em 1.875em;
+}
+
+.btn-xs {
+  font-size: 0.95em;
+  padding: 0.15em 1em 0;
+}
