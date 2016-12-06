@@ -4,7 +4,16 @@ This is the repo for my personal blog. It was moved from Rails to Middleman in 2
 
 ## To build
 
+To build for deployment:
+
 ```
-$ bundle exec middleman build
+$ make build
 ```
 
+To build for development:
+
+```
+$ make start
+```
+
+See `Makefile` for other tasks.
