@@ -9,6 +9,9 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
@@ -20,30 +23,17 @@ page '/*.txt', layout: false
 # Helpers
 ###
 
-helpers do
-  def human_date(date)
-    date.strftime("%b %d, %Y")
-  end
-
-  # in minutes
-  def read_length(content)
-    words_per_minute = 200.0
-    num_words = content.split.size
-    (num_words / words_per_minute).ceil
-  end
-end
-
 activate :autoprefixer
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
-  # blog.permalink = "{year}/{month}/{day}/{title}.html"
+  blog.permalink = "{title}"
   # Matcher for blog source files
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-  # blog.layout = "layout"
+  blog.layout = "post"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
@@ -60,18 +50,22 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
-page "/feed.xml", layout: false
-# Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+helpers do
+  def kudos(article)
+    3
+  end
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+  def human_date(date)
+    date.strftime("%b %d, %Y")
+  end
+
+  # in minutes
+  def read_length(content)
+    words_per_minute = 200.0
+    num_words = content.split.size
+    (num_words / words_per_minute).ceil
+  end
+end
 
 # Reload the browser automatically whenever files change
 configure :development do

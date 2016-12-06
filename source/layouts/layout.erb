@@ -9,7 +9,7 @@
     <meta name="google-site-verification" content="s_ncMYSeS7kFo375Qf34znxAx0k19qG2wGADUUe7MFA" />
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Steve Hanson" %></title>
+    <title><%= current_page.data.title.present? ? "#{current_page.data.title} – Steve Hanson" : "Steve Hanson" %></title>
 
     <% meta_description = current_page.data.description || "I’m Steve Hanson, an Austin-based web developer and human. I write about life, tech, and random nonsense." %>
     <meta property="og:title" content="<%= current_page.data.title || 'Steve Hanson' %>"/>
