@@ -10,22 +10,20 @@
   opacity: 0.4;
 }
 
-.page-body {
-  margin-top: 4em;
-  margin-bottom: 7em;
+// ensure footer is at least at bottom of page
+.body-content-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-$footer-height: 91px;
-.body-content-wrapper {
-  min-height: 100%;
-  padding: 0 0 $footer-height;
-  position: relative;
+// flex: 1 ensures content stretches to fill the room it needs
+.page-body {
+  margin-top: 2em;
+  margin-bottom: 7em;
+  flex: 1;
+}
 
-  footer {
-    bottom: 0;
-    height: $footer-height;
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
+footer {
+  width: 100%;
 }

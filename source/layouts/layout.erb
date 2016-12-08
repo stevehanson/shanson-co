@@ -23,7 +23,7 @@
 
     <%= partial "partials/favicons" %>
 
-    <link href="/feed" type="application/atom+xml" rel="alternate" title="Steve Hanson">
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Steve Hanson" %>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag "modernizr.min" %>
 
@@ -32,9 +32,9 @@
 
   <body class="<%= page_classes %>">
     <%= partial "partials/analytics" %>
-    <%= partial "partials/nav" %>
 
     <div class="body-content-wrapper">
+      <%= partial "partials/nav" %>
 
       <p class="notice"></p>
       <p class="alert"></p>

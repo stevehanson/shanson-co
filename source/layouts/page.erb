@@ -2,7 +2,10 @@
   <section class="page">
     <div class="container container-xs">
       <article class="post">
-        <h3 class="post-title"><%= current_page.data.title %></h3>
+        <% unless current_page.data.hide_title %>
+          <h3 class="post-title"><%= current_page.data.title %></h3>
+        <% end %>
+        
         <div class="post-body">
           <%= yield %>
         </div>

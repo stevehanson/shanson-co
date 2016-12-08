@@ -9,10 +9,9 @@
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
   <body>
-
-    <div id="main" role="main">
+    <main id="main" role="main">
       <%= yield %>
-    </div>
+    </main>
 
     <aside>
       <h2>Recent Articles</h2>
