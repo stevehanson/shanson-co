@@ -2,105 +2,96 @@
 
   function Kudo(element) {
     this.element = element;
-    this.key = element.attr('data-key');
+    this.heartElement = element.querySelector('.kudo-heart');
+    this.postId = element.getAttribute('data-post-id');
+
+    this.loadKudos();
     if(!storageSupported()) {
-      this.element.find('.kudo-heart').css('display', 'none');
+      this.heartElement.style.display = 'none';
       return;
     }
-    this.isKudoed = !!getKudos()[this.key];
-    if(this.isKudoed) { this.element.addClass('kudoed'); }
+
+    this.isKudoed = !!getKudos()[this.postId];
+    if(this.isKudoed) { this.element.classList.add('kudoed'); }
     this.bindEvents();
   }
 
   Kudo.prototype.bindEvents = function() {
     var self = this;
-    this.element.find('.kudo-heart').on('mouseup', function() {
+    this.heartElement.addEventListener('mouseup', function() {
       if(self.isKudoed) {
         self.removeKudo();
       } else {
         self.addKudo();
       }
     });
+  };
 
-    this.element.find('.cancel-kudo-form').click(function(e) {
-      self.defaultKudoState();
-      e.preventDefault();
-    });
+  Kudo.prototype.loadKudos = function() {
+    firebase.database().ref('/posts/' + this.postId + '/kudos_count').once('value').then(function(snapshot) {
+      this.kudosCount = parseInt(snapshot.val());
+      this.updateKudoCount(this.kudosCount);
+      _(this.element).fade('in', 100);
+    }.bind(this));
   };
 
   Kudo.prototype.addKudo = function() {
     var kudos = getKudos();
-    kudos[this.key] = true;
+    kudos[this.postId] = true;
     localStorage.setItem('kudos', JSON.stringify(kudos));
 
     var self = this;
-    $.post('/api/kudos/' + this.key).success(function(data) {
-      self.displayKudoThanks(data.count);
-    });
+    this.kudosCount += 1;
+
+    // TODO: actually sync kudos in a transaction and make sure we are setting the right value
+    firebase.database().ref('posts/' + this.postId + '/kudos_count').set(self.kudosCount);
+
+    self.displayKudoThanks(self.kudosCount);
     this.isKudoed = true;
-    this.element.addClass('kudoed');
+    this.element.classList.add('kudoed');
     this.track('add');
   };
 
   Kudo.prototype.removeKudo = function() {
     var kudos = getKudos();
-    delete kudos[this.key];
+    delete kudos[this.postId];
     localStorage.setItem('kudos', JSON.stringify(kudos));
 
     var self = this;
-    $.ajax({
-      url: '/api/kudos/' + this.key,
-      type: 'DELETE'
-    }).success(function(data) {
-      self.updateKudoCount(data.count);
-    });
+    this.kudosCount -= 1;
 
+    // TODO: actually sync kudos in a transaction and make sure we are setting the right value
+    firebase.database().ref('posts/' + this.postId + '/kudos_count').set(self.kudosCount);
+
+    self.updateKudoCount(self.kudosCount);
     this.isKudoed = false;
-    this.element.removeClass('kudoed');
+    this.element.classList.remove('kudoed');
     this.track('remove');
   };
 
   Kudo.prototype.displayKudoThanks = function(kudoCount) {
-    this.element.find('.kudo-count-message').css('display', 'none'); // hide count
+    var self = this;
+    this.element.querySelector('.kudo-count-message').style.display = 'none'; // hide count
+    this.element.querySelector('.kudo-thanks').style.display = 'block';  // display thanks
     this.updateKudoCount(kudoCount);
 
-    //var name = getStorage('userName');
-    //if(false) { // if we decide to prompt for name, change this to if(!name)
-    //  this.element.find('.kudo-heart').css('display', 'none');         // hide heart
-    //  this.element.find('.kudo-thanks').css('display', 'block');        // display thanks
-    //  this.element.find('.kudo-thanks-form').css('display', 'block');  // display form
-    //}
-    // else {
-    var self = this;
-    this.element.find('.kudo-thanks').css('display', 'block');        // display thanks
-    setTimeout(function() {                                          // already have name
-      self.element.find('.kudo-thanks').fadeOut(100, function() {    // fade count back in
-        self.element.find('.kudo-heart').fadeIn(100);
-        self.element.find('.kudo-count-message').fadeIn(100);
-      });
+    setTimeout(function() {
+      _(self.element.querySelector('.kudo-thanks')).fade('out', 100);         // fade thanks out after 1.5s
+      setTimeout(function() {
+        _(self.element.querySelector('.kudo-count-message')).fade('in', 100); // fade count back in after thanks out
+      }, 110);
     }, 1500);
     // }
   };
 
   Kudo.prototype.updateKudoCount = function(count) {
-    this.element.find('.kudo-count').text(count);
-    if(count == 1) {
-      this.element.find('.kudo-word').text('kudo');
-    } else {
-      this.element.find('.kudo-word').text('kudos');
-    }
-  };
-
-  Kudo.prototype.defaultKudoState = function() {
-    this.element.find('.kudo-thanks').css('display', 'none');
-    this.element.find('.kudo-thanks-form').css('display', 'none');
-
-    this.element.find('.kudo-heart').css('display', 'block');
-    this.element.find('.kudo-count-message').css('display', 'block');
+    this.element.querySelector('.kudo-count').textContent = count;
+    var kudoWord = count === 1 ? 'kudo' : 'kudos';
+    this.element.querySelector('.kudo-word').textContent = kudoWord;
   };
 
   Kudo.prototype.track = function(action) {
-    ga('send', 'event', 'kudo', action, $('.post-title').text());
+    ga('send', 'event', 'kudo', action, document.querySelector('.post-title').textContent);
   };
 
   function getKudos() {
@@ -114,9 +105,9 @@
     }
   }
 
-  function getStorage(key) {
+  function getStorage(postId) {
     if(storageSupported) {
-      return localStorage.getItem(key);
+      return localStorage.getItem(postId);
     }
   }
 
@@ -124,7 +115,7 @@
     return typeof(Storage) !== "undefined";
   }
 
-  // document.querySelectorAll('.kudo-container').forEach(function(kudoContainer) {
-  //   new Kudo($(kudoContainer));
-  // });
+  document.querySelectorAll('.kudo-container').forEach(function(kudoContainer) {
+    new Kudo(kudoContainer);
+  });
 })();
