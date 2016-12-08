@@ -41,15 +41,17 @@ per_page: 10
           <h3 class="post-excerpt-title">
             <%= link_to article.title, article %>
           </h3>
+
           <div class="post-excerpt-body">
-            <%# if article.excerpt.present? %>
-              <%# = article.excerpt.html_safe %>
-            <%# else %>
-            <!-- use article.summary(250) if you have Nokogiri available to show just
-                 the first 250 characters -->
-            <%= truncate(article.body.html_safe, length: 200, escape: false) %>
-            <%# end %>
+            <p>
+              <% if article.data.excerpt.present? %>
+                <%= article.data.excerpt %>
+              <% else %>
+                <%= article.summary %>
+              <% end %>
+            </p>
           </div>
+
           <div class="post-excerpt-metadata">
             <div class="read-time"><%= read_length(article.body) %> min read</div>
             <div class="date"><%= human_date(article.date) %></div>

@@ -107,5 +107,16 @@ a {
   @include respond-to(large) {
     font-size: 3em;
   }
+}
 
+.footnotes {
+  font-size: 0.8em;
+
+  ol {
+    padding-left: 1.6rem;
+  }
+
+  li p {
+    margin-bottom: 0.3em;
+  }
 }
