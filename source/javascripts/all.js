@@ -1,2 +1,3 @@
-// This is where it all goes :)
-//= require main
+//= require nav
+//= require external-links-in-new-tabs
+//= require kudos
