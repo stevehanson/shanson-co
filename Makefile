@@ -1,5 +1,5 @@
 default: install start
-deploy: build deployToSurge
+deploy: build deployAws
 
 install:
 	@bundle install
@@ -10,8 +10,8 @@ clean:
 build:
 	@bundle exec middleman build
 
-deployToSurge:
-	surge build --domain shanson.surge.sh
+deployAws:
+	@bundle exec middleman s3_sync
 
 start:
 	@bundle exec middleman server
