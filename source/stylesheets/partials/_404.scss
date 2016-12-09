@@ -13,7 +13,12 @@
 .four-oh-four-button {
   display: block;
   font-size: 1em;
-  margin: 3em auto;
+  margin: 2em auto;
   text-align: center;
-  width: 200px;
+  width: 330px;
+  max-width: 100%;
+
+  @include respond-to(small) {
+    margin-top: 3em;
+  }
 }
