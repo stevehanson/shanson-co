@@ -23,7 +23,6 @@
   }
 }
 
-
 .nav-links {
   list-style-type: none;
 }
@@ -47,6 +46,10 @@
   &:hover {
     text-decoration: none;
   }
+}
+
+.nav-link > .separator {
+  display: none;
 }
 
 .nav-mobile-menu-toggle {
@@ -134,4 +137,14 @@
     margin-left: 3em;
   }
 
+  .nav-link > .separator {
+    display: block;
+    margin-left: 2em;
+    margin-right: -1em;
+    color: #ddd;
+    border-right: 2px solid #ddd;
+    line-height: 1;
+    margin-top: 0.1em;
+    width: 2px;
+  }
 }

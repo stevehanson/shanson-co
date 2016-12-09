@@ -34,7 +34,7 @@ activate :blog do |blog|
   #blog.permalink = "blog/{year}/{title}.html"
   # Matcher for blog source files
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
-  # blog.taglink = "tags/{tag}.html"
+  blog.taglink = "{tag}.html"
   blog.layout = "post"
   blog.summary_separator = /READMORE/
   # blog.summary_length = 250
@@ -47,8 +47,7 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  # blog.paginate = true
-  # blog.per_page = 10
+  blog.paginate = true
   # blog.page_link = "page/{num}"
 end
 
@@ -71,10 +70,6 @@ end
 activate :directory_indexes
 
 helpers do
-  def kudos(article)
-    3
-  end
-
   def human_date(date)
     date.strftime("%b %d, %Y")
   end
@@ -87,17 +82,12 @@ helpers do
   end
 end
 
-# Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
 end
 
-
-# Build-specific configuration
 configure :build do
-  # Minify CSS on build
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
+  activate :asset_hash
+  activate :minify_css
+  activate :minify_javascript
 end
