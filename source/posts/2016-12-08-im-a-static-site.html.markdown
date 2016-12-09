@@ -2,6 +2,7 @@
 title: I’m a Static Site
 tags: tech
 excerpt: I just re-platformed this site off of Rails to Middleman, a static site generator.
+published: false
 ---
 
 I launched this site a couple years ago on Rails. I partially went with Rails because I was in the process of trying learn Rails better, and also because I anticipated wanting lots of back-end features. For example, the _kudos_ at the bottom of each post were being stored in a database, which you don't get with a static site.
