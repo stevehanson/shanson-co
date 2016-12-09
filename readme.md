@@ -1,10 +1,6 @@
 # shanson.co
 
-This is the repo for my personal blog. It was moved from Rails to Middleman in 2017.
-
-## Writing Tips
-
-Include `excerpt` front-matter to define custom excerpt on listing page. Otherwise, can insert "READMORE" to define where excerpt ends. SmartyPants isn't currently working on blog post summaries, so use correct quotes there.
+This is the repo for my personal blog. It was moved from Rails to Middleman in Dec 2016.
 
 ## To build
 
@@ -14,10 +10,20 @@ To build for deployment:
 $ make build
 ```
 
-To build for development:
+To run the development server:
 
 ```
 $ make start
 ```
 
+To deploy to S3 (require `.s3_sync` file with credentials):
+
+```
+$ make deploy
+```
+
 See `Makefile` for other tasks.
+
+## Writing Tips
+
+Include `excerpt` front-matter to define custom excerpt on listing page. Otherwise, can insert "READMORE" to define where excerpt ends.
