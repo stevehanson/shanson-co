@@ -23,7 +23,7 @@ greetings, from
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title.present? ? "#{current_page.data.title} – Steve Hanson" : "Steve Hanson" %></title>
 
-    <% meta_description = current_page.data.description || "I’m Steve Hanson, an Austin-based web developer and human. I write about life, tech, and random nonsense." %>
+    <% meta_description = yield_content(:meta_description).presence || current_page.data.description.presence || "I’m Steve Hanson, an Austin-based web developer and human. I write about life, tech, and random nonsense." %>
     <meta property="og:title" content="<%= current_page.data.title || 'Steve Hanson' %>"/>
     <meta content="http://shanson.co" property="og:url"/>
     <meta content="<%= meta_description %>" name="description"/>

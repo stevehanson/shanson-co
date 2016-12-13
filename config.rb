@@ -49,8 +49,20 @@ end
 activate :directory_indexes # must be activated after the blog
 
 helpers do
+  def article_summary(article)
+    if article.data.excerpt.present?
+      article.data.excerpt
+    else
+      article.summary
+    end
+  end
+
   def human_date(date)
     date.strftime("%b %d, %Y")
+  end
+
+  def non_draft_articles(articles)
+    articles.select {|a| !a.data[:draft] }
   end
 
   # in minutes

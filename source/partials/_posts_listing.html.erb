@@ -7,7 +7,7 @@
     <% end %>
   <% end %>
 
-  <% page_articles.each_with_index do |article, i| %>
+  <% non_draft_articles(page_articles).each_with_index do |article, i| %>
     <article class="post-excerpt">
       <h3 class="post-excerpt-title">
         <%= link_to article.title, article %>
@@ -15,11 +15,7 @@
 
       <div class="post-excerpt-body">
         <p>
-          <% if article.data.excerpt.present? %>
-            <%= article.data.excerpt %>
-          <% else %>
-            <%= article.summary %>
-          <% end %>
+          <%= article_summary(article) %>
         </p>
       </div>
 
