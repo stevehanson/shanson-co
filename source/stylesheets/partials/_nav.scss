@@ -68,11 +68,10 @@
 }
 
 @include respond-to(0, medium) {
-
   .nav-links {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s, visibility 0.4s;
+
     position: fixed;
     overflow: scroll;
     top: 42px;
@@ -102,14 +101,21 @@
     .nav-links {
       opacity: 1;
       visibility: visible;
+      transition: opacity 0.4s, visibility 0.4s;
     }
+  }
+
+  // closing transition
+  // add transition here too so transition happens when closing
+  // we don't want transition on .nav .nav-links because then blips when resizing browser
+  .nav.closed .nav-links {
+    transition: opacity 0.2s, visibility 0.2s;
   }
 
 }
 
 // tighten things up a bit on really small devices
 @include respond-to(0, 500px) {
-
   .nav-links {
     padding-top: 3em;
   }

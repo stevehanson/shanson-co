@@ -3,11 +3,14 @@
   <section class="post">
     <div class="container container-xs">
       <article class="post">
-        <h3 class="post-title"><%=current_article.title%></h3>
-        <div class="post-metadata">
-          <div class="read-time"><%=read_length(current_article.body)%> min read</div>
-          <div class="date"><%= current_article.date.strftime("%b %d, %Y") %></div>
+        <div class="post-heading">
+          <h3 class="post-title"><%=current_article.title%></h3>
+          <div class="post-metadata">
+            <div class="read-time"><%=read_length(current_article.body)%> min read</div>
+            <div class="date"><%= current_article.date.strftime("%b %d, %Y") %></div>
+          </div>
         </div>
+
         <div class="post-body">
           <div class="markdown">
             <%= current_article.body %>

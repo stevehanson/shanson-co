@@ -1,8 +1,19 @@
+// pages and posts are all posts 🎶
 .post {
+  .post-heading {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    text-align: center;
+
+    @include respond-to(small) {
+      margin-top: 4em;
+    }
+  }
+
   .post-title {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 600;
-    margin-top: 0.5em;
+    margin-top: 0;
     margin-bottom: 0.25em;
   }
 
@@ -11,9 +22,9 @@
   }
 
   .post-body {
-    font-size: 1.2em;
+    font-size: 1.125em; // 18px
     font-family: $font-primary;
-    margin-top: 2em;
+    margin-top: 0;
     margin-bottom: 3em;
   }
 
@@ -35,6 +46,7 @@
         font-family: "budicons" !important;
         vertical-align: text-bottom;
         margin-right: 0.3em;
+        line-height: 1.1;
       }
 
       &:hover:before {
