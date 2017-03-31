@@ -61,6 +61,7 @@ helpers do
     date.strftime("%b %d, %Y")
   end
 
+  # don't have to worry about published: false here because those aren't built by default
   def non_draft_articles(articles)
     articles.select {|a| !a.data[:draft] }
   end
