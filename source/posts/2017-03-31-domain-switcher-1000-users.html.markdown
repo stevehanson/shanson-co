@@ -2,7 +2,7 @@
 title: Domain Switcher is Still Alive!
 tags: tech
 excerpt: The little Chrome extension I built a few years back just passed 1,000 weekly users 🎉
-published: draft: true
+published: true
 ---
 
 A couple years ago, I decided to build a little Chrome extension to help me manage switching between multiple development environments in my browser. I wanted to be able to switch quickly between, say, `localhost:3000/about`, `my-site.dev/about`, `my-site.com/about`, etc.
