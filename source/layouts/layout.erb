@@ -25,13 +25,13 @@ greetings, from
 
     <% meta_description = yield_content(:meta_description).presence || current_page.data.description.presence || "I’m Steve Hanson, an Austin-based web developer and human. I write about life, tech, and random nonsense." %>
     <meta property="og:title" content="<%= current_page.data.title || 'Steve Hanson' %>"/>
-    <meta content="http://shanson.co" property="og:url"/>
+    <meta content="http://shanson.co<%= current_page.url %>" property="og:url"/>
     <meta content="<%= meta_description %>" name="description"/>
     <meta content="Steve Hanson, Austin, web developer, Ruby on Rails, freelance, front-end, tech, technology" name="keywords">
     <meta content="<%= meta_description %>" property="og:description"/>
     <meta content="website" property="og:type"/>
     <meta content="Steve Hanson" property="og:site_name"/>
-    <meta content="<%= current_page.data.og_image || '' %>" property="og:image"/>
+    <meta content="<%= current_page.data.og_image || "http://shanson.co#{image_path('steve.jpg')}" %>" property="og:image"/>
 
     <%= partial "partials/favicons" %>
 
