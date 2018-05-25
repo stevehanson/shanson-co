@@ -3,9 +3,9 @@ title: About
 layout: page
 ---
 
-Hey-o. I'm Stephen Hanson, or shanson, if you will. I'm an Austin-based freelance web developer currently working with the great folks at [Qeepsake](https://qeepsake.co). I [tweet](http://twitter.com/stephenhanson) on Twitter and [write code](http://github.com/stevehanson) on GitHub.
+Hey-o. I'm Stephen Hanson, or shanson, if you will. I'm an Austin-based web developer currently working at [thoughtbot](https://thoughtbot.com). I [tweet](http://twitter.com/stephenhanson) on Twitter and [write code](http://github.com/stevehanson) on GitHub.
 
-I have nearly seven years experience working as a developer for companies ranging from large enterprises like American Airlines to small startups. My current tools of the trade are Rails, React, React Native, and Node.js.
+I have seven years experience working as a developer for companies ranging from large enterprises like American Airlines to small startups. My current tools of the trade are Rails, React, React Native, and Node.js.
 
 You can get to know me a little bit here:
 
