@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Stephen hanson</title>
+  <subtitle>I’m Stephen Hanson, an Austin-based web developer and human. I write about life, tech, and random nonsense.</subtitle>
+  <id>http://shanson.co</id>
+  <link href="http://shanson.co"/>
+  <link href="http://shanson.co/feed.xml" rel="self"/>
+  <updated>2018-05-21T19:00:00-05:00</updated>
+  <author>
+    <name>Stephen Hanson</name>
+  </author>
+  <entry>
+    <title>I am a Giant Robot</title>
+    <link rel="alternate" href="http://shanson.co/im-a-giant-robot/"/>
+    <id>http://shanson.co/im-a-giant-robot/</id>
+    <published>2018-05-21T19:00:00-05:00</published>
+    <updated>2018-05-25T08:39:10-05:00</updated>
+    <author>
+      <name>Stephen Hanson</name>
+    </author>
+    <content type="html">&lt;p&gt;Last month I joined the amazing team at &lt;a href="https://thoughtbot.com"&gt;thoughtbot&lt;/a&gt; 🎉. It’s surreal getting to work with and learn from the people behind this company that I have looked up to for years.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Also, we’re still hiring in Austin and most of our other offices! If you’re interested in applying, send me a DM &lt;a href="https://twitter.com/stephenhanson"&gt;on Twitter&lt;/a&gt; or check out our open positions at &lt;a href="https://thoughtbot.com/jobs"&gt;thoughtbot.com/jobs&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Starting the Job Search</title>
+    <link rel="alternate" href="http://shanson.co/starting-the-job-search/"/>
+    <id>http://shanson.co/starting-the-job-search/</id>
+    <published>2018-02-18T18:00:00-06:00</published>
+    <updated>2018-05-25T08:39:10-05:00</updated>
+    <author>
+      <name>Stephen Hanson</name>
+    </author>
+    <content type="html">&lt;p&gt;It’s been almost two years since I’ve &lt;a href="http://shanson.co/new-city-new-job/"&gt;written a post&lt;/a&gt; about what’s going on with me. Since then, a lot has changed, and I figure it’s time to write an update!&lt;/p&gt;
+
+&lt;p&gt;In my last post, I wrote about moving to Austin in late 2015 and joining the design and development agency &lt;a href="http://heyspacetime.com/"&gt;Spacetime&lt;/a&gt;. I continued to work with Spacetime for another year after that post, until May of 2017. I had a blast working with them and our amazing clients. Seriously, if you have something you’d like to build, &lt;a href="http://heyspacetime.com/contact/"&gt;you should contact them&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In May 2017, one of our clients, &lt;a href="http://studiohopfitness.com/"&gt;StudioHop&lt;/a&gt;, informed us that they wanted to hire a development team in-house instead of continuing to contract out their development work to Spacetime. Most of my time was already being spent working with StudioHop, so it made sense for me to join them full-time.&lt;/p&gt;
+
+&lt;p&gt;StudioHop was special to me since I’d built their Rails app a year and a half earlier and had worked with them ever since as the sole developer. It was great to be able to continue to work with them and see their company grow. We hired another developer, expanded the product into several new cities, and built lots of new features.&lt;/p&gt;
+
+&lt;p&gt;Though I was enjoying my job, I was working from home and couldn’t shake the fact that one thing was missing: &lt;em&gt;people&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id="working-remotely-in-a-new-city"&gt;Working remotely in a “new” city&lt;/h3&gt;
+
+&lt;p&gt;Ever since moving to Austin in late 2015, I had been working from home and slowly becoming more of a hermit each day. Seriously. I’ve always been pretty social, but there were some days when I felt like I was forgetting how to interact with people. Also, I love Austin. It’s a fun, progressive city with rivers and lakes and nature trails, and &lt;em&gt;energy&lt;/em&gt;. But I was/am having trouble getting connected here. I began to realize that I was missing something that was important to me.&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;I finally decided that it's time for me to find a local job, so I made the tough decision to leave StudioHop and am officially starting the search today for an Austin development position&lt;/mark&gt;.&lt;/p&gt;
+
+&lt;p&gt;In the meantime, I am still doing contract work with StudioHop and a company called &lt;a href="https://www.qeepsake.co/"&gt;Qeepsake&lt;/a&gt;. I’m excited to see what happens in the next month or so!&lt;/p&gt;
+
+&lt;p&gt;If you are in Austin and are looking to hire a software developer, I’d love to &lt;a href="http://shanson.co/about"&gt;get in touch&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Thanks for stopping by :)&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Domain Switcher is Still Alive!</title>
+    <link rel="alternate" href="http://shanson.co/domain-switcher-1000-users/"/>
+    <id>http://shanson.co/domain-switcher-1000-users/</id>
+    <published>2017-03-30T19:00:00-05:00</published>
+    <updated>2018-05-25T08:37:54-05:00</updated>
+    <author>
+      <name>Stephen Hanson</name>
+    </author>
+    <content type="html">&lt;p&gt;A couple years ago, I decided to build a little Chrome extension to help me manage switching between multiple development environments in my browser. I wanted to be able to switch quickly between, say, &lt;code&gt;localhost:3000/about&lt;/code&gt;, &lt;code&gt;my-site.dev/about&lt;/code&gt;, &lt;code&gt;my-site.com/about&lt;/code&gt;, etc.&lt;/p&gt;
+
+&lt;p&gt;To be honest, a big part of my motivation for actually finishing the Chrome extension was that a friend and mentor at the time, Cody Case, had offered me free lunch if I completed it and released it to the Chrome Store. That got me going, and in November of 2013, I released &lt;a href="https://chrome.google.com/webstore/detail/domain-switcher/lbehdhpgigdlinfkidifkbhjnaglfojc"&gt;Domain Switcher&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I just checked back, and the extension has passed 1,000 weekly users. It makes me happy to know that the little utility I wrote for myself is also helping some other people!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/domain-switcher-1000-users-c05bee9b.jpg" alt="Domain Switcher" /&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>I’m a Static Site</title>
+    <link rel="alternate" href="http://shanson.co/im-a-static-site/"/>
+    <id>http://shanson.co/im-a-static-site/</id>
+    <published>2016-12-07T18:00:00-06:00</published>
+    <updated>2016-12-09T08:37:02-06:00</updated>
+    <author>
+      <name>Stephen Hanson</name>
+    </author>
+    <content type="html">&lt;p&gt;I launched this site a couple years ago on Rails. I partially went with Rails because I was in the process of trying learn Rails better, and also because I anticipated wanting lots of back-end features. For example, the &lt;em&gt;kudos&lt;/em&gt; at the bottom of each post were being stored in a database, which you don’t get with a static site.&lt;/p&gt;
+
+&lt;p&gt;Well, fast forward a couple years, and Heroku, where I was hosting the site, now charges for their basic hosting, and Rails was starting to just seem like overkill for such a small project. &lt;mark&gt;So, I decided about a week ago to switch to the static site generator, Middleman, and host my site on S3.&lt;/mark&gt;&lt;/p&gt;
+
+&lt;p&gt;The process was actually pretty simple. Middleman is built in Ruby and is specifically structured to be familiar to Rails developers. As a result, switching over to Middleman was largely just a copy-paste effort to move my markdown posts from the admin I had built over to static files.&lt;/p&gt;
+
+&lt;h4 id="building-the-kudos"&gt;Building the Kudos&lt;/h4&gt;
+
+&lt;p&gt;Since I was switching over to a static site, that meant I was losing my database, which I was using to store kudos. So, I signed up for &lt;a href="https://firebase.google.com/"&gt;Firebase&lt;/a&gt;, which offers a free, hosted, real-time database that I can access via JavaScript. It didn’t take too long to get it set up and to load the current kudos counts into Firebase. An added benefit of using Firebase is that the kudos now update in real-time, which means that when someone adds or removes a kudo, it updates on other users’ browsers immediately. This will be great for my millions of visitors who are kudoing my posts like crazy /s.&lt;/p&gt;
+
+&lt;p&gt;The site’s code is open-source and &lt;a href="https://github.com/stevehanson/shanson-co"&gt;hosted on GitHub&lt;/a&gt;. Check it out, if you please.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>New City, New Job</title>
+    <link rel="alternate" href="http://shanson.co/new-city-new-job/"/>
+    <id>http://shanson.co/new-city-new-job/</id>
+    <published>2016-04-18T19:00:00-05:00</published>
+    <updated>2016-12-08T17:40:40-06:00</updated>
+    <author>
+      <name>Stephen Hanson</name>
+    </author>
+    <content type="html">&lt;p&gt;It’s been a little while since I’ve written on here, and a lot has happened since then, so I figured I’d better make an update. The short version is that I moved to Austin and am now doing freelance work with some friends of mine. Now for the longer version…&lt;/p&gt;
+
+&lt;h3 id="moving-to-austin"&gt;Moving to Austin&lt;/h3&gt;
+
+&lt;p&gt;My wife, Monica, is from Austin, and her family lives here, so we had been planning to eventually move to Austin for a long time. The question was always just when. The opportunity finally came this past October, when Monica started talking about finding another job. She had been working the night shift as an ICU nurse for almost a year and was really struggling with a poor sleep schedule—switching back-and-forth between being awake at night for work and being awake during the day for me and friends and family.&lt;/p&gt;
+
+&lt;p&gt;Her changing jobs seemed like our chance to move to Austin. So, after she quit her job in October, we put our house on the market and started looking for a place to live down here. We quickly found an apartment in central Austin and moved down at the start of December.&lt;/p&gt;
+
+&lt;h3 id="new-job"&gt;New Job&lt;/h3&gt;
+
+&lt;p&gt;Shortly before we moved, a friend of mine, Caleb Sylvest, reached out to see if I would be interested in doing some Rails development for a client that he and his friend, Chase Hilbert, had been working with. I was still working with Oven Bits at the time, but I decided that with the move, it might be nice to also take a fresh start with a new job. I said yes. It was tough leaving my friends at Oven Bits, but it was made easier by the knowledge that I would be moving out of town and would be seeing them less either way. I started full-time with Chase and Caleb at the start of the new year, working contract for their company, &lt;a href="http://heyspacetime.com/"&gt;Spacetime&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My first project with them was for a company called StudioHop, re-platforming their existing site off of a home-grown PHP framework to Ruby on Rails. I had a blast with the project, and we launched their new site at the end of January. We then started our next project with them, implementing a site redesign and adding a bunch of new features to their site, which we just launched at the end of March. I’m &lt;a href="https://www.studiohopfitness.com"&gt;pretty proud of the result&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’ve also been working with another great client during this time, &lt;a href="http://steadkey.com"&gt;Steadkey&lt;/a&gt;. We’re helping them build a tool to streamline the home-buying process and are in the process of rolling out an MVP of the product.&lt;/p&gt;
+
+&lt;h3 id="wrapping-up"&gt;Wrapping up&lt;/h3&gt;
+
+&lt;p&gt;In summary, I’m feeling fortunate to have good work with good friends and good clients, and I’m loving being in Austin!&lt;/p&gt;
+
+&lt;p&gt;If you have any development needs and are interested in working with me or Spacetime, or if you just want to say hi or even to send me hate mail, feel free to &lt;a href="&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#115;&amp;#116;&amp;#101;&amp;#118;&amp;#101;&amp;#064;&amp;#115;&amp;#104;&amp;#097;&amp;#110;&amp;#115;&amp;#111;&amp;#110;&amp;#046;&amp;#099;&amp;#111;"&gt;hit me up&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you liked this post, show me some love by clicking the heart, below. Hope you have a great one!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>What’s Important in Life?</title>
+    <link rel="alternate" href="http://shanson.co/whats-important-in-life/"/>
+    <id>http://shanson.co/whats-important-in-life/</id>
+    <published>2015-11-10T18:00:00-06:00</published>
+    <updated>2016-12-08T17:40:40-06:00</updated>
+    <author>
+      <name>Stephen Hanson</name>
+    </author>
+    <content type="html">&lt;p&gt;I stumbled on Richard Muller’s &lt;a href="http://qr.ae/Rwm1ut"&gt;answer on Quora&lt;/a&gt; to the question “How do you realize what is really important in life?”. He really nailed it, in my opinion. I will be making an effort to keep this top-of-mind:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This may sound trivial, since it has been said so many times:&lt;/p&gt;
+
+  &lt;p&gt;The most important realization in life is that other people are just as real, just as meaningful, just as important as you are.&lt;/p&gt;
+
+  &lt;p&gt;You’ll recognize that what makes the things you do important is the impact that they have on others.  You’ll realize that you have “eternal life” as long as others live.&lt;/p&gt;
+
+  &lt;p&gt;The key to everything is empathy.  The Golden Rule is just a consequence of empathy.&lt;/p&gt;
+
+  &lt;p&gt;– &lt;a href="http://qr.ae/Rwm1ut"&gt;Richard Muller, on Quora&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+  </entry>
+</feed>

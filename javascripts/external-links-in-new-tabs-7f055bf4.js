@@ -1,0 +1,1 @@
+!function(t){function e(){for(var e=t.getElementsByTagName("a"),n=0;n<e.length;n++){var a=e[n];a.getAttribute("href")&&a.hostname!==location.hostname&&(a.target="_blank")}}e()}(document);
