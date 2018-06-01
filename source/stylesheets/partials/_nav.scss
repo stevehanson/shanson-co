@@ -61,9 +61,12 @@
 
   .icon-close {
     display: none;
-    margin-top: 0.2em;
-    margin-right: 0.2em;
-    font-size: 0.7em;
+    font-size: 1.2em;
+    margin-top: -0.1em;
+  }
+
+  .icon-menu {
+    vertical-align: baseline;
   }
 }
 
@@ -95,7 +98,7 @@
   nav.open {
     .nav-mobile-menu-toggle {
       .icon-close { display: block; }
-      .icon-menu  { display: none; }
+      .icon-menu { display: none; }
     }
 
     .nav-links {

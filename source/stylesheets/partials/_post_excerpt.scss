@@ -41,14 +41,13 @@
     margin-right: 1em;
     color: #555;
 
-    &:before {
-      content: 'b';
+    .icon-timer {
       display: inline-block;
-      min-width: 18px;
-      text-transform: none;
-      font-family: "budicons" !important;
-      vertical-align: text-bottom;
-      margin-right: 0.3em;
+      fill: currentColor;
+      margin-bottom: 2px;
+      margin-right: 0.2em;
+      min-width: 16px;
+      vertical-align: middle;
     }
 
     &:hover:before {

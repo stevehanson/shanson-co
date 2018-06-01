@@ -20,7 +20,9 @@
       </div>
 
       <div class="post-excerpt-metadata">
-        <div class="read-time"><%= read_length(article.body) %> min read</div>
+        <div class="read-time">
+          <%= inline_svg "ionicons/ios-timer.svg", class: "icon-timer" %>
+          <%= read_length(article.body) %> min read</div>
         <div class="date"><%= human_date(article.date) %></div>
       </div>
     </article>

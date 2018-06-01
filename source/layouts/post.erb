@@ -6,8 +6,13 @@
         <div class="post-heading">
           <h3 class="post-title"><%=current_article.title%></h3>
           <div class="post-metadata">
-            <div class="read-time"><%=read_length(current_article.body)%> min read</div>
-            <div class="date"><%= current_article.date.strftime("%b %d, %Y") %></div>
+            <div class="read-time">
+              <%= inline_svg "ionicons/ios-timer.svg", class: "icon-timer" %>
+              <%= read_length(current_article.body) %> min read
+            </div>
+            <div class="date">
+              <%= current_article.date.strftime("%b %d, %Y") %>
+            </div>
           </div>
         </div>
 

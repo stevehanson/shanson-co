@@ -38,15 +38,11 @@
       margin-right: 1em;
       color: #555;
 
-      &:before {
-        content: 'b';
+      .icon-timer {
         display: inline-block;
-        min-width: 14px;
-        text-transform: none;
-        font-family: "budicons" !important;
-        vertical-align: text-bottom;
-        margin-right: 0.3em;
-        line-height: 1.1;
+        margin-bottom: 2px;
+        min-width: 16px;
+        vertical-align: middle;
       }
 
       &:hover:before {
