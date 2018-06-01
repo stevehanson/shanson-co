@@ -15,6 +15,7 @@ gem 'middleman-sprockets'
 gem 'middleman-s3_sync'
 gem "middleman", "~> 4.1"
 gem "middleman-blog"
+gem 'middleman-gh-pages'
 gem 'middleman-svg'
 
 gem 'mime-types' # required by s3_sync
