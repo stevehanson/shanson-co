@@ -1,5 +1,4 @@
 default: install start
-deploy: build deployAws
 
 install:
 	@bundle install
@@ -10,8 +9,8 @@ clean:
 build:
 	@bundle exec middleman build
 
-deployAws:
-	@bundle exec middleman s3_sync
+deploy:
+	@rake publish
 
 start:
 	@bundle exec middleman server
