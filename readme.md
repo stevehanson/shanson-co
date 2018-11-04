@@ -4,25 +4,20 @@ This is the repo for my personal blog. It was moved from Rails to Middleman in D
 
 ## To build
 
-To build for deployment:
-
-```
-$ make build
-```
-
 To run the development server:
 
 ```
 $ make start
 ```
 
-To deploy to S3 (require `.s3_sync` file with credentials):
-
-```
-$ make deploy
-```
+The server will watch for changes and trigger live reload in the browser.
 
 See `Makefile` for other tasks.
+
+## Deployment
+
+The site is hosted on Netlify. Builds are automatically triggered and deployed
+when changes are pushed to master.
 
 ## Post front-matter options
 

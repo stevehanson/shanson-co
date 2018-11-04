@@ -9,9 +9,6 @@ clean:
 build:
 	@bundle exec middleman build
 
-deploy:
-	@rake publish
-
 start:
 	@bundle exec middleman server
 
