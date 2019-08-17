@@ -53,20 +53,21 @@
 }
 
 .nav-mobile-menu-toggle {
+  background: none;
+  border: none;
   float: right;
   font-size: 1.6em;
-  margin-top: 0.75em;
+  margin-top: 0.55em;
   margin-right: 0.2em;
-  cursor: pointer;
 
   .icon-close {
     display: none;
     font-size: 1.2em;
-    margin-top: -0.1em;
   }
 
   .icon-menu {
     vertical-align: baseline;
+    margin: 0.1em 0.1em 0 0;
   }
 }
 

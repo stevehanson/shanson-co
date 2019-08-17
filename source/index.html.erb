@@ -13,11 +13,10 @@ per_page: 10
 
           <div class="hero-text">
             <p>I’m glad you’re here, friend.</p>
-            <!--p>I’m a thinker, writer, tinkerer, husband, human, developer, friend.</p-->
           </div>
         </div>
 
-        <%= image_tag("me.jpg", class: "avatar", alt: "") %>
+        <%= image_tag("me.jpg", class: "avatar", alt: "Picture of shanson") %>
       </div>
     </header>
   <% end %>
@@ -26,7 +25,7 @@ per_page: 10
     <% unless prev_page # only show on first page of posts %>
       <div class="posts-heading">
         <div class="container container-xs">
-          Welcome to my blog! Check out my thoughts below, or <%=link_to "get to know me", "about", class: "text-link" %>.
+          Welcome to my corner of the interwebs! Check out my thoughts below, or <%=link_to "get to know me", "about", class: "text-link" %>.
         </div>
       </div>
     <% end %>
