@@ -2,12 +2,12 @@
 
   function Kudo(element) {
     this.element = element;
-    this.heartElement = element.querySelector('.kudo-heart');
+    this.heartButton = element.querySelector('.kudo-button');
     this.postId = element.getAttribute('data-post-id');
 
     this.loadKudos();
     if(!storageSupported()) {
-      this.heartElement.style.display = 'none';
+      this.heartButton.style.display = 'none';
       return;
     }
 
@@ -18,7 +18,7 @@
 
   Kudo.prototype.bindEvents = function() {
     var self = this;
-    this.heartElement.addEventListener('mouseup', function() {
+    this.heartButton.addEventListener('click', function() {
       if(self.isKudoed) {
         self.removeKudo();
       } else {

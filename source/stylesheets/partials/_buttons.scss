@@ -53,6 +53,10 @@ $btn-secondary-bg: #fff;
   }
 }
 
+.btn-unstyled {
+  @extend %reset-button;
+}
+
 .btn-small {
   font-size: 1em;
   padding: 0.7em 1.875em;

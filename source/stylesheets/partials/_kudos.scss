@@ -11,7 +11,6 @@
   }
 
   .kudo-heart {
-    cursor: pointer;
     font-size: 2.5em;
     line-height: 1;
     max-width: 50px;
@@ -24,8 +23,12 @@
     stroke-width: 20px;
     stroke: $text-color;
     transition: stroke-width 150ms;
+  }
 
-    &:hover {
+  .kudo-button {
+    @extend %reset-button;
+
+    &:hover .kudo-heart-path {
       stroke-width: 30px;
     }
   }
