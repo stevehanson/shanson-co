@@ -4,7 +4,7 @@ tags: tech
 excerpt: Joel Spolsky points out that developers have a tendency to want to trash code, because it is harder to read others’ code than it is to write our own.
 ---
 
-I just ran across [this article](http://www.joelonsoftware.com/articles/fog0000000069.html)  by Joel Spoelsky, in which he explains that programmers have a tendency to want to throw code away and start over because "it's harder to read code than to write it." So true, and something I want to keep in mind next time I want to trash some code.
+I just ran across [this article](https://www.joelonsoftware.com/articles/fog0000000069.html)  by Joel Spoelsky, in which he explains that programmers have a tendency to want to throw code away and start over because "it's harder to read code than to write it." So true, and something I want to keep in mind next time I want to trash some code.
 
 Here's an excerpt from the article:
 

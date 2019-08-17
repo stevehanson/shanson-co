@@ -6,7 +6,7 @@ excerpt: This is where I talk about my insecurities and struggles with Imposter 
 
 > I'm not good enough. I don't deserve to be here.
 
-I had just landed the job of my dreams working at a cool design and development agency downtown ([Oven Bits](http://ovenbits.com)). I had great co-workers, a cool office space and all the pour-over coffee I could ask for. I was genuinely happy, except for one fact: I didn't think I deserved it.
+I had just landed the job of my dreams working at a cool design and development agency downtown ([Oven Bits](https://ovenbits.com)). I had great co-workers, a cool office space and all the pour-over coffee I could ask for. I was genuinely happy, except for one fact: I didn't think I deserved it.
 
 Before joining Oven Bits, I had worked for three years in the slowww-moving enterprise software space, and I always had the feeling of being behind the curve. When I started at Oven Bits I felt like I was in a new world. We were using cloud hosting, the latest programming tools and moving super fast.
 
@@ -58,7 +58,7 @@ I can't say that I've completely overcome Imposter Syndrome, but I've come a lon
 
 Oven Bits is an incredible company, and I'm grateful to have walked through this with them and to have the opportunity to be here. An opportunity that I finally feel like I'm worthy of having.
 
-*This post was also published on the [Oven Bits blog](http://ovenbits.com/journal/im-not-good-enough).*
+*This post was also published on the [Oven Bits blog](https://ovenbits.com/journal/im-not-good-enough).*
 
-[^1]: [http://counseling.caltech.edu/general/InfoandResources/Impostor](http://counseling.caltech.edu/general/InfoandResources/Impostor)
-[^2]: [http://www.fastcompany.com/3036006/hit-the-ground-running/8-practical-steps-to-getting-over-your-impostor-syndrome](http://www.fastcompany.com/3036006/hit-the-ground-running/8-practical-steps-to-getting-over-your-impostor-syndrome)
+[^1]: [https://counseling.caltech.edu/general/InfoandResources/Impostor](https://counseling.caltech.edu/general/InfoandResources/Impostor)
+[^2]: [https://www.fastcompany.com/3036006/hit-the-ground-running/8-practical-steps-to-getting-over-your-impostor-syndrome](https://www.fastcompany.com/3036006/hit-the-ground-running/8-practical-steps-to-getting-over-your-impostor-syndrome)

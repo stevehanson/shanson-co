@@ -1,5 +1,5 @@
 // used to fade elements in and out
-// http://stackoverflow.com/questions/30206054/vanilla-javascript-fadein-fadeout-without-jquery
+// https://stackoverflow.com/questions/30206054/vanilla-javascript-fadein-fadeout-without-jquery
 
 // adding a _ method on which we can attach utility functions
 function _(el) {

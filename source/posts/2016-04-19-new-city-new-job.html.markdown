@@ -14,11 +14,11 @@ Her changing jobs seemed like our chance to move to Austin. So, after she quit h
 
 ### New Job
 
-Shortly before we moved, a friend of mine, Caleb Sylvest, reached out to see if I would be interested in doing some Rails development for a client that he and his friend, Chase Hilbert, had been working with. I was still working with Oven Bits at the time, but I decided that with the move, it might be nice to also take a fresh start with a new job. I said yes. It was tough leaving my friends at Oven Bits, but it was made easier by the knowledge that I would be moving out of town and would be seeing them less either way. I started full-time with Chase and Caleb at the start of the new year, working contract for their company, [Spacetime](http://heyspacetime.com/).
+Shortly before we moved, a friend of mine, Caleb Sylvest, reached out to see if I would be interested in doing some Rails development for a client that he and his friend, Chase Hilbert, had been working with. I was still working with Oven Bits at the time, but I decided that with the move, it might be nice to also take a fresh start with a new job. I said yes. It was tough leaving my friends at Oven Bits, but it was made easier by the knowledge that I would be moving out of town and would be seeing them less either way. I started full-time with Chase and Caleb at the start of the new year, working contract for their company, [Spacetime](https://heyspacetime.com/).
 
 My first project with them was for a company called StudioHop, re-platforming their existing site off of a home-grown PHP framework to Ruby on Rails. I had a blast with the project, and we launched their new site at the end of January. We then started our next project with them, implementing a site redesign and adding a bunch of new features to their site, which we just launched at the end of March. I’m [pretty proud of the result](https://www.studiohopfitness.com).
 
-I’ve also been working with another great client during this time, [Steadkey](http://steadkey.com). We’re helping them build a tool to streamline the home-buying process and are in the process of rolling out an MVP of the product.
+I’ve also been working with another great client during this time, [Steadkey](https://steadkey.com). We’re helping them build a tool to streamline the home-buying process and are in the process of rolling out an MVP of the product.
 
 ### Wrapping up
 

@@ -4,7 +4,7 @@ tags: personal
 excerpt: "The most important realization in life is that other people are just as real, just as meaningful, just as important as you are."
 ---
 
-I stumbled on Richard Muller's [answer on Quora](http://qr.ae/Rwm1ut) to the question "How do you realize what is really important in life?". He really nailed it, in my opinion. I will be making an effort to keep this top-of-mind:
+I stumbled on Richard Muller's [answer on Quora](https://qr.ae/Rwm1ut) to the question "How do you realize what is really important in life?". He really nailed it, in my opinion. I will be making an effort to keep this top-of-mind:
 
 > This may sound trivial, since it has been said so many times:  
 >
@@ -14,4 +14,4 @@ I stumbled on Richard Muller's [answer on Quora](http://qr.ae/Rwm1ut) to the que
 >
 > The key to everything is empathy.  The Golden Rule is just a consequence of empathy.
 >
-> – [Richard Muller, on Quora](http://qr.ae/Rwm1ut)
+> – [Richard Muller, on Quora](https://qr.ae/Rwm1ut)

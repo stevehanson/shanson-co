@@ -5,11 +5,11 @@ tags: tech
 excerpt: After a couple years of working from home, I've decided it's time to look for a local job in Austin and hopefully start to get connected here.
 ---
 
-It's been almost two years since I've [written a post](http://shanson.co/new-city-new-job/) about what's going on with me. Since then, a lot has changed, and I figure it's time to write an update!
+It's been almost two years since I've [written a post](https://shanson.co/new-city-new-job/) about what's going on with me. Since then, a lot has changed, and I figure it's time to write an update!
 
-In my last post, I wrote about moving to Austin in late 2015 and joining the design and development agency [Spacetime](http://heyspacetime.com/). I continued to work with Spacetime for another year after that post, until May of 2017. I had a blast working with them and our amazing clients. Seriously, if you have something you'd like to build, [you should contact them](http://heyspacetime.com/contact/).
+In my last post, I wrote about moving to Austin in late 2015 and joining the design and development agency [Spacetime](https://heyspacetime.com/). I continued to work with Spacetime for another year after that post, until May of 2017. I had a blast working with them and our amazing clients. Seriously, if you have something you'd like to build, [you should contact them](https://heyspacetime.com/contact/).
 
-In May 2017, one of our clients, [StudioHop](http://studiohopfitness.com/), informed us that they wanted to hire a development team in-house instead of continuing to contract out their development work to Spacetime. Most of my time was already being spent working with StudioHop, so it made sense for me to join them full-time.
+In May 2017, one of our clients, [StudioHop](https://studiohopfitness.com/), informed us that they wanted to hire a development team in-house instead of continuing to contract out their development work to Spacetime. Most of my time was already being spent working with StudioHop, so it made sense for me to join them full-time.
 
 StudioHop was special to me since I'd built their Rails app a year and a half earlier and had worked with them ever since as the sole developer. It was great to be able to continue to work with them and see their company grow. We hired another developer, expanded the product into several new cities, and built lots of new features. 
 
@@ -23,6 +23,6 @@ Ever since moving to Austin in late 2015, I had been working from home and slowl
 
 In the meantime, I am still doing contract work with StudioHop and a company called [Qeepsake](https://www.qeepsake.co/). I'm excited to see what happens in the next month or so!
 
-If you are in Austin and are looking to hire a software developer, I'd love to [get in touch](http://shanson.co/about)!
+If you are in Austin and are looking to hire a software developer, I'd love to [get in touch](https://shanson.co/about)!
 
 Thanks for stopping by :)
