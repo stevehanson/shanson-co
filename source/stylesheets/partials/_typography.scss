@@ -78,7 +78,7 @@ a {
   }
 }
 
-.markdown a, .text-link {
+.markdown a, .post-excerpt-body a, .text-link {
   border-bottom: 1px solid #eee;
   transition: color 25ms linear, border-bottom-color 50ms linear;
 
@@ -95,6 +95,32 @@ a {
 
 .link-secondary {
   color: $color-secondary;
+}
+
+.heading-link {
+  color: $text-color;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+
+  &:after {
+    background-color: rgba($color-primary, 0.4);
+    bottom: 6px;
+    content: '';
+    height: 0;
+    left: 0;
+    padding-bottom: 0;
+    position: absolute;
+    transition: height 50ms linear;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:hover {
+    &:after {
+      height: 6px;
+    }
+  }
 }
 
 .announcement-text {
