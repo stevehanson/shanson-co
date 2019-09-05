@@ -1,6 +1,5 @@
-
-$font-sans: "PT Sans", sans-serif;
-$font-serif: "Bitter", serif;
+$font-sans: 'PT Sans', sans-serif;
+$font-serif: 'Bitter', serif;
 
 $font-primary: $font-serif;
 $font-heading: $font-sans;
@@ -17,8 +16,10 @@ $color-danger: $color-secondary;
 
 $text-color: #353538;
 $text-color-accent: #54646e;
+$text-color-muted: #95959a;
 
 $link-color: darken($color-primary, 6%);
+$link-color-hover: $color-primary;
 //$link-color: #08b;
 
 $light-gray-bg-color: #f8f8f8;

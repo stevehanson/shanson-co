@@ -37,7 +37,7 @@
     text-transform: uppercase;
     display: inline-block;
     margin-right: 1em;
-    color: #555;
+    color: $text-color-accent;
 
     .icon-timer {
       display: inline-block;
@@ -51,6 +51,6 @@
 
   .date {
     display: inline-block;
-    color: #999;
+    color: $text-color-muted;
   }
 }

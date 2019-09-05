@@ -8,7 +8,7 @@
           <div class="post-metadata">
             <div class="read-time">
               <%= inline_svg "ionicons/ios-timer.svg", class: "icon-timer" %>
-              <%= read_length(current_article.body) %> min read
+              <%= read_length(article_body(current_article)) %> min read
             </div>
             <div class="date">
               <%= current_article.date.strftime("%b %d, %Y") %>
@@ -18,7 +18,7 @@
 
         <div class="post-body">
           <div class="markdown">
-            <%= current_article.body %>
+            <%= article_body(current_article) %>
           </div>
 
           <div class="kudo-container" style="display: none" data-post-id="<%=current_article.slug%>">

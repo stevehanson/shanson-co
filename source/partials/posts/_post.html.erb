@@ -1,0 +1,16 @@
+<article class="post-excerpt">
+  <h3 class="post-excerpt-title">
+    <%= link_to article.title, article, class: "heading-link" %>
+  </h3>
+
+  <div class="post-excerpt-body">
+    <p><%= article_summary(article) %></p>
+  </div>
+
+  <div class="post-excerpt-metadata">
+    <div class="read-time">
+      <%= inline_svg "ionicons/ios-timer.svg", class: "icon-timer" %>
+      <%= read_length(article_body(article)) %> min read</div>
+    <div class="date"><%= human_date(article.date) %></div>
+  </div>
+</article>

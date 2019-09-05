@@ -1,36 +1,31 @@
 <div class="container container-xs">
-  <% if paginate && num_pages > 1 %>
-    <p>Page <%= page_number %> of <%= num_pages %></p>
-
-    <% if prev_page %>
-      <p><%= link_to 'Previous page', prev_page %></p>
-    <% end %>
-  <% end %>
-
   <% non_draft_articles(page_articles).each_with_index do |article, i| %>
-    <article class="post-excerpt">
-      <h3 class="post-excerpt-title">
-        <%= link_to article.title, article, class: "heading-link" %>
-      </h3>
-
-      <div class="post-excerpt-body">
-        <p>
-          <%= article_summary(article) %>
-        </p>
-      </div>
-
-      <div class="post-excerpt-metadata">
-        <div class="read-time">
-          <%= inline_svg "ionicons/ios-timer.svg", class: "icon-timer" %>
-          <%= read_length(article.body) %> min read</div>
-        <div class="date"><%= human_date(article.date) %></div>
-      </div>
-    </article>
+    <% if article.data.target.present? %>
+      <%= partial "partials/posts/external_post", locals: {article: article } %>
+    <% else %>
+      <%= partial "partials/posts/post", locals: {article: article } %>
+    <% end %>
   <% end %>
 
-  <% if paginate %>
-    <% if next_page %>
-      <p><%= link_to 'Next page', next_page %></p>
-    <% end %>
+  <% if paginate && num_pages > 1 %>
+    <div class="pagination">
+      <% if prev_page %>
+        <p class="pagination__prev">
+          <% link_to prev_page, class: "arrow-link" do %>
+            <%= inline_svg "ionicons/ios-arrow-round-back.svg", class: "icon-arrow-round-back" %>
+            Previous Page
+          <% end %>
+        </p>
+      <% end %>
+      <p class="pagination__pages">Page <%= page_number %> of <%= num_pages %></p>
+      <% if next_page %>
+        <p class="pagination__next">
+          <% link_to next_page, class: "arrow-link" do %>
+            Next Page
+            <%= inline_svg "ionicons/ios-arrow-round-forward.svg", class: "icon-arrow-round-forward" %>
+          <% end %>
+        </p>
+      <% end %>
+    </div>
   <% end %>
 </div>

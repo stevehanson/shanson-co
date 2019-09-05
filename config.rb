@@ -59,12 +59,13 @@ helpers do
   end
 
   def human_date(date)
-    date.strftime("%b %d, %Y")
+    date.strftime("%b %-d, %Y")
   end
 
-  # don't have to worry about published: false here because those aren't built by default
+  # don't have to worry about published: false here because those aren't
+  # built by default
   def non_draft_articles(articles)
-    articles.select {|a| !a.data[:draft] }
+    articles.select { |a| !a.data[:draft] }
   end
 
   # in minutes
@@ -72,6 +73,27 @@ helpers do
     words_per_minute = 200.0
     num_words = content.split.size
     (num_words / words_per_minute).ceil
+  end
+
+  def article_source(url)
+    host = URI.parse(url).host.downcase
+    host.start_with?("www.") ? host[4..-1] : host
+  end
+
+  def article_body(article)
+    if article.data.target.present?
+      link = link_to article.data.target, class: "arrow-link" do 
+        %(
+          Read more on
+          #{article_source article.data.target}
+          #{inline_svg "ionicons/ios-arrow-round-forward.svg", class: "icon-arrow-round-forward"}
+        )
+      end
+
+      "#{article.body} <p>#{link}</p>"
+    else
+      article.body
+    end
   end
 end
 

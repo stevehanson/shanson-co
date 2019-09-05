@@ -1,5 +1,7 @@
-
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: $font-heading;
 }
 
@@ -36,7 +38,8 @@ p {
   font-size: 1.5625em;
 }
 
-.code, .markdown code {
+.code,
+.markdown code {
   font-size: 0.9em;
   background-color: #f5f5f5;
   padding: 0.2em;
@@ -73,19 +76,35 @@ a {
     text-decoration: none;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     color: darken($link-color, 10%);
   }
 }
 
-.markdown a, .post-excerpt-body a, .text-link {
+.markdown a,
+.post-excerpt-body a,
+.text-link {
   border-bottom: 1px solid #eee;
   transition: color 25ms linear, border-bottom-color 50ms linear;
 
   &:hover {
-    border-bottom-color: $color-primary;
-    color: $color-primary;
+    border-bottom-color: $link-color-hover;
+    color: $link-color-hover;
     text-decoration: none;
+  }
+}
+
+.arrow-link {
+  svg {
+    margin-bottom: -0.25em;
+    fill: $link-color;
+    font-size: 1.3em;
+    transition: fill 25ms linear;
+  }
+
+  &:hover svg {
+    fill: $link-color-hover;
   }
 }
 
@@ -102,6 +121,13 @@ a {
   position: relative;
   text-decoration: none;
   z-index: 1;
+
+  &__domain {
+    margin-left: 0.3em;
+    font-size: 0.7em;
+    color: $text-color-muted;
+    font-family: bitter;
+  }
 
   &:after {
     background-color: rgba($color-primary, 0.4);

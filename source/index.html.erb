@@ -5,7 +5,7 @@ per_page: 10
 ---
 
 <div class="index-page">
-  <% unless prev_page # only show on first page of posts %>
+  <% unless defined?(prev_page) && prev_page # only show on first page of posts %>
     <header class="hero hero-main">
       <div class="hero-container container container-xs">
         <div class="hero-text-container">
@@ -22,7 +22,14 @@ per_page: 10
   <% end %>
 
   <section class="posts-list">
-    <% unless prev_page # only show on first page of posts %>
+    <% if defined?(prev_page) && prev_page %>
+        <div class="container container-xs">
+          <h3 class="posts-page-heading">
+            Posts &ndash; page <%= page_number %>
+          </h3>
+        </div>
+      </h3>
+    <% else %>
       <div class="posts-heading">
         <div class="container container-xs">
           Welcome to my corner of the interwebs! Check out my thoughts below, or <%=link_to "get to know me", "about", class: "text-link" %>.

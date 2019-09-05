@@ -1,0 +1,12 @@
+.pagination {
+  $spacing-between: 1.75rem;
+  display: flex;
+
+  &__pages {
+    margin-right: $spacing-between;
+  }
+
+  &__prev {
+    margin-right: $spacing-between;
+  }
+}
