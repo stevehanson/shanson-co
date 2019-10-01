@@ -1,25 +1,29 @@
 (function() {
-
   function Kudo(element) {
     this.element = element;
     this.heartButton = element.querySelector('.kudo-button');
     this.postId = element.getAttribute('data-post-id');
 
     this.loadKudos();
-    if(!storageSupported()) {
+    if (!storageSupported()) {
       this.heartButton.style.display = 'none';
       return;
     }
 
     this.isKudoed = !!getKudos()[this.postId];
-    if(this.isKudoed) { this.element.classList.add('kudoed'); }
+    if (this.isKudoed) {
+      this.displayKudoed();
+    } else {
+      this.displayNotKudoed();
+    }
+
     this.bindEvents();
   }
 
   Kudo.prototype.bindEvents = function() {
     var self = this;
     this.heartButton.addEventListener('click', function() {
-      if(self.isKudoed) {
+      if (self.isKudoed) {
         self.removeKudo();
       } else {
         self.addKudo();
@@ -31,16 +35,19 @@
     this.postRef = firebase.database().ref('/posts/' + this.postId);
 
     // will listen for updates
-    this.postRef.on('value', function(snapshot) {
-      if(!snapshot.val()) {
-        this.postRef.set({ kudos_count: 0 });
-      }
+    this.postRef.on(
+      'value',
+      function(snapshot) {
+        if (!snapshot.val()) {
+          this.postRef.set({ kudos_count: 0 });
+        }
 
-      this.postData = snapshot.val() || { kudos_count: 0 };
-      this.kudosCount = parseInt(this.postData.kudos_count);
-      this.updateKudoCountDisplay(this.kudosCount);
-      _(this.element).fade('in', 100);
-    }.bind(this));
+        this.postData = snapshot.val() || { kudos_count: 0 };
+        this.kudosCount = parseInt(this.postData.kudos_count);
+        this.updateKudoCountDisplay(this.kudosCount);
+        _(this.element).fade('in', 100);
+      }.bind(this)
+    );
   };
 
   Kudo.prototype.addKudo = function() {
@@ -48,11 +55,15 @@
     kudos[this.postId] = true;
     localStorage.setItem('kudos', JSON.stringify(kudos));
     this.toggleKudo('add');
-
+    this.track('add');
+    this.displayKudoed();
     this.displayKudoThanks();
+  };
+
+  Kudo.prototype.displayKudoed = function() {
     this.isKudoed = true;
     this.element.classList.add('kudoed');
-    this.track('add');
+    this.heartButton.setAttribute('aria-pressed', true);
   };
 
   Kudo.prototype.toggleKudo = function(operation) {
@@ -84,25 +95,28 @@
     delete kudos[this.postId];
     localStorage.setItem('kudos', JSON.stringify(kudos));
     this.toggleKudo('remove');
-
     this.updateKudoCountDisplay(this.kudosCount);
+    this.track('remove');
+    this.displayNotKudoed();
+  };
+
+  Kudo.prototype.displayNotKudoed = function() {
     this.isKudoed = false;
     this.element.classList.remove('kudoed');
-    this.track('remove');
+    this.heartButton.setAttribute('aria-pressed', false);
   };
 
   Kudo.prototype.displayKudoThanks = function() {
     var self = this;
     this.element.querySelector('.kudo-count-message').style.display = 'none'; // hide count
-    this.element.querySelector('.kudo-thanks').style.display = 'block';  // display thanks
+    this.element.querySelector('.kudo-thanks').style.display = 'block'; // display thanks
 
     setTimeout(function() {
-      _(self.element.querySelector('.kudo-thanks')).fade('out', 100);         // fade thanks out after 1.5s
+      _(self.element.querySelector('.kudo-thanks')).fade('out', 100);
       setTimeout(function() {
-        _(self.element.querySelector('.kudo-count-message')).fade('in', 100); // fade count back in after thanks out
+        _(self.element.querySelector('.kudo-count-message')).fade('in', 100);
       }, 110);
     }, 1500);
-    // }
   };
 
   Kudo.prototype.updateKudoCountDisplay = function(count) {
@@ -112,13 +126,19 @@
   };
 
   Kudo.prototype.track = function(action) {
-    ga('send', 'event', 'kudo', action, document.querySelector('.post-title').textContent);
+    ga(
+      'send',
+      'event',
+      'kudo',
+      action,
+      document.querySelector('.post-title').textContent
+    );
   };
 
   function getKudos() {
-    if(storageSupported) {
+    if (storageSupported) {
       var kudos = JSON.parse(localStorage.getItem('kudos'));
-      if(!kudos) {
+      if (!kudos) {
         kudos = {};
         localStorage.setItem('kudos', JSON.stringify(kudos));
       }
@@ -127,13 +147,13 @@
   }
 
   function getStorage(postId) {
-    if(storageSupported) {
+    if (storageSupported) {
       return localStorage.getItem(postId);
     }
   }
 
   function storageSupported() {
-    return typeof(Storage) !== "undefined";
+    return typeof Storage !== 'undefined';
   }
 
   document.querySelectorAll('.kudo-container').forEach(function(kudoContainer) {
