@@ -1,0 +1,15 @@
+.skip-nav {
+  @include hide-visually;
+
+  &:active,
+  &:focus {
+    @include unhide-visually;
+    @extend .btn-default;
+    @extend .btn-small;
+    display: block;
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    transition: width 1ms, height 1ms;
+  }
+}

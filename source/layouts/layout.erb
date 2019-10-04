@@ -47,7 +47,7 @@ greetings, from
       <p class="notice hide"></p>
       <p class="alert hide"></p>
 
-      <main role="main" class="page-body">
+      <main <%= yield_content(:skip_main_id).present? ? '' : 'id="main"' %> role="main" class="page-body">
         <%= yield %>
 
         <aside class="container container-xs hide">
