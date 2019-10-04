@@ -30,17 +30,63 @@ img {
   border-radius: 50%;
 }
 
-.img-sm, .figcaption-sm {
+.img-sm,
+.figcaption-sm {
   width: 320px;
   max-width: 100%;
 }
 
-.img-md, .figcaption-md {
+.img-md,
+.figcaption-md {
   width: 500px;
   max-width: 100%;
 }
 
-.figcaption-sm, .figcaption-md {
+.figcaption-sm,
+.figcaption-md {
   margin: 0 auto;
   margin-top: -1.3em;
+}
+
+.img-wrap {
+  $img-zoom-bp: 880px;
+  $img-transition: 100ms ease;
+  position: relative;
+  width: 100%;
+  transition: width $img-transition, margin-left $img-transition;
+
+  &--expanded {
+    @include respond-to($img-zoom-bp) {
+      width: 120%;
+      margin-left: -10%;
+    }
+
+    @include respond-to(medium) {
+      width: 140%;
+      margin-left: -20%;
+    }
+
+    @include respond-to(1100px) {
+      width: 150%;
+      margin-left: -25%;
+    }
+
+    @include respond-to(large) {
+      width: 160%;
+      margin-left: -30%;
+    }
+  }
+
+  .icon-expand-contract {
+    display: none;
+    bottom: 2rem;
+    right: 2rem;
+    position: absolute;
+    fill: #fff;
+    font-size: 1.5em;
+
+    @include respond-to($img-zoom-bp) {
+      display: block;
+    }
+  }
 }

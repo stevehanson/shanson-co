@@ -3,6 +3,7 @@
 //= require nav
 //= require firebase-init
 //= require kudos
+//= require image-zoom
 /*
 
 greetings, from
