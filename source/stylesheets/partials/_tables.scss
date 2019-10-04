@@ -1,0 +1,40 @@
+.table,
+.markdown table {
+  border-collapse: separate;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 2px solid $color-light-gray;
+  border-radius: 3px;
+  width: 100%;
+
+  thead {
+    text-align: left;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid $color-light-gray;
+    border-right: 1px solid $color-light-gray;
+    padding: 0.5em 1em;
+  }
+
+  th {
+    border-bottom-width: 2px;
+  }
+
+  tbody tr:last-of-type td {
+    border-bottom-width: 0;
+  }
+
+  td:last-of-type,
+  th:last-of-type {
+    border-right: none;
+  }
+}
+
+.totals-table {
+  td:last-of-type,
+  th:last-of-type {
+    text-align: right;
+  }
+}

@@ -44,10 +44,6 @@
         min-width: 16px;
         vertical-align: middle;
       }
-
-      &:hover:before {
-        content: 'd';
-      }
     }
 
     .date {
@@ -55,7 +51,6 @@
       color: #999;
     }
   }
-
 }
 
 section.post {
