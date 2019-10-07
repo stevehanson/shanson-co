@@ -5,7 +5,7 @@
   function init() {
     const images = document.querySelectorAll('.post-body img');
 
-    for (let i = 0; i < images.length; i++) {
+    for (var i = 0; i < images.length; i++) {
       makeImageZoomable(images[i]);
     }
   }
@@ -34,7 +34,7 @@
 
   // toggle the image between zoomed and unzoomed state
   function toggleZoom(wrapper) {
-    let icon;
+    var icon;
     if (wrapper.classList.contains(expandedClass)) {
       icon = expandSVG();
     } else {
