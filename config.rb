@@ -50,6 +50,18 @@ end
 activate :directory_indexes # must be activated after the blog
 
 helpers do
+  def host_with_port
+    if app.development?
+      "http://localhost:4567"
+    else
+      "https://shanson.co"
+    end
+  end
+
+  def image_url(path)
+    "#{host_with_port}#{image_path(path)}"
+  end
+
   def article_summary(article)
     if article.data.excerpt.present?
       article.data.excerpt
@@ -82,7 +94,7 @@ helpers do
 
   def article_body(article)
     if article.data.target.present?
-      link = link_to article.data.target, class: "arrow-link" do 
+      link = link_to article.data.target, class: "arrow-link" do
         %(
           Read more on
           #{article_source article.data.target}

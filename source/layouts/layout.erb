@@ -27,7 +27,9 @@ greetings, from
     <meta content="<%= meta_description %>" property="og:description"/>
     <meta content="website" property="og:type"/>
     <meta content="Stephen Hanson" property="og:site_name"/>
-    <!-- <meta content="<%= current_page.data.og_image || "https://shanson.co#{image_path('me.jpg')}" %>" property="og:image"/> -->
+    <% if current_page.data.og_image.present? %>
+      <meta content="<%= image_url(current_page.data.og_image) %>" property="og:image"/>
+    <% end %>
 
     <%= partial "partials/favicons" %>
 
