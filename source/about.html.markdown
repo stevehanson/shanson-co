@@ -1,11 +1,15 @@
 ---
-title: About
+title: About Me
 layout: page
 ---
 
-Hey-o. I'm Stephen Hanson, or shanson, if you will. I'm an Austin-based web developer currently working at [thoughtbot](https://thoughtbot.com). I [tweet](https://twitter.com/stephenhanson) on Twitter and [write code](https://github.com/stevehanson) on GitHub.
+Hi, thanks for stopping by 👋. I'm Stephen Hanson, an Austin-based web and mobile
+developer currently working at [thoughtbot](https://thoughtbot.com), where I
+spend most of my time working with React, React Native, and Rails. I
+[tweet](https://twitter.com/stephenhanson) on Twitter and [write
+code](https://github.com/stevehanson) on GitHub.
 
-I have seven years experience working as a developer for companies ranging from large enterprises like American Airlines to small startups. My current tools of the trade are Rails, React, React Native, and Node.js.
+I write on here very seldomly and usually about random topics. Good luck!
 
 You can get to know me a little bit here:
 
