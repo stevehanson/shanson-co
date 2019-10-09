@@ -1,7 +1,9 @@
+$nav-transition-duration: 100ms;
+
 .nav {
   //@include animate(fadeIn, 0.2s, 0);
   min-height: 4em;
-  background: rgba(255,255,255,0.96);
+  background: rgba(255, 255, 255, 0.96);
   width: 100%;
   position: absolute;
   top: 0;
@@ -37,7 +39,7 @@
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
   color: $text-color;
-  transition: border-bottom-color 200ms linear;
+  transition: border-bottom-color 100ms linear;
 
   &.link-primary {
     color: $color-primary;
@@ -98,14 +100,19 @@
 
   nav.open {
     .nav-mobile-menu-toggle {
-      .icon-close { display: block; }
-      .icon-menu { display: none; }
+      .icon-close {
+        display: block;
+      }
+      .icon-menu {
+        display: none;
+      }
     }
 
     .nav-links {
       opacity: 1;
       visibility: visible;
-      transition: opacity 0.4s, visibility 0.4s;
+      transition: opacity $nav-transition-duration,
+        visibility $nav-transition-duration;
     }
   }
 
@@ -113,9 +120,9 @@
   // add transition here too so transition happens when closing
   // we don't want transition on .nav .nav-links because then blips when resizing browser
   .nav.closed .nav-links {
-    transition: opacity 0.2s, visibility 0.2s;
+    transition: opacity $nav-transition-duration,
+      visibility $nav-transition-duration;
   }
-
 }
 
 // tighten things up a bit on really small devices
@@ -128,8 +135,6 @@
     margin-bottom: 1.5em;
   }
 }
-
-
 
 // nav opened
 @include respond-to(medium) {
