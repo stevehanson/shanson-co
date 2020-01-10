@@ -34,14 +34,11 @@
 
   .hero-title.highlight-primary {
     padding: 0 3px;
-    @include animate(fadeIn, 0.3s, 0.1s);
   }
 
   .hero-text {
     margin-top: 0.2em;
     display: block;
-    @include animate(fadeIn, 0.5s, 0.1s);
-    //@include animate(fadeIn, 0.8s, 0.7s);
   }
 
   .avatar {
@@ -49,7 +46,7 @@
     height: 200px;
     border-radius: 100px;
     margin-top: 1.5em;
-    @include animate(fadeInAndSlideUp, 0.2s, 0.25s, linear);
+    // @include animate(fadeInAndSlideUp, 0.2s, 0.25s, linear);
   }
 
   @include respond-to(380px) {
