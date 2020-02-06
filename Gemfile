@@ -12,7 +12,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'middleman-livereload'
 gem 'middleman-autoprefixer'
 gem 'middleman-sprockets'
-gem 'middleman-s3_sync'
 gem "middleman", "~> 4.1"
 gem "middleman-blog"
 gem 'middleman-gh-pages'

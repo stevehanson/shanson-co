@@ -31,22 +31,6 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
-activate :s3_sync do |s3_sync|
-  s3_sync.bucket                     = 'shanson.co'
-  s3_sync.region                     = 'us-east-1'
-  s3_sync.delete                     = true # deletes stray files by default
-  s3_sync.after_build                = false # does not chain after the build step by default
-  s3_sync.prefer_gzip                = true
-  s3_sync.path_style                 = true
-  s3_sync.reduced_redundancy_storage = false
-  s3_sync.acl                        = 'public-read'
-  s3_sync.encryption                 = false
-  s3_sync.prefix                     = ''
-  s3_sync.version_bucket             = false
-  s3_sync.index_document             = 'index.html'
-  s3_sync.error_document             = '404/index.html'
-end
-
 activate :directory_indexes # must be activated after the blog
 
 helpers do
