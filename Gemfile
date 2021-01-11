@@ -19,7 +19,7 @@ gem 'middleman-svg'
 
 gem 'mime-types' # required by s3_sync
 
-gem 'redcarpet', '~> 3.0'
+gem 'redcarpet', '~> 3.5'
 gem 'nokogiri' # for summary
 
 # For feed.xml.builder
