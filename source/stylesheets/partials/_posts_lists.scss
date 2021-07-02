@@ -1,6 +1,10 @@
 .posts-list {
   background-color: #fff;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
+
+  @include respond-to(medium) {
+    margin-bottom: 4em;
+  }
 }
 
 .posts-heading {
