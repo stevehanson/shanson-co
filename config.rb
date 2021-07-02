@@ -10,7 +10,7 @@ activate :inline_svg
 
 activate :external_pipeline, {
   name:    :webpack,
-  command: build? ? 'yarn webpack' : 'yarn webpack --watch',
+  command: build? ? 'yarn build' : 'yarn start',
   source:  'tmp/build'
 }
 
@@ -105,5 +105,4 @@ end
 configure :build do
   activate :asset_hash
   activate :minify_css
-  activate :minify_javascript
 end
