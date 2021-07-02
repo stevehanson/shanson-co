@@ -16,9 +16,7 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
-    "firebase": "^8.7.0",
-    "firebase-init": "^1.3.2",
-    "kudos": "^1.0.0"
+    "firebase": "^8.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
