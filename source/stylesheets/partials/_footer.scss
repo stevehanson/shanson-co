@@ -1,9 +1,9 @@
-.footer  {
+.footer {
   padding: 2.3em 0 2em;
   background: $color-footer;
   background: #f5f5f5;
   color: #444;
-  font-size: 0.95em;
+  font-size: $font-size-body;
 
   .icon-heart {
     font-size: 0.9em;
@@ -33,7 +33,6 @@
   @include respond-to(380px) {
     float: right;
   }
-
 
   a {
     color: #666;

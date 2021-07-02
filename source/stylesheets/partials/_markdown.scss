@@ -1,4 +1,8 @@
 .markdown {
+  li {
+    margin-bottom: 0.5em;
+  }
+
   img {
     display: block;
     border: 2px solid #eee;
@@ -19,7 +23,8 @@
       width: 500px;
     }
 
-    &.large { // breaks out of contianer a little bit on 992px+
+    &.large {
+      // breaks out of contianer a little bit on 992px+
       @include respond-to(medium) {
         max-width: 130%;
         width: 130%;
