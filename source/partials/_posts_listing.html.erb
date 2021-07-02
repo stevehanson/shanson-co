@@ -6,7 +6,7 @@
     <%= partial(
       "partials/posts_category_listing",
       locals: {
-        category_articles: articles_for_tag(articles, category),
+        category_articles: articles_for_tag(blog.articles, category),
         category: category
       }
     ) %>
