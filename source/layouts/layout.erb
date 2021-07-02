@@ -35,7 +35,6 @@ greetings, from
 
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Stephen Hanson" %>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
-    <%= javascript_include_tag "modernizr.min" %>
 
     <%= stylesheet_link_tag :site %>
   </head>
@@ -105,6 +104,6 @@ greetings, from
       </footer>
     </div>
 
-    <%= javascript_include_tag :all %>
+    <%= javascript_include_tag :main %>
   </body>
 </html>
