@@ -1,9 +1,8 @@
-$font-sans: 'PT Sans', sans-serif;
-$font-serif: 'Bitter', serif;
+$font-primary: 'Arial', 'Helvetica', sans-serif;
+$font-heading: 'PT Sans', 'Arial', sans-serif;
 
-$font-primary: $font-serif;
-$font-heading: $font-sans;
-
+$font-size-body: 1.2em;
+$font-size-heading: 1.75em;
 $color-primary: #0ae;
 $color-secondary: tomato;
 
@@ -16,7 +15,7 @@ $color-danger: $color-secondary;
 
 $text-color: #353538;
 $text-color-accent: #54646e;
-$text-color-muted: #95959a;
+$text-color-muted: #75757a;
 
 $link-color: darken($color-primary, 6%);
 $link-color-hover: $color-primary;
