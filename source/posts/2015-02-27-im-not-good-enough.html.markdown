@@ -1,6 +1,6 @@
 ---
 title: I’m (not) Good Enough
-tags: tech
+tags: personal
 excerpt: This is where I talk about my insecurities and struggles with Imposter Syndrome. In short, I never feel like I’m doing good enough work.
 ---
 
@@ -16,7 +16,7 @@ It was new and different, and I loved it. But, I couldn't help but feel a little
 
 I started talking about how I was feeling with some of the awesome people at Oven Bits. Everyone I talked to was surprised to hear that I doubted my performance. In fact, the entire time I'd been at Oven Bits, I'd received a steady stream of affirmation. And my coworkers were right: I was doing great work. I had no reason to think I wasn't good enough. Then why did I think it?
 
-It turns out, what I was experiencing wasn't unique. In fact, it's so common that it has a name: *Imposter Syndrome*. Imposter Syndrome is defined as a "collection of feelings of inadequacy that persist even in the face of information that indicates that the opposite is true. It is experienced internally as chronic self-doubt and feelings of intellectual fraudulence." [^1] According to Fast Company, over 70% of people have experienced it at some point in their life, [^2] and it's even more common in tech companies.
+It turns out, what I was experiencing wasn't unique. In fact, it's so common that it has a name: _Imposter Syndrome_. Imposter Syndrome is defined as a "collection of feelings of inadequacy that persist even in the face of information that indicates that the opposite is true. It is experienced internally as chronic self-doubt and feelings of intellectual fraudulence." [^1] According to Fast Company, over 70% of people have experienced it at some point in their life, [^2] and it's even more common in tech companies.
 
 ### Getting over it
 
@@ -58,7 +58,7 @@ I can't say that I've completely overcome Imposter Syndrome, but I've come a lon
 
 Oven Bits is an incredible company, and I'm grateful to have walked through this with them and to have the opportunity to be here. An opportunity that I finally feel like I'm worthy of having.
 
-*This post was also published on the [Oven Bits blog](https://ovenbits.com/journal/im-not-good-enough).*
+_This post was also published on the [Oven Bits blog](https://ovenbits.com/journal/im-not-good-enough)._
 
 [^1]: [https://counseling.caltech.edu/general/InfoandResources/Impostor](https://counseling.caltech.edu/general/InfoandResources/Impostor)
 [^2]: [https://www.fastcompany.com/3036006/hit-the-ground-running/8-practical-steps-to-getting-over-your-impostor-syndrome](https://www.fastcompany.com/3036006/hit-the-ground-running/8-practical-steps-to-getting-over-your-impostor-syndrome)

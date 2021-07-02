@@ -1,7 +1,7 @@
 ---
 title: I am a Giant Robot
 date: 2018-05-22
-tags: tech, personal
+tags: personal
 ---
 
 Last month I joined the amazing team at [thoughtbot](https://thoughtbot.com) 🎉. It's surreal getting to work with and learn from the people behind this company that I have looked up to for years.

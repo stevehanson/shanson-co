@@ -1,6 +1,6 @@
 ---
 title: Becoming Responsible
-tags: tech
+tags: personal
 excerpt: I’m disorganized and have no goals. Let’s see if I can get things together.
 ---
 
@@ -14,10 +14,10 @@ I also generally have a vague feeling in the back of my head that I’m forgetti
 
 I’ve always known that I’m a poor planner and am disorganized, but I’ve never before put a plan in place to get better (do you see the chicken and egg problem here?). Today, I figured I would go against my nature and put a loose plan of action together. Here it is:
 
-* Wake up 30 minutes early, at least 4 times per week, to plan my day
-* Time-box my activities. Plan ahead of time how much time I’ll spend on things. If I can finish early, I just got time back!
-* Segment work and life. When I’m at home, unless I didn’t finish something at work, tell that “vague feeling that you should be doing something for work” to go away
+- Wake up 30 minutes early, at least 4 times per week, to plan my day
+- Time-box my activities. Plan ahead of time how much time I’ll spend on things. If I can finish early, I just got time back!
+- Segment work and life. When I’m at home, unless I didn’t finish something at work, tell that “vague feeling that you should be doing something for work” to go away
 
-The *plan* is to try this out for two weeks and then go from there.
+The _plan_ is to try this out for two weeks and then go from there.
 
 Until next time.

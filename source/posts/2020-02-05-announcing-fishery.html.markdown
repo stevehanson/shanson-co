@@ -1,5 +1,5 @@
 ---
-title: Announcing Fishery &ndash; a JavaScript and TypeScript Factory Library
+title: Announcing Fishery &ndash; a TypeScript Factory Library
 date: 2020-02-05
 target: https://thoughtbot.com/blog/announcing-fishery-a-javascript-and-typescript-factory-library
 tags: tech

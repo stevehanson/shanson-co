@@ -69,6 +69,11 @@ helpers do
     articles.select { |a| !a.data[:draft] }
   end
 
+  def articles_for_tag(articles, tag)
+    non_draft_articles(articles)
+      .select { |a| a.data[:tags].include?(tag.to_s) }
+  end
+
   # in minutes
   def read_length(content)
     words_per_minute = 200.0

@@ -1,0 +1,15 @@
+<h3 class="posts-listing__category-header"><%= category.capitalize %></h3>
+<p class="posts-listing__updated-at">Updated <%= human_date(category_articles[0].data[:date]) %></p>
+
+<ul class="posts-listing__ul">
+  <% category_articles.each_with_index do |article, i| %>
+    <li>
+      <% if article.data.target.present? %>
+        <%= link_to article.title, article.data.target, class: "posts-listing__title posts-listing__title--with-domain" %>
+        <span class="posts-listing__domain"><%= article_source(article.data.target) %></span>
+      <% else %>
+        <%= link_to article.title, article, class: "posts-listing__title" %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

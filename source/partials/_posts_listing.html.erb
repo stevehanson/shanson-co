@@ -1,31 +1,14 @@
-<div class="container container-xs">
-  <% non_draft_articles(page_articles).each_with_index do |article, i| %>
-    <% if article.data.target.present? %>
-      <%= partial "partials/posts/external_post", locals: {article: article } %>
-    <% else %>
-      <%= partial "partials/posts/post", locals: {article: article } %>
-    <% end %>
-  <% end %>
+<div class="container container-xs markdown posts">
+  <h2>Writings</h2>
+  <p>I write infrequently about tech, woodworking, and anything else that comes to mind.</p>
 
-  <% if paginate && num_pages > 1 %>
-    <div class="pagination">
-      <% if prev_page %>
-        <p class="pagination__prev">
-          <% link_to prev_page, class: "arrow-link" do %>
-            <%= inline_svg "ionicons/ios-arrow-round-back.svg", class: "icon-arrow-round-back" %>
-            Previous Page
-          <% end %>
-        </p>
-      <% end %>
-      <p class="pagination__pages">Page <%= page_number %> of <%= num_pages %></p>
-      <% if next_page %>
-        <p class="pagination__next">
-          <% link_to next_page, class: "arrow-link" do %>
-            Next Page
-            <%= inline_svg "ionicons/ios-arrow-round-forward.svg", class: "icon-arrow-round-forward" %>
-          <% end %>
-        </p>
-      <% end %>
-    </div>
+  <% %w(tech woodworking personal).each do |category| %>
+    <%= partial(
+      "partials/posts_category_listing",
+      locals: {
+        category_articles: articles_for_tag(articles, category),
+        category: category
+      }
+    ) %>
   <% end %>
 </div>

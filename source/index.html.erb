@@ -7,22 +7,6 @@ per_page: 30
 <% content_for :skip_main_id, "true" %>
 
 <div class="index-page">
-  <% unless defined?(prev_page) && prev_page # only show on first page of posts %>
-    <header class="hero hero-main">
-      <div class="hero-container container container-xs">
-        <div class="hero-text-container">
-          <h2 class="hero-title highlight-primary">Hello, i’m <span class="shanson">shanson</span></h2>
-
-          <div class="hero-text">
-            <p>I’m glad you’re here, friend.</p>
-          </div>
-        </div>
-
-        <%= image_tag("me.jpg", class: "avatar", alt: "Picture of shanson") %>
-      </div>
-    </header>
-  <% end %>
-
   <section class="posts-list" id="main">
     <% if defined?(prev_page) && prev_page %>
         <div class="container container-xs">
@@ -35,7 +19,13 @@ per_page: 30
       <div class="posts-heading">
         <div class="container container-xs">
           <p class="mb0">
-            Welcome to my corner of the interwebs! Check out my thoughts below, or <%=link_to "get to know me", "about", class: "text-link" %>.
+            Hi, thanks for stopping by 👋. I'm Stephen, an Austin-based web and
+            mobile developer. I am currently working at <a
+            href="https://thoughtbot.com">thoughtbot</a>, where I help bring new
+            ideas to life for companies of all shapes and sizes. My current tools of the trade are React, React
+            Native, and Rails.  I <a
+            href="https://twitter.com/stephenhanson">tweet</a> on Twitter and <a
+            href="https://github.com/stevehanson">write code</a> on GitHub.
           </p>
         </div>
       </div>

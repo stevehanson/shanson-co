@@ -1,17 +1,15 @@
 .posts-list {
   background-color: #fff;
-  //@include animate(fadeIn, 0.3s, 0.3s, 'ease-in');
+  margin-bottom: 4em;
 }
 
 .posts-heading {
-  padding: 2em 0;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
   font-size: $font-size-body;
-  text-align: center;
 
-  @include respond-to(small) {
-    text-align: left;
+  @include respond-to(medium) {
+    margin-top: 4em;
   }
 }
 
@@ -23,4 +21,8 @@
 
 .index-page {
   background-color: #fff;
+}
+
+.posts {
+  font-size: 1.2em;
 }

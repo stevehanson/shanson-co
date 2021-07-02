@@ -1,0 +1,33 @@
+.posts-listing__category-header {
+  margin: 1.3em 0 0.2em;
+}
+
+.posts-listing__updated-at {
+  color: $text-color-muted;
+  font-size: $font-size-body-sm;
+}
+
+.posts-listing__ul {
+  padding-left: 1.1em;
+}
+
+.posts-listing__title {
+  color: $text-color;
+  line-height: 1.6;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+
+.posts-listing__title--with-domain {
+  margin-right: 0.3em;
+}
+
+.posts-listing__domain {
+  font-size: 0.8em;
+  color: $text-color-muted;
+}
