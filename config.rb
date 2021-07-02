@@ -6,7 +6,6 @@ page '/*.txt', layout: false
 set :markdown, fenced_code_blocks: true, smartypants: true, footnotes: false
 
 activate :autoprefixer
-activate :sprockets
 activate :inline_svg
 
 activate :blog do |blog|
