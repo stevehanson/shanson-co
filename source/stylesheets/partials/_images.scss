@@ -2,6 +2,10 @@ img {
   vertical-align: middle;
 }
 
+img:not([src]) {
+  display: none;
+}
+
 .img-responsive {
   display: block;
   max-width: 100%;
