@@ -51,6 +51,13 @@ helpers do
     "#{host_with_port}#{image_path(path)}"
   end
 
+  def lazy_image_tag(path, options = {})
+    image_tag("placeholder.png", options.merge({
+      data: { src: image_path(path) },
+      class: "lazy #{options[:class]}".strip
+    }))
+  end
+
   def article_summary(article)
     if article.data.excerpt.present?
       article.data.excerpt
