@@ -1,12 +1,30 @@
-window.addEventListener('load', () => {
-  init();
-});
+const config = {
+  root: null, // viewport
+  rootMargin: '0px 0px 2000px 0px',
+  threshold: 0,
+};
 
 const init = () => {
-  const images = document.querySelectorAll('img.lazy');
+  const images = [].slice.call(document.querySelectorAll('img.lazy'));
 
-  for (var i = 0; i < images.length; i++) {
-    setImageSource(images[i]);
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const image = entry.target;
+          setImageSource(image);
+          observer.unobserve(image);
+        }
+      });
+    }, config);
+
+    for (let image of images) {
+      observer.observe(image);
+    }
+  } else {
+    for (let image of images) {
+      setImageSource(image);
+    }
   }
 };
 
@@ -14,3 +32,5 @@ const setImageSource = (image) => {
   image.src = image.dataset.src;
   image.classList.remove('lazy');
 };
+
+window.addEventListener('load', init);
