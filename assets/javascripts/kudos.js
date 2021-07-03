@@ -58,7 +58,6 @@ class Kudo {
     kudos[this.postId] = true;
     localStorage.setItem('kudos', JSON.stringify(kudos));
     this.toggleKudo('add');
-    this.track('add');
     this.displayKudoed();
     this.displayKudoThanks();
   }
@@ -99,7 +98,6 @@ class Kudo {
     localStorage.setItem('kudos', JSON.stringify(kudos));
     this.toggleKudo('remove');
     this.updateKudoCountDisplay(this.kudosCount);
-    this.track('remove');
     this.displayNotKudoed();
   }
 
@@ -129,16 +127,6 @@ class Kudo {
     this.element.querySelector('.kudo-count').textContent = count;
     var kudoWord = count === 1 ? 'kudo' : 'kudos';
     this.element.querySelector('.kudo-word').textContent = kudoWord;
-  }
-
-  track(action) {
-    ga(
-      'send',
-      'event',
-      'kudo',
-      action,
-      document.querySelector('.post-title').textContent
-    );
   }
 }
 
