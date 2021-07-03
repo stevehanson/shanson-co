@@ -1,6 +1,14 @@
-import { firebaseApp } from './firebaseApp';
+import firebase from 'firebase/app';
+import 'firebase/database';
 import { _ } from './_';
 
+const firebaseApp = firebase.initializeApp({
+  apiKey: 'AIzaSyAggscqrqgt998lEG0qKLUKIpujLtTjZ_s',
+  authDomain: 'shanson-co-31c59.firebaseapp.com',
+  databaseURL: 'https://shanson-co-31c59.firebaseio.com',
+  storageBucket: 'shanson-co-31c59.appspot.com',
+  messagingSenderId: '855737951921',
+});
 class Kudo {
   constructor(element) {
     this.element = element;

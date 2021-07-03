@@ -38,4 +38,8 @@
       </article>
     </div>
   </section>
+
+  <% content_for :end_of_body do %>
+    <%= javascript_include_tag :kudos, async: true %>
+  <% end %>
 <% end %>
