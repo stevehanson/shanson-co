@@ -3,7 +3,6 @@ const path = require('path');
 module.exports = {
   entry: {
     main: './assets/javascripts/main.js',
-    kudos: './assets/javascripts/kudos.js',
   },
   output: {
     path: path.resolve(__dirname, 'tmp/build'),

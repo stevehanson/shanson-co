@@ -1,14 +1,6 @@
-import firebase from 'firebase/app';
-import 'firebase/database';
 import { _ } from './_';
 
-const firebaseApp = firebase.initializeApp({
-  apiKey: 'AIzaSyAggscqrqgt998lEG0qKLUKIpujLtTjZ_s',
-  authDomain: 'shanson-co-31c59.firebaseapp.com',
-  databaseURL: 'https://shanson-co-31c59.firebaseio.com',
-  storageBucket: 'shanson-co-31c59.appspot.com',
-  messagingSenderId: '855737951921',
-});
+let firebaseApp;
 class Kudo {
   constructor(element) {
     this.element = element;
@@ -153,6 +145,40 @@ function storageSupported() {
   return typeof Storage !== 'undefined';
 }
 
-document.querySelectorAll('.kudo-container').forEach((kudoContainer) => {
-  new Kudo(kudoContainer);
+const injectScript = (src, onLoad) => {
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.defer = true;
+  script.onload = onLoad;
+  script.src = src;
+  document.getElementsByTagName('head')[0].appendChild(script);
+};
+const injectFirebase = (onLoad) => {
+  injectScript('https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js');
+  injectScript(
+    'https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js',
+    onLoad
+  );
+};
+
+const initializeFirebase = () => {
+  firebaseApp = firebase.initializeApp({
+    apiKey: 'AIzaSyAggscqrqgt998lEG0qKLUKIpujLtTjZ_s',
+    authDomain: 'shanson-co-31c59.firebaseapp.com',
+    databaseURL: 'https://shanson-co-31c59.firebaseio.com',
+    storageBucket: 'shanson-co-31c59.appspot.com',
+    messagingSenderId: '855737951921',
+  });
+};
+
+window.addEventListener('load', () => {
+  const kudoContainers = document.querySelectorAll('.kudo-container');
+  if (kudoContainers.length > 0) {
+    injectFirebase(() => {
+      initializeFirebase();
+      for (let container of kudoContainers) {
+        new Kudo(container);
+      }
+    });
+  }
 });
