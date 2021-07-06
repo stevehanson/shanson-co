@@ -12,6 +12,10 @@
   margin-top: 1em;
   font-size: $font-size-body;
 
+  @include respond-to(small) {
+    margin-top: 2.5em;
+  }
+
   @include respond-to(medium) {
     margin-top: 4em;
   }

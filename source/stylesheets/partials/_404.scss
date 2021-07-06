@@ -10,13 +10,20 @@
   text-align: center;
 }
 
-.four-oh-four-button {
+.markdown .four-oh-four-button {
+  background-color: $link-color;
   display: block;
-  font-size: 1em;
-  margin: 2em auto;
+  font-size: 0.8em;
+  margin: 1em auto;
   text-align: center;
   width: 330px;
   max-width: 100%;
+
+
+  &:hover {
+    background-color: $link-color-hover;
+    color: white;
+  }
 
   @include respond-to(small) {
     margin-top: 3em;
