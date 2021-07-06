@@ -18,3 +18,8 @@
     public,
     max-age=31536000,
     must-revalidate'''
+
+[[redirects]]
+  from = "/*"
+  to = "/404"
+  status = 404
