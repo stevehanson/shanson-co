@@ -1,6 +1,6 @@
 # shanson.co
 
-This is the repo for my personal blog. It was moved from Rails to Middleman in Dec 2016.
+This is the repo for [my personal blog](https://shanson.co). It was moved from Rails to Middleman in Dec 2016.
 
 ## To build
 
