@@ -8,15 +8,10 @@ mobile developer currently working at [thoughtbot](https://thoughtbot.com),
 where I spend most of my time working with React, React Native, and Rails to
 help bring my clients' ideas to life.
 
-I have over 10 years of experience as a software developer and have been
-consulting for almost as long. I've had the privilege of working for companies
-such as Houseparty, American Airlines, National Breast Cancer Foundation,
-Ticketmaster, Qeepsake, Frito Lay, Pep Boys, StudioHop, and many more.
-
 You can get to know me a little bit here:
 
 - [GitHub](https://github.com/stevehanson)
-- [Twitter](https://twitter.com/stephenhanson)
+- [LinkedIn](https://www.linkedin.com/in/hansonsteve)
 - [Instagram (private)](https://instagram.com/steve_hanson)
 - [Stack Overflow](https://stackoverflow.com/users/680847/steve-hanson)
 
