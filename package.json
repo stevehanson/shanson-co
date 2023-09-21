@@ -2,7 +2,7 @@
   "name": "shanson",
   "version": "1.0.0",
   "engines": {
-    "node": "12.16.1"
+    "node": "16.20.0"
   },
   "private": true,
   "repository": "git@github.com:stevehanson/shanson-co.git",
