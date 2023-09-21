@@ -4,7 +4,7 @@ layout: page
 ---
 
 Hi, thanks for stopping by 👋. I'm Stephen Hanson, an Austin-based web and
-mobile developer currently working at [thoughtbot](https://thoughtbot.com),
+mobile developer currently working at [thoughtbot](https://thoughtbot.com) as Director of Mobile Development,
 where I spend most of my time working with React, React Native, and Rails to
 help bring my clients' ideas to life.
 
