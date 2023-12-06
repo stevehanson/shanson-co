@@ -15,7 +15,7 @@ You can get to know me a little bit here:
 - [Instagram (private)](https://instagram.com/steve_hanson)
 - [Stack Overflow](https://stackoverflow.com/users/680847/steve-hanson)
 
-Or, contact me [by email](mailto:stephen@shanson.co?subject=Hello from shanson.co).
+The best way to get in touch with me is [by email](mailto:stephen@shanson.co?subject=Hello from shanson.co) or LinkedIn if we are connected there.
 
 #### Behind the curtain
 
