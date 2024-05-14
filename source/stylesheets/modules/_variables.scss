@@ -6,6 +6,7 @@ $font-heading: 'PT Sans', 'Arial', sans-serif;
   --font-size-body-sm: 0.85em;
   --font-size-heading: 1.75em;
 
+  // also update meta theme-color in layout.erb
   --background-color: #f3f2f1;
   --background-accent: #{darken(#f3f2f1, 3%)};
   --border: #533;
@@ -19,6 +20,7 @@ $font-heading: 'PT Sans', 'Arial', sans-serif;
   --color-danger: var(--color-primary);
 
   @media (prefers-color-scheme: dark) {
+    // also update meta theme-color in layout.erb
     --background-color: #252527;
     --background-accent: var(--background-color);
     --border: #68686b;

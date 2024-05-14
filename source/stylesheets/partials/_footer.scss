@@ -12,28 +12,10 @@
 }
 
 .footer-msg {
-  display: none;
-  @include respond-to(380px) {
-    display: block;
-    float: left;
-  }
-
   .icon-heart {
     display: inline-block;
     vertical-align: text-bottom;
     margin-bottom: 2px;
     min-width: 15px;
-  }
-}
-
-.footer-social {
-  text-align: center;
-
-  @include respond-to(380px) {
-    float: right;
-  }
-
-  a {
-    color: #666;
   }
 }
