@@ -206,9 +206,9 @@ html {
 body {
   font-family: $font-primary;
   font-size: 15px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   color: $text-color;
-  background-color: #ffffff;
+  background-color: $background-color;
 
   @include respond-to(small) {
     font-size: 18px;

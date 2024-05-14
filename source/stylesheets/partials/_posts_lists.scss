@@ -1,5 +1,4 @@
 .posts-list {
-  background-color: #fff;
   margin-bottom: 2em;
 
   @include respond-to(medium) {
@@ -25,10 +24,6 @@
   border-bottom: 1px solid #eee;
   margin-bottom: 1.5em;
   padding: 2rem 0;
-}
-
-.index-page {
-  background-color: #fff;
 }
 
 .posts {

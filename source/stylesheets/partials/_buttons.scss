@@ -34,25 +34,6 @@ $btn-default-bg: $color-primary;
   }
 }
 
-$btn-secondary-bg: #fff;
-
-.btn-secondary {
-  @extend .btn;
-  background-color: $btn-secondary-bg;
-  border: 2px solid $text-color;
-  color: $text-color;
-  transition: all 100ms linear;
-
-  &:hover {
-    color: #fff;
-    background: $text-color;
-  }
-
-  &:active {
-    background: #000;
-  }
-}
-
 .btn-unstyled {
   @extend %reset-button;
 }
