@@ -4,9 +4,22 @@ layout: page
 ---
 
 Hi, thanks for stopping by 👋. I'm Stephen Hanson, an Austin-based web and
-mobile developer currently working at [thoughtbot](https://thoughtbot.com) as Director of Mobile Development,
-where I spend most of my time working with React, React Native, and Rails to
-help bring my clients' ideas to life.
+mobile developer. I currently work as Development Director at a digital agency
+called [thoughtbot](https://thoughtbot.com), where I help clients bring their
+web and mobile ideas to life.
+
+I'm motivated by building. I get satisfaction from making things that are useful
+and delightful. That's why I built [the office I work out
+of](/building-my-backyard-office) and [furniture in my
+home](/building-a-credenza), and it's also why I built open source tools like
+[Fishery](https://github.com/thoughtbot/fishery) and
+[Belt](https://github.com/thoughtbot/belt).
+
+I'm a generalist, with some deep specializations. I'm happiest when I can work
+across a stack, implementing mission-critical features from end-to-end. Over the
+course of my 13+ year career, I've worked in many different technologies, with
+most of the past 7+ years focused on React, React Native, Ruby on Rails, and
+Node.
 
 You can get to know me a little bit here:
 
@@ -15,7 +28,7 @@ You can get to know me a little bit here:
 - [Instagram (private)](https://instagram.com/steve_hanson)
 - [Stack Overflow](https://stackoverflow.com/users/680847/steve-hanson)
 
-The best way to get in touch with me is [by email](mailto:stephen@shanson.co?subject=Hello from shanson.co) or LinkedIn if we are connected there.
+The best way to get in touch with me is [by email](mailto:stephen@shanson.co?subject=Hello from shanson.co) or LinkedIn if we are connected there, though I might not check that as frequently.
 
 #### Behind the curtain
 
