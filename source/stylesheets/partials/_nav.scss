@@ -11,7 +11,7 @@ $nav-transition-duration: 100ms;
 .nav-title {
   display: inline-block;
   text-transform: uppercase;
-  font-family: $font-heading;
+  font-family: var(--font-family-heading);
   color: var(--text-color);
   margin-top: 1.4em;
   font-weight: 700;

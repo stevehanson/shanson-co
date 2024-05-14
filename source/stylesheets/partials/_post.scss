@@ -24,7 +24,7 @@
 
   .post-body {
     font-size: var(--font-size-body);
-    font-family: $font-primary;
+    font-family: var(--font-family);
     margin-top: 0;
     margin-bottom: 3em;
   }

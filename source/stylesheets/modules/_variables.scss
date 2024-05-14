@@ -1,7 +1,7 @@
-$font-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Arial', sans-serif;
-$font-heading: $font-primary;
-
 :root {
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Arial',
+    sans-serif;
+  --font-family-heading: var(--font-family);
   --font-size-body: 1.2em;
   --font-size-body-sm: 0.85em;
   --font-size-heading: 1.75em;
