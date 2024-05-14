@@ -9,7 +9,7 @@
 .posts-heading {
   margin-bottom: 0.5em;
   margin-top: 1em;
-  font-size: $font-size-body;
+  font-size: var(--font-size-body);
 
   @include respond-to(small) {
     margin-top: 2.5em;
@@ -21,7 +21,7 @@
 }
 
 .posts-page-heading {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-subtle);
   margin-bottom: 1.5em;
   padding: 2rem 0;
 }

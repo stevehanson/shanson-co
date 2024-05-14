@@ -6,7 +6,7 @@
 
   &.kudoed {
     .kudo-heart-path {
-      fill: $text-color;
+      fill: var(--text-color);
     }
   }
 
@@ -19,9 +19,9 @@
   }
 
   .kudo-heart-path {
-    fill: #fff;
+    fill: transparent;
     stroke-width: 20px;
-    stroke: $text-color;
+    stroke: var(--text-color);
     transition: stroke-width 150ms;
   }
 

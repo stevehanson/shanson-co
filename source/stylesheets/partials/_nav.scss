@@ -12,7 +12,7 @@ $nav-transition-duration: 100ms;
 .nav-title {
   display: inline-block;
   text-transform: uppercase;
-  color: $text-color;
+  color: var(--text-color);
   margin-top: 1.4em;
   font-weight: 600;
 
@@ -31,12 +31,12 @@ $nav-transition-duration: 100ms;
 
 .nav-link > a {
   border-bottom: 2px solid transparent;
-  color: $text-color;
+  color: var(--text-color);
   font-size: 1.1em;
   transition: border-bottom-color 100ms linear;
 
   &.link-primary {
-    color: $color-primary;
+    color: var(--color-primary);
   }
 
   &:hover {

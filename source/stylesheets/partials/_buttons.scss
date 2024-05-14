@@ -14,18 +14,16 @@
   }
 }
 
-$btn-default-bg: $color-primary;
-
 .btn-default {
   @extend .btn;
-  background-color: $btn-default-bg;
-  border: 2px solid $btn-default-bg;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   //background-image: linear-gradient(to bottom, $btn-default-bg 50%, rgba(darken(#1698da,2%), 1) 100%);
   transition: all 150ms linear;
 
   &:hover {
-    background: $text-color;
-    border-color: $text-color;
+    background: var(--text-color);
+    border-color: var(--text-color);
   }
 
   &:active {

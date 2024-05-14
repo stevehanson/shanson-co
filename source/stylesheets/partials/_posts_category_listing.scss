@@ -3,9 +3,9 @@
 }
 
 .posts-listing__updated-at {
-  color: $text-color-muted;
+  color: var(--text-color-muted);
   font-family: $font-heading;
-  font-size: $font-size-body-sm;
+  font-size: var(--font-size-body-sm);
 }
 
 .posts-listing__ul {
@@ -13,14 +13,14 @@
 }
 
 .posts-listing__title {
-  color: $text-color;
+  color: var(--text-color);
   line-height: 1.6;
   position: relative;
   text-decoration: none;
   z-index: 1;
 
   &:hover {
-    color: $link-color-hover;
+    color: var(--link-color-hover);
   }
 }
 
@@ -30,5 +30,5 @@
 
 .posts-listing__domain {
   font-size: 0.8em;
-  color: $text-color-muted;
+  color: var(--text-color-muted);
 }

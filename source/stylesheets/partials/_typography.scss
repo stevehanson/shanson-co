@@ -40,7 +40,7 @@ p {
 }
 
 .p {
-  font-size: $font-size-body;
+  font-size: var(--font-size-body);
 }
 
 .code,
@@ -68,34 +68,34 @@ blockquote {
 }
 
 .highlight-primary {
-  background-color: $color-primary;
+  background-color: var(--color-primary);
   color: #fff;
 }
 
 a {
-  color: $link-color;
+  color: var(--link-color);
   transition: color 50ms linear;
 
   &:hover {
-    color: $color-primary;
+    color: var(--link-color-hover);
     text-decoration: none;
   }
 
   &:active,
   &:focus {
-    color: darken($link-color, 10%);
+    color: var(--link-color-hover);
   }
 }
 
 .markdown a,
 .post-excerpt-body a,
 .text-link {
-  border-bottom: 1px solid #eee;
-  transition: color 25ms linear, border-bottom-color 50ms linear;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: color 25ms linear, border-bottom-color 30ms linear;
 
   &:hover {
-    border-bottom-color: $link-color-hover;
-    color: $link-color-hover;
+    border-bottom-color: var(--link-color-hover);
+    color: var(--link-color-hover);
     text-decoration: none;
   }
 }
@@ -103,18 +103,18 @@ a {
 .arrow-link {
   svg {
     margin-bottom: -0.25em;
-    fill: $link-color;
+    fill: var(--link-color);
     font-size: 1.3em;
     transition: fill 25ms linear;
   }
 
   &:hover svg {
-    fill: $link-color-hover;
+    fill: var(--link-color-hover);
   }
 }
 
 .link-primary {
-  color: $color-primary;
+  color: var(--color-primary);
 }
 
 .footnotes {

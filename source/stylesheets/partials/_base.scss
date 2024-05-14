@@ -207,8 +207,8 @@ body {
   font-family: $font-primary;
   font-size: 15px;
   line-height: 1.4;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
 
   @include respond-to(small) {
     font-size: 18px;
@@ -242,7 +242,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid var(--border);
 }
 .sr-only {
   position: absolute;
@@ -285,5 +285,5 @@ hr {
   float: left !important;
 }
 .color-primary {
-  color: $color-primary;
+  color: var(--color-primary);
 }

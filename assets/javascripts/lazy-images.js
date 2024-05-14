@@ -4,7 +4,7 @@ const config = {
   threshold: 0,
 };
 
-const init = () => {
+function init() {
   const images = [].slice.call(document.querySelectorAll('img.lazy'));
 
   if ('IntersectionObserver' in window) {
@@ -26,11 +26,11 @@ const init = () => {
       setImageSource(image);
     }
   }
-};
+}
 
-const setImageSource = (image) => {
+function setImageSource(image) {
   image.src = image.dataset.src;
   image.classList.remove('lazy');
-};
+}
 
 window.addEventListener('load', init);

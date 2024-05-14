@@ -11,7 +11,7 @@
 }
 
 .markdown .four-oh-four-button {
-  background-color: $link-color;
+  background-color: var(--link-color);
   display: block;
   font-size: 0.8em;
   margin: 1em auto;
@@ -19,9 +19,8 @@
   width: 330px;
   max-width: 100%;
 
-
   &:hover {
-    background-color: $link-color-hover;
+    background-color: var(--link-color-hover);
     color: white;
   }
 

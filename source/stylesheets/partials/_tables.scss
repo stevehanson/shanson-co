@@ -3,7 +3,7 @@
   border-collapse: separate;
   border-spacing: 0;
   empty-cells: show;
-  border: 2px solid $color-light-gray;
+  border: 2px solid var(--border-subtle);
   border-radius: 3px;
   width: 100%;
 
@@ -13,8 +13,8 @@
 
   th,
   td {
-    border-bottom: 1px solid $color-light-gray;
-    border-right: 1px solid $color-light-gray;
+    border-bottom: 1px solid var(--border-subtle);
+    border-right: 1px solid var(--border-subtle);
     padding: 0.5em 1em;
   }
 

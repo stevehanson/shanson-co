@@ -23,7 +23,7 @@
   }
 
   .post-body {
-    font-size: $font-size-body;
+    font-size: var(--font-size-body);
     font-family: $font-primary;
     margin-top: 0;
     margin-bottom: 3em;
@@ -37,19 +37,20 @@
       cursor: pointer;
       display: inline-block;
       margin-right: 1em;
-      color: #555;
+      color: var(--text-color-muted);
 
       .icon-timer {
         display: inline-block;
         margin-bottom: 2px;
         min-width: 16px;
         vertical-align: middle;
+        fill: var(--text-color-muted);
       }
     }
 
     .date {
       display: inline-block;
-      color: $text-color-muted;
+      color: var(--text-color-muted);
     }
   }
 }

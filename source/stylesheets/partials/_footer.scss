@@ -1,14 +1,13 @@
 .footer {
   padding: 2.3em 0 2em;
-  background: $color-footer;
-  background: #f5f5f5;
-  color: #444;
-  font-size: $font-size-body;
+  font-size: var(--font-size-body);
+  background-color: var(--background-accent);
 
   .icon-heart {
     font-size: 0.9em;
     margin-left: 0.15em;
     margin-right: 0.15em;
+    fill: var(--text-color);
   }
 }
 
