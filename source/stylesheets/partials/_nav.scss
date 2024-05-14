@@ -14,7 +14,8 @@ $nav-transition-duration: 100ms;
   font-family: $font-heading;
   color: var(--text-color);
   margin-top: 1.4em;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.15px;
 
   &:hover {
     text-decoration: none;
