@@ -1,4 +1,6 @@
 const iconClass = 'icon-expand-contract';
+const containerClass = 'img-wrap';
+const innerClass = 'img-wrap-inner';
 const expandedClass = 'img-wrap--expanded';
 
 function init() {
@@ -19,15 +21,19 @@ function makeImageZoomable(image) {
 function wrapImageAndAddIcon(image) {
   if (!isWrapped(image)) {
     const wrapper = document.createElement('div');
-    wrapper.classList.add('img-wrap');
+    wrapper.classList.add(containerClass);
+    const wrapper2 = document.createElement('div');
+    wrapper2.classList.add(innerClass);
     image.parentNode.insertBefore(wrapper, image);
-    wrapper.appendChild(image);
-    wrapper.appendChild(expandSVG());
+
+    wrapper.appendChild(wrapper2);
+    wrapper2.appendChild(image);
+    wrapper2.appendChild(expandSVG());
   }
 }
 
 function addImageClickHandler(image) {
-  const wrapper = image.parentNode;
+  const wrapper = image.closest(`.${containerClass}`);
   wrapper.addEventListener('click', toggleZoom.bind(this, wrapper));
 }
 
@@ -41,13 +47,13 @@ function toggleZoom(wrapper) {
   }
 
   wrapper.querySelector('.' + iconClass).remove();
-  wrapper.appendChild(icon);
+  wrapper.querySelector('.' + innerClass).appendChild(icon);
 
-  wrapper.classList.toggle('img-wrap--expanded');
+  wrapper.classList.toggle(expandedClass);
 }
 
 function isWrapped(image) {
-  return image.parentNode.classList.contains('img-wrap');
+  return image.parentNode.classList.contains(innerClass);
 }
 
 function expandSVG() {

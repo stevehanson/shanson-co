@@ -49,11 +49,22 @@ img {
 }
 
 .img-wrap {
-  $img-zoom-bp: 880px;
-  $img-transition: 100ms ease;
-  position: relative;
-  width: 100%;
-  transition: width $img-transition, margin-left $img-transition;
+  $img-zoom-bp: 800px;
+  margin: 1.75em auto;
+  display: flex;
+  justify-content: center;
+  transition: all 100ms ease;
+
+  .img-wrap-inner {
+    position: relative;
+    transition: all 100ms ease;
+  }
+
+  img {
+    transition: all 100ms ease;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
   // make images go slightly outside container on large screens
   @include respond-to(large) {
@@ -80,6 +91,12 @@ img {
     @include respond-to(large) {
       width: 180%;
       margin-left: -40%;
+    }
+
+    img {
+      width: auto !important;
+      max-height: 150vh !important;
+      transition: all 100ms ease;
     }
   }
 
