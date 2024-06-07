@@ -20,7 +20,7 @@ greetings, from
     <title><%= current_page.data.title.present? ? "#{current_page.data.title} – Stephen Hanson" : "Stephen Hanson" %></title>
 
     <% meta_description = yield_content(:meta_description).presence || current_page.data.description.presence || "Hi 👋, I’m Stephen Hanson, an Austin-based web developer. I write every now and then about life, tech, and anything else on my mind." %>
-    <meta name="theme-color" content="#f3f2f1" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#fffaf2" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#252527" media="(prefers-color-scheme: dark)">
 
     <meta property="og:title" content="<%= current_page.data.title || 'Stephen Hanson' %>">
