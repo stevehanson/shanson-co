@@ -7,10 +7,10 @@
   --font-size-heading: 1.75em;
 
   // also update meta theme-color in layout.erb
-  --background-color: #fffaf2;
-  --background-accent: #{darken(#fffaf2, 3%)};
+  --background-color: #fffcf8;
+  --background-accent: #{darken(#fffdfb, 3%)};
   --border: #533;
-  --border-subtle: #eee8d8; // link underline, tables, etc.
+  --border-subtle: #eeebdf; // link underline, tables, etc.
   --text-color: #353538;
   --text-color-muted: #555;
   --color-primary: #de6202;
