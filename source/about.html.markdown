@@ -15,11 +15,11 @@ home](/building-a-credenza), and it's also why I built open source tools like
 [Fishery](https://github.com/thoughtbot/fishery) and
 [Belt](https://github.com/thoughtbot/belt).
 
-I'm a generalist, with some deep specializations. I'm happiest when I can work
-across a stack, implementing mission-critical features from end-to-end. Over the
-course of my 13+ year career, I've worked in many different technologies, with
-most of the past 7+ years focused on React, React Native, Ruby on Rails, and
-Node.
+I'm a generalist, with some deep specializations. I'm happiest in positions
+where I can have a large impact. I enjoy working across the stack and across
+teams, implementing mission-critical features from end-to-end. Over the course
+of my 13 year career, I've worked in many different technologies, with recent
+years focused on React, React Native, Ruby on Rails, and Node.
 
 You can get to know me a little bit here:
 

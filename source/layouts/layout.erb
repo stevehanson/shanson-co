@@ -30,6 +30,9 @@ greetings, from
     <meta property="og:description" content="<%= meta_description %>">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Stephen Hanson">
+    <% if current_page.data.draft %>
+      <meta name="robots" content="noindex">
+    <% end %>
     <meta name="author" content="Stephen Hanson">
     <% if current_page.data.og_image.present? %>
       <meta property="og:image" content="<%= image_url(current_page.data.og_image) %>">
