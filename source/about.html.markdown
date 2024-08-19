@@ -21,14 +21,17 @@ teams, implementing mission-critical features from end-to-end. Over the course
 of my 13 year career, I've worked in many different technologies, with recent
 years focused on React, React Native, Ruby on Rails, and Node.
 
-You can get to know me a little bit here:
+#### Contact
 
+I'd love to get in touch! You can find me here:
+
+- Email - "stephen at shanson dot co"
 - [GitHub](https://github.com/stevehanson)
 - [LinkedIn](https://www.linkedin.com/in/hansonsteve)
 - [Instagram (private)](https://instagram.com/steve_hanson)
 - [Stack Overflow](https://stackoverflow.com/users/680847/steve-hanson)
 
-The best way to get in touch with me is [by email](mailto:stephen@shanson.co?subject=Hello from shanson.co) or LinkedIn if we are connected there, though I might not check that as frequently.
+The best way to reach me is by email, or LinkedIn if we are connected there, though I might not check that as frequently.
 
 #### Behind the curtain
 
