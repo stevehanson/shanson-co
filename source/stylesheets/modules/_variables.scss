@@ -14,6 +14,7 @@
   --text-color: #353538;
   --text-color-muted: #555;
   --color-primary: #de6202;
+  --color-selection: #dec30273;
   --link-color: #{darken(#de6202, 6%)};
   --link-color-hover: var(--color-primary);
   --link-color-focus: var(--color-primary);
@@ -28,6 +29,7 @@
     --text-color: #cdcdcf;
     --text-color-muted: var(--text-color);
     --color-primary: #ffcf6e;
+    --color-selection: #423e22;
     --link-color: #f5d490;
     --link-color-focus: #{darken(#ffcf6e, 8%)};
     --link-color-hover: #{lighten(#ffcf6e, 2%)};
