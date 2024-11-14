@@ -3,6 +3,8 @@ title: About Me
 layout: page
 ---
 
+<img src="/images/office/office-04-desk-crop.jpeg" alt="Desk in my office" />
+
 Hi, thanks for stopping by 👋. I'm Stephen Hanson, an Austin-based software engineer. I am currently work on tax reporting at [Stripe](https://stripe.com/). Before Stripe, I was Development Director at a digital agency
 called [thoughtbot](https://thoughtbot.com).
 
