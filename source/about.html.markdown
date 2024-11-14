@@ -3,10 +3,8 @@ title: About Me
 layout: page
 ---
 
-Hi, thanks for stopping by 👋. I'm Stephen Hanson, an Austin-based web and
-mobile developer. I currently work as Development Director at a digital agency
-called [thoughtbot](https://thoughtbot.com), where I help clients bring their
-web and mobile ideas to life.
+Hi, thanks for stopping by 👋. I'm Stephen Hanson, an Austin-based software engineer. I am currently work on tax reporting at [Stripe](https://stripe.com/). Before Stripe, I was Development Director at a digital agency
+called [thoughtbot](https://thoughtbot.com).
 
 I'm motivated by building. I get satisfaction from making things that are useful
 and delightful. That's why I built [the office I work out

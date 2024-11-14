@@ -2,6 +2,10 @@
 
 This is the repo for [my personal blog](https://shanson.co). It was moved from Rails to Middleman in Dec 2016.
 
+## Dependencies
+
+Ensure you have Node.js and yarn installed, matching the versions in `.ruby-version` and `.node-version`. Install yarn dependencies with `yarn install`.
+
 ## To build
 
 To run the development server:
